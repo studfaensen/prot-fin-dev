@@ -52,9 +52,9 @@ When having the sequences transformed, it's just basic music recognition.
         <td><code>score_songs(hashes, database)</code></td>
         <td>
             <ol>
-                <li>for each hash that occurs in the database, collect the matches and store the time from the sample and from the database per song id</li>
-                <li>for each match in the stored matches per song, calculate the diff between source and sample time and count the occurences of each diff</li>
-                <li>the score of a song is the max count of all diffs</li>
+                <li>for each hash, collect for each protein its offsets to its occurences in the chord sequence</li>
+                <li>for each protein, group the occurences of the hashes/ankerpoints by their offsets</li>
+                <li>the group with the biggest size is the score for a protein, as it is the best fitting constellation of the hashes</li>
             </ol>
         </td>
     </tr>
