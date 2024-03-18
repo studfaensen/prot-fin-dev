@@ -93,7 +93,7 @@ def create_db(prot_file: str):
             if (proc := len(prot_index)) == 1000:
                 break
             if proc % 100 == 0:
-                print("%d%%" % int(proc/2))
+                print("%d%%" % int(proc / 10))
             prot_index[prot_id] = description
             hashes = hashes_from_seq(seq, aa_vec_map, prot_id)
             for hash_, index_prot_id_pair in hashes.items():
@@ -119,8 +119,6 @@ def create_hashes(constellation_map, prot_id=None):
             # ignore this set of pairs
             if diff <= 1 or diff > 10:
                 continue
-
-            # Place the frequencies (in Hz) into a 1024 bins
 
             # Produce a 32 bit hash
             hash = int(freq) | (int(other_freq) << 10) | (int(diff) << 20)

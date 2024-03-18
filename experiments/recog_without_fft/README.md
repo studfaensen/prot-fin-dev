@@ -64,10 +64,10 @@ why not combining the raw values of the kidera factors instead of their ff-trans
 </table>
 
 ### Convenience Methods
-`hashes_from_seq(seq, chord_map, prot_id)`
+`hashes_from_seq(seq, aa_vec_map, prot_id)`
  - just the workflow `seq_to_vectors` $\rightarrow$ `create_constellation` $\rightarrow$ `create_hashes`
 
-`seq_to_vectors(seq, chord_map)`
+`seq_to_vectors(seq, aa_vec_map)`
  - transform the sequence into an array of vectors
 
 `iter_fasta(fasta_file)`
@@ -85,6 +85,7 @@ The initial test implies a fast recognition of similar sequences. But there are 
 
 Some ideas for future development:
  - add appropriate testing
+ - possible to combine more than two points into one hash (maybe `int(value * 10)` $\rightarrow$ 5bit $\rightarrow$ combine with upto 3 others in 20bit)
  - check how to find similarity by specific kidera factors without recreating the database (maybe just allow combinations between the specifics only)
 
 ---
