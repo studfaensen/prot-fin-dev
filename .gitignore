@@ -1,0 +1,12 @@
+materials/*.fa
+materials/mapman*
+experiments/*/*/*.pickle
+
+.*
+!.gitignore
+*/.*
+*/*/.*
+_*
+*/_*
+*/*/_*
+
