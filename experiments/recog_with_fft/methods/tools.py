@@ -46,13 +46,17 @@ def create_constellation(aa_vec: np.ndarray, window_size: int, n_peaks=0, window
     """
     overlap = kwargs.get("overlap", window_size // 2)
 
-    assert type(n_peaks) is int, "create_constellation: n_peaks must be integer, got: %s" % type(window_size)
+    assert type(n_peaks) is int, "create_constellation: n_peaks must be integer, got: %s" % type(n_peaks)
     assert type(overlap) is int, "create_constellation: Overlap must be integer, got: %s" % type(overlap)
     assert type(window_size) is int, "create_constellation: Window Size must be integer, got: %s" % type(window_size)
     assert n_peaks > -1, f"create_constellation: n_peaks must be positive, got: {n_peaks}"
     assert overlap > -1, f"create_constellation: Overlap must be positive, got: {overlap}"
     assert window_size > 0, f"create_constellation: Window Size must be true positive, got: {window_size}"
 
+    if len(aa_vec) < window_size:
+        window_size = len(aa_vec)
+    if overlap >= window_size:
+        overlap = 0
     freq, aa_indexes, stft = signal.stft(
         aa_vec,
         nperseg=window_size,
@@ -82,7 +86,6 @@ def create_constellation(aa_vec: np.ndarray, window_size: int, n_peaks=0, window
 
 
 def create_hashes(constellation_map, prot_id=None):
-    assert len(constellation_map) > 0
     hashes = {}
     # assume pre-sorted
     # Iterate the constellation

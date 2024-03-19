@@ -44,12 +44,18 @@ def find_match(fasta_file: str):
             database = pickle.load(open('database.pickle', 'rb'))
             prot_index_lookup = pickle.load(open("prot_index_lookup.pickle", "rb"))
             scores = score_prots(hashes, database, prot_index_lookup)
+            if len(scores):
+                filtered_scores = list(filter(lambda score: score[1][1]*score[1][2] == scores[0][1][1]*scores[0][1][2], scores))
+                scores = filtered_scores
 
             for prot_index, score in scores:
                 match_prot_description, _ = prot_index_lookup[prot_index]
                 print(f"{prot_index} - {match_prot_description}: Jaccard Index of {score[2]} : Score of {score[1]}")
 
-            print("\nSeems to be: %s - %s" % (scores[0][0], prot_index_lookup[scores[0][0]][0]))
+            if len(scores):
+                print("\nSeems to be: %s - %s" % (scores[0][0], prot_index_lookup[scores[0][0]][0]))
+            else:
+                print("\nNo matches found")
             print("\nInput:       %s - %s\n             %s" % (prot_id, description, seq))
             print("\nFound hashes: %d" % len(hashes))
 
@@ -86,6 +92,7 @@ def score_prots(hashes, database, prot_index_lookup):
         for offset, score in prot_scores_by_offset.items():
             if score > max_[1]:
                 max_ = (offset, score, jacc_sim_index)
+
         scores[match_prot_index] = max_
         # scores[match_prot_index] = (0, jacc_sim_index)
 
@@ -102,10 +109,8 @@ def create_db(prot_file: str):
 
     with open(prot_file) as f:
         for prot_id, description, seq in iter_fasta(f):
-            if (proc := len(prot_index_lookup)) == 1000:
-                break
-            if proc % 100 == 0:
-                print("%d%%" % int(proc / 10))
+            if (proc := len(prot_index_lookup)) % 40 == 0:
+                print("%s%%" % round(proc / 400, 1))
             hashes = hashes_from_seq(seq, prot_id)
             prot_index_lookup[prot_id] = (description, len(hashes))
             for hash_, index_prot_id_pair in hashes.items():
@@ -120,6 +125,8 @@ def create_db(prot_file: str):
 
 
 def hashes_from_seq(seq: str, prot_id=None):
+    if "O" in seq or "U" in seq:
+        return {}
     aa_vec = get_aa_vector(seq, KIDERA_FACTOR)
     constellation = create_constellation(aa_vec, WINDOW_SIZE, N_PEAKS, overlap=OVERLAP)
     return create_hashes(constellation, prot_id)
