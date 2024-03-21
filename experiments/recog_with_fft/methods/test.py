@@ -1,6 +1,5 @@
 from protfin import *
 from tools import *
-from sys import stderr
 import numpy as np
 
 
@@ -38,10 +37,6 @@ def main():
             eprint("%s: passed" % test.__name__)
         except Exception as err:
             eprint(f"{err}")
-
-
-def eprint(*args, **kwargs):
-    print(*args, file=stderr, **kwargs)
 
 
 if __name__ == '__main__':

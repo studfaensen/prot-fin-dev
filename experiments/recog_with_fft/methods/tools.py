@@ -1,7 +1,40 @@
-import pandas as pd
-import numpy as np
 from scipy import signal
 from protfin import MAX_ANKER_LENGTH
+from sys import stderr
+from tqdm import tqdm
+import pandas as pd
+import numpy as np
+import re
+
+
+class Fasta():
+    def __init__(self, file_name):
+        with open(file_name) as f:
+            self.file_name = file_name
+            self.protein_count = 0
+            while (buffer := f.read(1024 ** 2)):
+                self.protein_count += len(re.findall('^>', buffer, re.MULTILINE))
+            f.seek(0)
+
+            # validate ... TODO
+
+    def __len__(self):
+        return self.protein_count
+
+    def __iter__(self):
+        with open(self.file_name) as f:
+            for _ in tqdm(range(len(self))):
+                while True:
+                    prot_desc = f.readline()
+                    if prot_desc[0] == ">":
+                        break
+
+                prot_id, _, description = prot_desc.split(" ", 2)
+                seq = f.readline()
+                if seq[-1] == "\n":
+                    seq = seq[:-1]
+
+                yield prot_id[1:], description[:-1], seq
 
 
 def get_aa_vector(seq: str, factor: int, normalize=True, file="../../../materials/Amino_Acid_Kidera_Factors.csv") -> np.ndarray:
@@ -31,6 +64,9 @@ def get_aa_vector(seq: str, factor: int, normalize=True, file="../../../material
     }
     for s in special_aa:
         sel_factor[s] = sel_factor[special_aa[s]].to_numpy().mean()
+
+    sel_factor["O"] = 0
+    sel_factor["U"] = 0
 
     return np.array([sel_factor[i] for i in seq])
 
@@ -85,7 +121,7 @@ def create_constellation(aa_vec: np.ndarray, window_size: int, n_peaks=0, window
     return constellation_map
 
 
-def create_hashes(constellation_map, prot_id=None):
+def create_hashes(constellation_map, prot_id):
     hashes = {}
     # assume pre-sorted
     # Iterate the constellation
@@ -107,3 +143,11 @@ def create_hashes(constellation_map, prot_id=None):
             hash = int(freq) | (int(other_freq) << 10) | (int(diff) << 20)
             hashes[hash] = (index, prot_id)
     return hashes
+
+
+def eprint(*args, **kwargs):
+    print(*args, file=stderr, **kwargs)
+
+
+def warn(*args, **kwargs):
+    eprint("WARNING:", *args, **kwargs)

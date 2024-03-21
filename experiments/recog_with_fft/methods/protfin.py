@@ -37,27 +37,29 @@ def main():
 
 
 def find_match(fasta_file: str):
-    with open(fasta_file) as f:
-        for (prot_id, description, seq) in iter_fasta(f):
-            hashes = hashes_from_seq(seq)
+    for (prot_id, description, seq) in Fasta(fasta_file):
+        hashes = hashes_from_seq(seq, prot_id)
 
-            database = pickle.load(open('database.pickle', 'rb'))
-            prot_index_lookup = pickle.load(open("prot_index_lookup.pickle", "rb"))
-            scores = score_prots(hashes, database, prot_index_lookup)
-            if len(scores):
-                filtered_scores = list(filter(lambda score: score[1][1]*score[1][2] == scores[0][1][1]*scores[0][1][2], scores))
-                scores = filtered_scores
+        with open('database.pickle', 'rb') as f:
+            database = pickle.load(f)
+        with open('prot_index_lookup.pickle', 'rb') as f:
+            prot_index_lookup = pickle.load(f)
 
-            for prot_index, score in scores:
-                match_prot_description, _ = prot_index_lookup[prot_index]
-                print(f"{prot_index} - {match_prot_description}: Jaccard Index of {score[2]} : Score of {score[1]}")
+        scores = score_prots(hashes, database, prot_index_lookup)
+        if len(scores):
+            filtered_scores = list(filter(lambda score: score[1][1]*score[1][2] == scores[0][1][1]*scores[0][1][2], scores))
+            scores = filtered_scores
 
-            if len(scores):
-                print("\nSeems to be: %s - %s" % (scores[0][0], prot_index_lookup[scores[0][0]][0]))
-            else:
-                print("\nNo matches found")
-            print("\nInput:       %s - %s\n             %s" % (prot_id, description, seq))
-            print("\nFound hashes: %d" % len(hashes))
+        for prot_index, score in scores:
+            match_prot_description, _ = prot_index_lookup[prot_index]
+            print(f"{prot_index} - {match_prot_description}: Jaccard Index of {score[2]} : Score of {score[1]}")
+
+        if len(scores):
+            print("\nSeems to be: %s - %s" % (scores[0][0], prot_index_lookup[scores[0][0]][0]))
+        else:
+            print("\nNo matches found")
+        print("\nInput:       %s - %s\n             %s" % (prot_id, description, seq))
+        print("\nFound hashes: %d" % len(hashes))
 
 
 def score_prots(hashes, database, prot_index_lookup):
@@ -107,16 +109,13 @@ def create_db(prot_file: str):
     prot_index_lookup = {}
     database: Dict[str, List[Tuple[int, int]]] = {}
 
-    with open(prot_file) as f:
-        for prot_id, description, seq in iter_fasta(f):
-            if (proc := len(prot_index_lookup)) % 40 == 0:
-                print("%s%%" % round(proc / 400, 1))
-            hashes = hashes_from_seq(seq, prot_id)
-            prot_index_lookup[prot_id] = (description, len(hashes))
-            for hash_, index_prot_id_pair in hashes.items():
-                if hash_ not in database:
-                    database[hash_] = []
-                database[hash_].append(index_prot_id_pair)
+    for prot_id, description, seq in Fasta(prot_file):
+        hashes = hashes_from_seq(seq, prot_id)
+        prot_index_lookup[prot_id] = (description, len(hashes))
+        for hash_, index_prot_id_pair in hashes.items():
+            if hash_ not in database:
+                database[hash_] = []
+            database[hash_].append(index_prot_id_pair)
     # %%
     with open("database.pickle", 'wb') as db:
         pickle.dump(database, db, pickle.HIGHEST_PROTOCOL)
@@ -124,27 +123,13 @@ def create_db(prot_file: str):
         pickle.dump(prot_index_lookup, prots, pickle.HIGHEST_PROTOCOL)
 
 
-def hashes_from_seq(seq: str, prot_id=None):
+def hashes_from_seq(seq: str, prot_id):
     if "O" in seq or "U" in seq:
-        return {}
+        warn(f"{prot_id}: Values for Kidera factors of O and U are treated as zero")
+
     aa_vec = get_aa_vector(seq, KIDERA_FACTOR)
     constellation = create_constellation(aa_vec, WINDOW_SIZE, N_PEAKS, overlap=OVERLAP)
     return create_hashes(constellation, prot_id)
-
-
-def iter_fasta(fasta_file: TextIO) -> Tuple[str, str]:
-    while True:
-        prot_desc = fasta_file.readline()
-
-        if "\n" not in prot_desc:  # -> EOF
-            break
-        if prot_desc[0] == ">":
-            prot_id, _, description = prot_desc.split(" ", 2)
-            seq = fasta_file.readline()
-            if seq[-1] == "\n":
-                seq = seq[:-1]
-
-            yield prot_id[1:], description[:-1], seq
 
 
 if __name__ == '__main__':
