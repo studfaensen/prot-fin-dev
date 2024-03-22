@@ -1,1152 +1,902 @@
-A0A075QQ08 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 15
-A0A1D8EJF9 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 15
-A0A1U8GR65 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 15
-A0A3Q7FGP1 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 15
-A5HEH4 - SMARCL component *(AN3/GIF) of SWI/SNF chromatin remodeling complex & cofactor component *(GIF) of GRF-GIF transcriptional complex : Jaccard Index of 1.0 : Score of 15
-D3UW26 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 15
-F4I5N6 - GTPase effector *(RIC) : Jaccard Index of 1.0 : Score of 15
-F4IVV0 - GTPase effector *(RIC) : Jaccard Index of 1.0 : Score of 15
-I1GTC2 - not classified : Jaccard Index of 1.0 : Score of 15
-O22793 - RNA editing factor *(MORF) : Jaccard Index of 1.0 : Score of 15
-O48915 - regulatory protein *(NDR1) of effector-triggered immunity : Jaccard Index of 1.0 : Score of 15
-O78310 - copper/zinc superoxide dismutase *(CSD) & EC_1.15 oxidoreductase acting on superoxide as acceptor : Jaccard Index of 1.0 : Score of 15
-O80339 - subgroup ERF-VIII transcription factor : Jaccard Index of 1.0 : Score of 15
-O80340 - subgroup ERF-VIII transcription factor : Jaccard Index of 1.0 : Score of 15
-O80562 - halide methyltransferase *(HOL) : Jaccard Index of 1.0 : Score of 15
-O80575 - lumazine synthase *(RibE) & EC_2.5 transferase transferring alkyl or aryl group, other than methyl group : Jaccard Index of 1.0 : Score of 15
-O81045 - component *(p24-delta) of GPI-anchor protein cargo receptor complex : Jaccard Index of 1.0 : Score of 15
-O81223 - calcium-dependent SOS2 activator SOS3 & calcium sensor *(CBL) : Jaccard Index of 1.0 : Score of 15
-O81445 - calcium sensor *(CBL) : Jaccard Index of 1.0 : Score of 15
-O81481 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 15
-O82268 - plant-specific ALOG-type transcription factor : Jaccard Index of 1.0 : Score of 15
-O82481 - small GTPase *(ROP) : Jaccard Index of 1.0 : Score of 15
-O82743 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-O82794 - regulatory protein *(SVP/AGL24) of floral meristem identity control & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-P07505 - copper/zinc superoxide dismutase *(CSD) & EC_1.15 oxidoreductase acting on superoxide as acceptor : Jaccard Index of 1.0 : Score of 15
-P08980 - EC_1.10 oxidoreductase acting on diphenol or related substance as donor & Rieske iron-sulfur component *(PetC) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-P12653 - class phi glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-P27900 - MYB class-R2R3 subgroup-15 transcription factor : Jaccard Index of 1.0 : Score of 15
-P28012 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-P28185 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-P28186 - E-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-P28187 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-P31170 - class-P small heat-shock-responsive protein : Jaccard Index of 1.0 : Score of 15
-P41916 - GTPase *(Ran) : Jaccard Index of 1.0 : Score of 15
-P42742 - beta-type-6 component *(PBF) of 26S proteasome : Jaccard Index of 1.0 : Score of 15
-P43188 - adenylate kinase & EC_2.7 transferase transferring phosphorus-containing group : Jaccard Index of 1.0 : Score of 15
-P46420 - class phi glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-P46421 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-P58514 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-P85136 - EC_3.4 hydrolase acting on peptide bond (peptidase) & A1-class (Pepsin) protease : Jaccard Index of 1.0 : Score of 15
-P93830 - transcriptional repressor *(IAA/AUX) : Jaccard Index of 1.0 : Score of 15
-Q0DC89 - methionine R-enantiomer sulfoxide reductase *(MsrB) : Jaccard Index of 1.0 : Score of 15
-Q0GRC4 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 15
-Q0WP12 - halide methyltransferase *(HOL) : Jaccard Index of 1.0 : Score of 15
-Q2V2S7 - component *(NdhM) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q38832 - transcriptional repressor *(IAA/AUX) : Jaccard Index of 1.0 : Score of 15
-Q38838 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q42539 - protein-L-isoaspartate methyltransferase & EC_2.1 transferase transferring one-carbon group : Jaccard Index of 1.0 : Score of 15
-Q43209 - protein-L-isoaspartate methyltransferase & EC_2.1 transferase transferring one-carbon group : Jaccard Index of 1.0 : Score of 15
-Q4QXS7 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 15
-Q4VQY1 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 15
-Q4VQY3 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 15
-Q5BPS0 - cytokinin phosphoribohydrolase *(LOG) : Jaccard Index of 1.0 : Score of 15
-Q66UV4 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 15
-Q69K55 - EC_4.1 carbon-carbon lyase & phosphopantothenoylcysteine decarboxylase : Jaccard Index of 1.0 : Score of 15
-Q6AVI1 - SMARCL component *(AN3/GIF) of SWI/SNF chromatin remodeling complex & cofactor component *(GIF) of GRF-GIF transcriptional complex : Jaccard Index of 1.0 : Score of 15
-Q6AWU6 - halide methyltransferase *(HOL) : Jaccard Index of 1.0 : Score of 15
-Q6NLA5 - phosphatidate phosphatase *(LPP-gamma) & EC_3.1 hydrolase acting on ester bond : Jaccard Index of 1.0 : Score of 15
-Q7XAQ6 - bHLH-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q7XPM8 - TIFY-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q84JH7 - sirohydrochlorin ferrochelatase : Jaccard Index of 1.0 : Score of 15
-Q84MC2 - cytokinin phosphoribohydrolase *(LOG) : Jaccard Index of 1.0 : Score of 15
-Q84VQ4 - component *(NdhU) of NDH electron donor-binding subcomplex E : Jaccard Index of 1.0 : Score of 15
-Q8GTS1 - bZIP class-F transcription factor & zinc cation sensor protein *(bZIP19/bZIP23)) : Jaccard Index of 1.0 : Score of 15
-Q8GW29 - cytokinin phosphoribohydrolase *(LOG) : Jaccard Index of 1.0 : Score of 15
-Q8GY54 - gamma-glutamyl cyclotransferase : Jaccard Index of 1.0 : Score of 15
-Q8GYX0 - NDR-activator component *(MOB1/2) of RAM signalling pathway : Jaccard Index of 1.0 : Score of 15
-Q8L7C9 - glutathione S-transferase & class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q8L983 - night-time repressor *(COR27) : Jaccard Index of 1.0 : Score of 15
-Q8LAS7 - calcium sensor *(CBL) : Jaccard Index of 1.0 : Score of 15
-Q8LBA6 - phosphatidylinositol synthase *(PIS) & EC_2.7 transferase transferring phosphorus-containing group : Jaccard Index of 1.0 : Score of 15
-Q8LDC8 - subgroup ERF-IX transcription factor : Jaccard Index of 1.0 : Score of 15
-Q8LDL0 - protein involved in PS-II assembly *(HHL1) : Jaccard Index of 1.0 : Score of 15
-Q8LEM7 - calcium sensor *(CBL) : Jaccard Index of 1.0 : Score of 15
-Q8LET2 - not classified : Jaccard Index of 1.0 : Score of 15
-Q8RWM6 - component *(p24-delta) of GPI-anchor protein cargo receptor complex : Jaccard Index of 1.0 : Score of 15
-Q8RXD5 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-Q8S8E3 - receptor component *(PYL/RCAR) of cytoplasm-localized abscisic acid receptor complex : Jaccard Index of 1.0 : Score of 15
-Q8VY92 - component *(p24-delta) of GPI-anchor protein cargo receptor complex : Jaccard Index of 1.0 : Score of 15
-Q8VZ52 - autophagosome E2 ATG12-ubiquitin-conjugating enzyme *(ATG10) : Jaccard Index of 1.0 : Score of 15
-Q8VZB2 - 3-hydroxyacyl-CoA dehydratase *(HCD) : Jaccard Index of 1.0 : Score of 15
-Q8VZS8 - receptor component *(PYL/RCAR) of cytoplasm-localized abscisic acid receptor complex : Jaccard Index of 1.0 : Score of 15
-Q93V66 - fatty acid export protein *(FAX) : Jaccard Index of 1.0 : Score of 15
-Q93VH6 - cofactor component *(GIF) of GRF-GIF transcriptional complex : Jaccard Index of 1.0 : Score of 15
-Q93VT9 - component *(uL16) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 15
-Q93WE4 - E3 ubiquitin ligase *(SINA) : Jaccard Index of 1.0 : Score of 15
-Q93ZE8 - component *(SDF2) of ERdj3B-BiP-SDF2 chaperone complex : Jaccard Index of 1.0 : Score of 15
-Q94AU2 - R-type SEC22-group component of SNARE longin membrane fusion complex : Jaccard Index of 1.0 : Score of 15
-Q94CV1 - transcriptional co-regulator *(OFP) : Jaccard Index of 1.0 : Score of 15
-Q96262 - phosphoinositide signalling effector *(PCaP) : Jaccard Index of 1.0 : Score of 15
-Q96289 - C2H2-type subclass ZAT transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9ASY9 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9C8Z9 - bHLH-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9CAF2 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9FE46 - class phi glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q9FEN9 - component *(SHL/EBS) of PRC1 complex : Jaccard Index of 1.0 : Score of 15
-Q9FHI1 - NDR-activator component *(MOB1/2) of RAM signalling pathway : Jaccard Index of 1.0 : Score of 15
-Q9FUS6 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q9FUS8 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q9FY89 - component *(VPS20) of ESCRT-III complex : Jaccard Index of 1.0 : Score of 15
-Q9LFF9 - cytosolic pyrophosphatase : Jaccard Index of 1.0 : Score of 15
-Q9LFP1 - R-type VAMP7-group component of SNARE longin membrane fusion complex : Jaccard Index of 1.0 : Score of 15
-Q9LH50 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q9LJB7 - BBX class-V transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9LK95 - MYB class-R2R3 subgroup-19/20 transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9LS09 - histone chaperone *(ASF1) : Jaccard Index of 1.0 : Score of 15
-Q9LSF6 - iron cation transporter *(VTL) : Jaccard Index of 1.0 : Score of 15
-Q9LTB8 - calcium sensor *(CBL) : Jaccard Index of 1.0 : Score of 15
-Q9LTJ1 - methylation reader *(MBD5-6) : Jaccard Index of 1.0 : Score of 15
-Q9LU63 - assembly factor involved in RuBisCo assembly *(RAF2) : Jaccard Index of 1.0 : Score of 15
-Q9LU86 - atypical 2-Cys peroxiredoxin *(PrxQ) & EC_1.11 oxidoreductase acting on peroxide as acceptor : Jaccard Index of 1.0 : Score of 15
-Q9LVP9 - Qb-type VTI-group component of SNARE membrane fusion complex : Jaccard Index of 1.0 : Score of 15
-Q9LVW6 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9LXD8 - bHLH-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9LY15 - methionine S-enantiomer sulfoxide reductase *(MsrA) & EC_1.8 oxidoreductase acting on sulfur group of donor : Jaccard Index of 1.0 : Score of 15
-Q9M0L0 - transcription factor *(CBF/DREB1) & subgroup ERF-III transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9SA07 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9SB61 - zf-HD-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9SCY3 - component *(PnsL4) of NDH lumen subcomplex L & peptidyl-prolyl cis-trans isomerase *(FKBP13) : Jaccard Index of 1.0 : Score of 15
-Q9SE33 - regulatory protein *(RAR1) of effector-triggered immunity : Jaccard Index of 1.0 : Score of 15
-Q9SEL5 - Qb-type VTI-group component of SNARE membrane fusion complex : Jaccard Index of 1.0 : Score of 15
-Q9SEL6 - Qb-type VTI-group component of SNARE membrane fusion complex : Jaccard Index of 1.0 : Score of 15
-Q9SGH4 - component *(PnsL3/PQL2) of NDH lumen subcomplex L : Jaccard Index of 1.0 : Score of 15
-Q9SI19 - SRS-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9SIT9 - component *(NF-YB) of NF-Y transcription factor complex : Jaccard Index of 1.0 : Score of 15
-Q9SJZ6 - component *(MED18) of head module of MEDIATOR transcription co-activator complex : Jaccard Index of 1.0 : Score of 15
-Q9SKI2 - component *(VPS2/CHMP2) of ESCRT-III complex : Jaccard Index of 1.0 : Score of 15
-Q9SMQ6 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q9SPG9 - MYB class-R2R3 subgroup-19/20 transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9STY0 - peroxisomal fission factor *(PEX11) : Jaccard Index of 1.0 : Score of 15
-Q9SZE4 - component *(VPS32/SNF7) of ESCRT-III complex : Jaccard Index of 1.0 : Score of 15
-Q9XFM6 - Cyt-P450 hydroxylase scaffold protein *(MSBP) : Jaccard Index of 1.0 : Score of 15
-Q9XFT3 - component *(PsbQ) of PS-II oxygen-evolving center : Jaccard Index of 1.0 : Score of 15
-Q9ZQI2 - lignin polymerization scaffold protein *(CASP) : Jaccard Index of 1.0 : Score of 15
-Q9ZR03 - EC_1.10 oxidoreductase acting on diphenol or related substance as donor & Rieske iron-sulfur component *(PetC) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q9ZRW8 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q9ZTW3 - R-type component *(VAMP721/VAMP722) of SNARE cell-plate vesicle fusion complex & R-type VAMP7-group component of SNARE longin membrane fusion complex : Jaccard Index of 1.0 : Score of 15
-Q9ZVN4 - atypical PTP phosphatase *(PFA-DSP) : Jaccard Index of 1.0 : Score of 15
-Q9ZVQ3 - maleylacetoacetate isomerase *(MAAI) & class zeta glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-A0A217EJJ0 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-A0A2R6S148 - MYB class-R2R3 subgroup-6 transcription factor : Jaccard Index of 1.0 : Score of 15
-A2IBF8 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-B6TPF2 - not classified : Jaccard Index of 1.0 : Score of 15
-F4I1G5 - not classified : Jaccard Index of 1.0 : Score of 15
-F4IE21 - regulatory protein *(FLZ) of SnRK1 complex : Jaccard Index of 1.0 : Score of 15
-F4J4Y0 - component *(p24-delta) of GPI-anchor protein cargo receptor complex : Jaccard Index of 1.0 : Score of 15
-F6I457 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-M1ETA5 - MYB class-R2R3 subgroup-6 transcription factor : Jaccard Index of 1.0 : Score of 15
-O04005 - 1-Cys peroxiredoxin (1-CysPrx) & EC_1.11 oxidoreductase acting on peroxide as acceptor : Jaccard Index of 1.0 : Score of 15
-O04486 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-O22160 - not classified : Jaccard Index of 1.0 : Score of 15
-O22870 - peptidyl-prolyl cis-trans isomerase *(FKBP16-3) : Jaccard Index of 1.0 : Score of 15
-O23049 - component *(uL6c) of large plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-O24466 - E-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-O49377 - R-type VAMP7-group component of SNARE longin membrane fusion complex : Jaccard Index of 1.0 : Score of 15
-O49605 - peptidyl-prolyl cis-trans isomerase *(CYP21-1) & EC_5.2 cis-trans-isomerase : Jaccard Index of 1.0 : Score of 15
-O65708 - not classified : Jaccard Index of 1.0 : Score of 15
-O80323 - T2-type RNase *(RNS) : Jaccard Index of 1.0 : Score of 15
-O80324 - T2-type RNase *(RNS) : Jaccard Index of 1.0 : Score of 15
-O80325 - T2-type RNase *(RNS) : Jaccard Index of 1.0 : Score of 15
-O80365 - A-type ARR response regulator of cytokinin signalling : Jaccard Index of 1.0 : Score of 15
-O80807 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-O80839 - LIM-type transcription factor : Jaccard Index of 1.0 : Score of 15
-O81323 - AS2/LOB-type transcription factor : Jaccard Index of 1.0 : Score of 15
-O82259 - actin-binding protein *(NET3) & actin-cytoskeleton contact protein (NET3) of ER-cytoskeleton-PM interface : Jaccard Index of 1.0 : Score of 15
-O82451 - class phi glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-O98679 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-P01070 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-P02876 - not classified : Jaccard Index of 1.0 : Score of 15
-P04907 - class phi glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-P06670 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-P09595 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-P0C343 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-P0DKI0 - membrane-anchor component *(SDH3) of succinate dehydrogenase complex : Jaccard Index of 1.0 : Score of 15
-P0DKI1 - membrane-anchor component *(SDH3) of succinate dehydrogenase complex : Jaccard Index of 1.0 : Score of 15
-P13087 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-P15290 - not classified : Jaccard Index of 1.0 : Score of 15
-P21216 - cytosolic pyrophosphatase : Jaccard Index of 1.0 : Score of 15
-P26759 - not classified : Jaccard Index of 1.0 : Score of 15
-P29557 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 15
-P30361 - EC_1.10 oxidoreductase acting on diphenol or related substance as donor & Rieske iron-sulfur component *(PetC) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-P30941 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-P31164 - component *(uL11c) of large plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-P32110 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-P32761 - not classified : Jaccard Index of 1.0 : Score of 15
-P41917 - GTPase *(Ran) : Jaccard Index of 1.0 : Score of 15
-P45851 - not classified : Jaccard Index of 1.0 : Score of 15
-P51412 - component *(bL21c) of large plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-P56756 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-P60994 - EC_3.4 hydrolase acting on peptide bond (peptidase) : Jaccard Index of 1.0 : Score of 15
-P80356 - not classified : Jaccard Index of 1.0 : Score of 15
-P80969 - polyamine N-acetyltransferase *(NATA) : Jaccard Index of 1.0 : Score of 15
-P82193 - component *(uL6c) of large plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-P84346 - EC_3.4 hydrolase acting on peptide bond (peptidase) : Jaccard Index of 1.0 : Score of 15
-P84527 - not classified : Jaccard Index of 1.0 : Score of 15
-P85261 - not classified : Jaccard Index of 1.0 : Score of 15
-P92996 - not classified : Jaccard Index of 1.0 : Score of 15
-P94014 - not classified : Jaccard Index of 1.0 : Score of 15
-Q00471 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q01796 - T2-type RNase *(RNS) : Jaccard Index of 1.0 : Score of 15
-Q02585 - EC_1.10 oxidoreductase acting on diphenol or related substance as donor & Rieske iron-sulfur component *(PetC) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q0WTY4 - component *(VPS2/CHMP2) of ESCRT-III complex : Jaccard Index of 1.0 : Score of 15
-Q1G3K8 - GTPase effector *(RIC) : Jaccard Index of 1.0 : Score of 15
-Q2QR54 - TDL precursor polypeptide : Jaccard Index of 1.0 : Score of 15
-Q39222 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q40477 - subgroup ERF-VIII transcription factor : Jaccard Index of 1.0 : Score of 15
-Q40703 - component *(PISTILLATA) of AP3-PISTILLATA organ-identity heterodimer & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q40965 - T2-type RNase *(RNS) : Jaccard Index of 1.0 : Score of 15
-Q40966 - T2-type RNase *(RNS) : Jaccard Index of 1.0 : Score of 15
-Q42577 - component *(NQO6/PSST) of NADH dehydrogenase electron output (module Q) : Jaccard Index of 1.0 : Score of 15
-Q42599 - component *(NQO9/TYKY) of NADH dehydrogenase electron output (module Q) : Jaccard Index of 1.0 : Score of 15
-Q42687 - subunit delta of peripheral CF1 subcomplex of ATP synthase complex : Jaccard Index of 1.0 : Score of 15
-Q5ZEG0 - neoxanthin synthase *(ABA4) & neoxanthin synthase *(ABA4) : Jaccard Index of 1.0 : Score of 15
-Q67VP4 - small GTPase *(ROP) : Jaccard Index of 1.0 : Score of 15
-Q69GY7 - EC_1.10 oxidoreductase acting on diphenol or related substance as donor & Rieske iron-sulfur component *(PetC) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q69S39 - EC_1.10 oxidoreductase acting on diphenol or related substance as donor & Rieske iron-sulfur component *(PetC) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q6EPN6 - 2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase & EC_4.6 phosphorus-oxygen lyase : Jaccard Index of 1.0 : Score of 15
-Q6IDL4 - component *(p24-delta) of GPI-anchor protein cargo receptor complex : Jaccard Index of 1.0 : Score of 15
-Q6K7H2 - uridylate kinase *(UMK) & EC_2.7 transferase transferring phosphorus-containing group : Jaccard Index of 1.0 : Score of 15
-Q6NKP9 - deubiquitinase *(AMSH) : Jaccard Index of 1.0 : Score of 15
-Q6NML0 - RING-H2-class ATL-subclass E3 ubiquitin ligase : Jaccard Index of 1.0 : Score of 15
-Q6NPF4 - component *(MED20) of head module of MEDIATOR transcription co-activator complex : Jaccard Index of 1.0 : Score of 15
-Q6NQP5 - component *(SLD5) of GINS DNA replication fork maintenance complex : Jaccard Index of 1.0 : Score of 15
-Q6QPJ6 - atypical 2-Cys peroxiredoxin *(PrxQ) & EC_1.11 oxidoreductase acting on peroxide as acceptor : Jaccard Index of 1.0 : Score of 15
-Q75GY0 - not classified : Jaccard Index of 1.0 : Score of 15
-Q7X9A6 - EC_1.10 oxidoreductase acting on diphenol or related substance as donor & Rieske iron-sulfur component *(PetC) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q84J70 - C2H2 subclass Di19 transcription factor : Jaccard Index of 1.0 : Score of 15
-Q84U09 - not classified : Jaccard Index of 1.0 : Score of 15
-Q8GRN0 - regulatory protein *(FLZ) of SnRK1 complex : Jaccard Index of 1.0 : Score of 15
-Q8GXN6 - component *(VPS20) of ESCRT-III complex : Jaccard Index of 1.0 : Score of 15
-Q8H156 - GTPase *(Ran) : Jaccard Index of 1.0 : Score of 15
-Q8L8B8 - cytokinin phosphoribohydrolase *(LOG) : Jaccard Index of 1.0 : Score of 15
-Q8L8W5 - peptidyl-prolyl cis-trans isomerase *(ROC7) & EC_5.2 cis-trans-isomerase : Jaccard Index of 1.0 : Score of 15
-Q8L9K1 - subgroup ERF-IX transcription factor : Jaccard Index of 1.0 : Score of 15
-Q8LBB7 - cytokinin phosphoribohydrolase *(LOG) : Jaccard Index of 1.0 : Score of 15
-Q8LEK4 - atypical thioredoxin *(ACHT) : Jaccard Index of 1.0 : Score of 15
-Q8LFP9 - neoxanthin synthase *(ABA4) & neoxanthin synthase *(ABA4) : Jaccard Index of 1.0 : Score of 15
-Q8LGD5 - not classified : Jaccard Index of 1.0 : Score of 15
-Q8RUN2 - cytokinin phosphoribohydrolase *(LOG) : Jaccard Index of 1.0 : Score of 15
-Q93V72 - not classified : Jaccard Index of 1.0 : Score of 15
-Q93VI4 - regulatory protein of poly(A) RNA polymerase activity : Jaccard Index of 1.0 : Score of 15
-Q93W22 - component *(uL16) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 15
-Q940P5 - not classified : Jaccard Index of 1.0 : Score of 15
-Q944S9 - component *(AP3) of AP3-PISTILLATA organ-identity heterodimer & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q949G5 - NDR-activator component *(MOB1/2) of RAM signalling pathway : Jaccard Index of 1.0 : Score of 15
-Q94AL8 - not classified : Jaccard Index of 1.0 : Score of 15
-Q96276 - MYB class-R2R3 subgroup-15 transcription factor : Jaccard Index of 1.0 : Score of 15
-Q96283 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q9FFB3 - component *(VPS24) of ESCRT-III complex : Jaccard Index of 1.0 : Score of 15
-Q9FI03 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9FIF9 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q9FJ93 - transcription factor *(CBF/DREB1) & subgroup ERF-III transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9FK28 - Membrin-group Qb-type SNARE protein : Jaccard Index of 1.0 : Score of 15
-Q9FKB5 - cyclin-dependent kinase inhibitor *(KRP/ICK) : Jaccard Index of 1.0 : Score of 15
-Q9FKJ9 - zf-HD-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9FNH4 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9FUQ7 - calcium sensor *(CBL) : Jaccard Index of 1.0 : Score of 15
-Q9FX64 - component *(HOP2) of HOP2-MND1 presynaptic filament stabilization complex : Jaccard Index of 1.0 : Score of 15
-Q9FX83 - component *(NQO9/TYKY) of NADH dehydrogenase electron output (module Q) : Jaccard Index of 1.0 : Score of 15
-Q9LFH3 - cytokinin phosphoribohydrolase *(LOG) : Jaccard Index of 1.0 : Score of 15
-Q9LHS9 - C2H2 subclass ZFP transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9LIL4 - component *(p24-beta) of GPI-anchor protein cargo receptor complex : Jaccard Index of 1.0 : Score of 15
-Q9LJV9 - component *(p24-delta) of GPI-anchor protein cargo receptor complex : Jaccard Index of 1.0 : Score of 15
-Q9LNW1 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q9LQY3 - component *(p24-delta) of GPI-anchor protein cargo receptor complex : Jaccard Index of 1.0 : Score of 15
-Q9LVR0 - HD-ZIP I/II-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9LX90 - regulatory protein of poly(A) RNA polymerase activity : Jaccard Index of 1.0 : Score of 15
-Q9LZD4 - E-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q9M1J2 - component *(NRPE5) of RNA polymerase V complex : Jaccard Index of 1.0 : Score of 15
-Q9S8P4 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9SCX3 - component *(eEF1B-beta/-delta) of eEF1B eEF1A-GDP-recycling complex : Jaccard Index of 1.0 : Score of 15
-Q9SE42 - EC_5.1 racemase or epimerase & ribulose-phosphate 3-epimerase : Jaccard Index of 1.0 : Score of 15
-Q9SF91 - E-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q9SHE8 - component *(PsaF) of PS-I complex : Jaccard Index of 1.0 : Score of 15
-Q9SHH6 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q9SHH8 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q9SMB8 - polyamine N-acetyltransferase *(NATA) : Jaccard Index of 1.0 : Score of 15
-Q9SN27 - RING-H2-class ATL-subclass E3 ubiquitin ligase : Jaccard Index of 1.0 : Score of 15
-Q9SN35 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q9SRX2 - component *(eL19) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 15
-Q9SUI4 - component *(PsaL) of PS-I complex : Jaccard Index of 1.0 : Score of 15
-Q9SYS6 - transcription factor *(CBF/DREB1) & subgroup ERF-III transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9XIB5 - REM-type transcription factor & regulatory protein *(VRN1) of PRC1 complex : Jaccard Index of 1.0 : Score of 15
-Q9XJ66 - regulatory protein *(SVP/AGL24) of floral meristem identity control & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9ZV05 - polyamine N-acetyltransferase *(NATA) : Jaccard Index of 1.0 : Score of 15
-Q9ZVB9 - component *(NRPE5) of RNA polymerase V complex : Jaccard Index of 1.0 : Score of 15
-Q9ZVL3 - component *(NF-YC) of NF-Y transcription factor complex : Jaccard Index of 1.0 : Score of 15
-R4HYA4 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 15
-A0A0Q3PY21 - not classified : Jaccard Index of 1.0 : Score of 15
-A0A2U7XUH7 - not classified : Jaccard Index of 1.0 : Score of 15
-A0ZZ39 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-A1E9S8 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-A1E9U9 - EC_3.4 hydrolase acting on peptide bond (peptidase) & proteolytic core component *(ClpP1/3-6) of chloroplast Clp-type protease complex : Jaccard Index of 1.0 : Score of 15
-A1E9V4 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-A1EA12 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-A1EA33 - EC_3.4 hydrolase acting on peptide bond (peptidase) & proteolytic core component *(ClpP1/3-6) of chloroplast Clp-type protease complex : Jaccard Index of 1.0 : Score of 15
-A1XFV9 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-A1XGP2 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-A2WZI4 - subgroup ERF-III transcription factor : Jaccard Index of 1.0 : Score of 15
-A2X8Q3 - cytosolic pyrophosphatase : Jaccard Index of 1.0 : Score of 15
-A2XVZ1 - component *(NdhM) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-A2YQK9 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-A4D998 - regulatory protein (CIB) of blue light perception & bHLH-type transcription factor : Jaccard Index of 1.0 : Score of 15
-A4GYR4 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-A4QJT7 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-A4QK22 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-A4QKA9 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-A4QKJ6 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-A4QKT5 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-A4QL23 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-A4QLB0 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-A4QLJ8 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-A4QLT7 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-A6MMC6 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-A6MML1 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-A6MMU8 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-A6YGA2 - component *(uS4c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A7M927 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-A7M993 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-A8IW99 - not classified : Jaccard Index of 1.0 : Score of 15
-A8Y9H4 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-A9L9A0 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-A9QC82 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-B0Z4L3 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-B0Z4U7 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-B0Z531 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-B0Z5B5 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-B1A939 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-B1NWF4 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-B2LMJ7 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-B2XWK8 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-B3TN55 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-B7E7M8 - cytokinin phosphoribohydrolase *(LOG) : Jaccard Index of 1.0 : Score of 15
-B8ANR3 - outer membrane porin *(OEP24) : Jaccard Index of 1.0 : Score of 15
-B9F2L1 - phosphopantetheine adenylyl transferase : Jaccard Index of 1.0 : Score of 15
-D4AEP7 - not classified : Jaccard Index of 1.0 : Score of 15
-E3SU11 - not classified : Jaccard Index of 1.0 : Score of 15
-F4I8R6 - transcriptional co-regulator *(OFP) : Jaccard Index of 1.0 : Score of 15
-F4IA73 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-F4IBJ3 - not classified : Jaccard Index of 1.0 : Score of 15
-F4JIG1 - not classified : Jaccard Index of 1.0 : Score of 15
-F4K265 - accessory component *(ATG101) of ATG1-13 autophagosome assembly control complex : Jaccard Index of 1.0 : Score of 15
-F6HQ26 - component *(U1C) of U1 snRNP complex : Jaccard Index of 1.0 : Score of 15
-O04011 - not classified : Jaccard Index of 1.0 : Score of 15
-O04259 - C2H2 subclass Di19 transcription factor : Jaccard Index of 1.0 : Score of 15
-O04997 - copper/zinc superoxide dismutase *(CSD) & EC_1.15 oxidoreductase acting on superoxide as acceptor : Jaccard Index of 1.0 : Score of 15
-O22255 - RING-H2-class ATL-subclass E3 ubiquitin ligase : Jaccard Index of 1.0 : Score of 15
-O22773 - photosynthetic acclimation MPH2 acclimation factor : Jaccard Index of 1.0 : Score of 15
-O22845 - calcium sensor *(CML) : Jaccard Index of 1.0 : Score of 15
-O22944 - Nt-glutamine amidase *(NTAQ) : Jaccard Index of 1.0 : Score of 15
-O23208 - HD-ZIP I/II-type transcription factor : Jaccard Index of 1.0 : Score of 15
-O23429 - R-type component *(VAMP721/VAMP722) of SNARE cell-plate vesicle fusion complex & R-type VAMP7-group component of SNARE longin membrane fusion complex : Jaccard Index of 1.0 : Score of 15
-O23979 - cytosolic pyrophosphatase : Jaccard Index of 1.0 : Score of 15
-O48556 - cytosolic pyrophosphatase : Jaccard Index of 1.0 : Score of 15
-O48962 - sterol delta8-delta7 isomerase & EC_5.3 intramolecular oxidoreductase : Jaccard Index of 1.0 : Score of 15
-O49513 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-O64464 - beta-type-6 component *(PBF) of 26S proteasome : Jaccard Index of 1.0 : Score of 15
-O65252 - not classified : Jaccard Index of 1.0 : Score of 15
-O65373 - not classified : Jaccard Index of 1.0 : Score of 15
-O65857 - class phi glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-O80322 - T2-type RNase *(RNS) : Jaccard Index of 1.0 : Score of 15
-O80362 - component *(uL10) of organelle large ribosomal-subunit proteome & component *(uL10c) of large plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-O80915 - B-G-class Rab-GDF protein : Jaccard Index of 1.0 : Score of 15
-O81482 - component *(eIF-iso4E) of eIF-iso4F unwinding complex : Jaccard Index of 1.0 : Score of 15
-O82083 - not classified : Jaccard Index of 1.0 : Score of 15
-O82286 - BBR/BPC-type transcription factor : Jaccard Index of 1.0 : Score of 15
-O82353 - RING-H2-class ATL-subclass E3 ubiquitin ligase : Jaccard Index of 1.0 : Score of 15
-O82597 - cytosolic pyrophosphatase : Jaccard Index of 1.0 : Score of 15
-O82711 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-O82793 - cytosolic pyrophosphatase : Jaccard Index of 1.0 : Score of 15
-P00165 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-P04706 - not classified : Jaccard Index of 1.0 : Score of 15
-P05642 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-P06247 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-P06409 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-P09004 - subunit b of ATP synthase membrane MF0 subcomplex : Jaccard Index of 1.0 : Score of 15
-P0C312 - EC_3.4 hydrolase acting on peptide bond (peptidase) & proteolytic core component *(ClpP1/3-6) of chloroplast Clp-type protease complex : Jaccard Index of 1.0 : Score of 15
-P0C313 - EC_3.4 hydrolase acting on peptide bond (peptidase) & proteolytic core component *(ClpP1/3-6) of chloroplast Clp-type protease complex : Jaccard Index of 1.0 : Score of 15
-P0C314 - EC_3.4 hydrolase acting on peptide bond (peptidase) & proteolytic core component *(ClpP1/3-6) of chloroplast Clp-type protease complex : Jaccard Index of 1.0 : Score of 15
-P0C315 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-P0C316 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-P0C341 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-P0C342 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-P0C5C8 - 1-Cys peroxiredoxin (1-CysPrx) & EC_1.11 oxidoreductase acting on peroxide as acceptor : Jaccard Index of 1.0 : Score of 15
-P0C5C9 - 1-Cys peroxiredoxin (1-CysPrx) & EC_1.11 oxidoreductase acting on peroxide as acceptor : Jaccard Index of 1.0 : Score of 15
-P0C5D1 - 1-Cys peroxiredoxin (1-CysPrx) & EC_1.11 oxidoreductase acting on peroxide as acceptor : Jaccard Index of 1.0 : Score of 15
-P0C5D4 - atypical 2-Cys peroxiredoxin *(PrxQ) & EC_1.11 oxidoreductase acting on peroxide as acceptor : Jaccard Index of 1.0 : Score of 15
-P0C5D5 - atypical 2-Cys peroxiredoxin *(PrxQ) & EC_1.11 oxidoreductase acting on peroxide as acceptor : Jaccard Index of 1.0 : Score of 15
-P0CJ65 - HD-ZIP I/II-type transcription factor : Jaccard Index of 1.0 : Score of 15
-P10792 - copper/zinc superoxide dismutase *(CSD) & EC_1.15 oxidoreductase acting on superoxide as acceptor : Jaccard Index of 1.0 : Score of 15
-P12123 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-P12356 - component *(PsaF) of PS-I complex : Jaccard Index of 1.0 : Score of 15
-P14831 - copper/zinc superoxide dismutase *(CSD) & EC_1.15 oxidoreductase acting on superoxide as acceptor : Jaccard Index of 1.0 : Score of 15
-P17979 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-P19892 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-P20347 - not classified : Jaccard Index of 1.0 : Score of 15
-P24064 - EC_3.4 hydrolase acting on peptide bond (peptidase) & proteolytic core component *(ClpP1/3-6) of chloroplast Clp-type protease complex : Jaccard Index of 1.0 : Score of 15
-P25317 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-P25766 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-P26291 - EC_1.10 oxidoreductase acting on diphenol or related substance as donor & Rieske iron-sulfur component *(PetC) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-P26304 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-P26567 - EC_3.4 hydrolase acting on peptide bond (peptidase) & proteolytic core component *(ClpP1/3-6) of chloroplast Clp-type protease complex : Jaccard Index of 1.0 : Score of 15
-P28342 - class zeta glutathione S-transferase & maleylacetoacetate isomerase *(MAAI) : Jaccard Index of 1.0 : Score of 15
-P29530 - Oleosin-type lipid droplet structural protein : Jaccard Index of 1.0 : Score of 15
-P29531 - Oleosin-type lipid droplet structural protein : Jaccard Index of 1.0 : Score of 15
-P29545 - component *(eEF1B-beta/-delta) of eEF1B eEF1A-GDP-recycling complex : Jaccard Index of 1.0 : Score of 15
-P29546 - component *(eEF1B-beta/-delta) of eEF1B eEF1A-GDP-recycling complex : Jaccard Index of 1.0 : Score of 15
-P30109 - class phi glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-P30188 - calcium sensor *(CML) : Jaccard Index of 1.0 : Score of 15
-P31853 - subunit b_ of membrane CF0 subcomplex of ATP synthase complex : Jaccard Index of 1.0 : Score of 15
-P32111 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-P33679 - not classified : Jaccard Index of 1.0 : Score of 15
-P40393 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-P42027 - component *(NQO6/PSST) of NADH dehydrogenase electron output (module Q) : Jaccard Index of 1.0 : Score of 15
-P42769 - class phi glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-P42815 - T2-type RNase *(RNS) : Jaccard Index of 1.0 : Score of 15
-P45853 - not classified : Jaccard Index of 1.0 : Score of 15
-P46417 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-P46440 - class phi glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-P47192 - R-type component *(VAMP721/VAMP722) of SNARE cell-plate vesicle fusion complex & R-type VAMP7-group component of SNARE longin membrane fusion complex : Jaccard Index of 1.0 : Score of 15
-P48599 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 15
-P48883 - EC_3.4 hydrolase acting on peptide bond (peptidase) & proteolytic core component *(ClpP1/3-6) of chloroplast Clp-type protease complex : Jaccard Index of 1.0 : Score of 15
-P49332 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-P50471 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-P51109 - EC_1.1 oxidoreductase acting on CH-OH group of donor : Jaccard Index of 1.0 : Score of 15
-P52572 - 1-Cys peroxiredoxin (1-CysPrx) & EC_1.11 oxidoreductase acting on peroxide as acceptor : Jaccard Index of 1.0 : Score of 15
-P52574 - 1-Cys peroxiredoxin (1-CysPrx) & EC_1.11 oxidoreductase acting on peroxide as acceptor : Jaccard Index of 1.0 : Score of 15
-P52766 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-P56773 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-P56798 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-P58519 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-P59230 - component *(uL1) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 15
-P59231 - component *(uL1) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 15
-P60161 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-P60162 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-P81295 - not classified : Jaccard Index of 1.0 : Score of 15
-P81370 - not classified : Jaccard Index of 1.0 : Score of 15
-P82474 - EC_3.4 hydrolase acting on peptide bond (peptidase) : Jaccard Index of 1.0 : Score of 15
-P83958 - not classified : Jaccard Index of 1.0 : Score of 15
-P92248 - not classified : Jaccard Index of 1.0 : Score of 15
-P92251 - not classified : Jaccard Index of 1.0 : Score of 15
-P92985 - Ran-activation accessory protein *(RanBP1) : Jaccard Index of 1.0 : Score of 15
-P92995 - not classified : Jaccard Index of 1.0 : Score of 15
-P92997 - not classified : Jaccard Index of 1.0 : Score of 15
-P92998 - not classified : Jaccard Index of 1.0 : Score of 15
-P92999 - not classified : Jaccard Index of 1.0 : Score of 15
-P93000 - not classified : Jaccard Index of 1.0 : Score of 15
-P93007 - subgroup ERF-X transcription factor : Jaccard Index of 1.0 : Score of 15
-P93394 - uracil phosphoribosyltransferase *(UPP) & EC_2.4 glycosyltransferase : Jaccard Index of 1.0 : Score of 15
-P93447 - component *(eEF1B-beta/-delta) of eEF1B eEF1A-GDP-recycling complex : Jaccard Index of 1.0 : Score of 15
-P93460 - T2-type RNase *(RNS) : Jaccard Index of 1.0 : Score of 15
-Q003J2 - component *(AP3) of AP3-PISTILLATA organ-identity heterodimer & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q00652 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-Q01IH3 - peroxisomal fission factor *(PEX11) : Jaccard Index of 1.0 : Score of 15
-Q01MB6 - not classified : Jaccard Index of 1.0 : Score of 15
-Q03197 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-Q04522 - class phi glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q06FN8 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q06FP3 - EC_3.4 hydrolase acting on peptide bond (peptidase) : Jaccard Index of 1.0 : Score of 15
-Q06FV6 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q06FV8 - component *(uS4c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q06GZ3 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q06RC5 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q08770 - component *(uL16) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 15
-Q09FV7 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q09G42 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q09ME7 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q09MH4 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q09X13 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q0DEB8 - regulatory protein *(SEPALLATA) of floral meristem identity control & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q0G9L5 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q0G9V8 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q0J8G8 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q0J8J8 - vacuolar/cell wall invertase inhibitor *(VIF2) : Jaccard Index of 1.0 : Score of 15
-Q0JF21 - not classified : Jaccard Index of 1.0 : Score of 15
-Q0ZJ16 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q10B63 - not classified : Jaccard Index of 1.0 : Score of 15
-Q10NQ9 - RNA-cap-binding factor (4EHP) : Jaccard Index of 1.0 : Score of 15
-Q14FF3 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q19V56 - component *(NdhG) of NDH membrane subcomplex M : Jaccard Index of 1.0 : Score of 15
-Q19VC3 - EC_3.4 hydrolase acting on peptide bond (peptidase) : Jaccard Index of 1.0 : Score of 15
-Q1ACH6 - EC_3.4 hydrolase acting on peptide bond (peptidase) & proteolytic core component *(ClpP1/3-6) of chloroplast Clp-type protease complex : Jaccard Index of 1.0 : Score of 15
-Q1KXV5 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q2L909 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q2L933 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q2MI96 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q2MII3 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q2R352 - not classified : Jaccard Index of 1.0 : Score of 15
-Q2VEH3 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q2WBN3 - NDR-activator component *(MOB1/2) of RAM signalling pathway : Jaccard Index of 1.0 : Score of 15
-Q332X4 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q33C30 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q38840 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q39127 - subgroup ERF-III transcription factor : Jaccard Index of 1.0 : Score of 15
-Q3C1J8 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q3E7L7 - bHLH-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q3E9B4 - transcriptional co-regulator *(OFP) : Jaccard Index of 1.0 : Score of 15
-Q3EBL9 - component *(VPS37) of ESCRT-I complex : Jaccard Index of 1.0 : Score of 15
-Q3HRN9 - calcium-dependent SOS2 activator SOS3 & calcium sensor *(CBL) : Jaccard Index of 1.0 : Score of 15
-Q3HRP0 - calcium-dependent SOS2 activator SOS3 & calcium sensor *(CBL) : Jaccard Index of 1.0 : Score of 15
-Q3HRP1 - calcium sensor *(CBL) : Jaccard Index of 1.0 : Score of 15
-Q3HRP2 - calcium sensor *(CBL) : Jaccard Index of 1.0 : Score of 15
-Q3HRP5 - calcium sensor *(CBL) : Jaccard Index of 1.0 : Score of 15
-Q40379 - T2-type RNase *(RNS) : Jaccard Index of 1.0 : Score of 15
-Q40381 - T2-type RNase *(RNS) : Jaccard Index of 1.0 : Score of 15
-Q40682 - component *(eEF1B-beta/-delta) of eEF1B eEF1A-GDP-recycling complex : Jaccard Index of 1.0 : Score of 15
-Q40875 - T2-type RNase *(RNS) : Jaccard Index of 1.0 : Score of 15
-Q41015 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-Q41048 - component *(PsbQ) of PS-II oxygen-evolving center : Jaccard Index of 1.0 : Score of 15
-Q41448 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-Q41480 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-Q41495 - CAPE precursor polypeptide : Jaccard Index of 1.0 : Score of 15
-Q41822 - not classified : Jaccard Index of 1.0 : Score of 15
-Q42463 - not classified : Jaccard Index of 1.0 : Score of 15
-Q42485 - C2H2 subclass ZFP transcription factor : Jaccard Index of 1.0 : Score of 15
-Q42684 - iron superoxide dismutase *(FSD) & manganese superoxide dismutase *(MSD) : Jaccard Index of 1.0 : Score of 15
-Q43056 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-Q43645 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-Q43646 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-Q43844 - component *(NQO6/PSST) of NADH dehydrogenase electron output (module Q) : Jaccard Index of 1.0 : Score of 15
-Q49KZ4 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q4VZH1 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q4VZI6 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q52QU1 - subgroup ERF-III transcription factor : Jaccard Index of 1.0 : Score of 15
-Q53B70 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-Q53B74 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-Q565D8 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-Q56XP9 - AP2-type transcription factor *(APD1) : Jaccard Index of 1.0 : Score of 15
-Q5S1S6 - atypical 2-Cys peroxiredoxin *(PrxQ) & EC_1.11 oxidoreductase acting on peroxide as acceptor : Jaccard Index of 1.0 : Score of 15
-Q5TKD8 - atypical thioredoxin *(ACHT) : Jaccard Index of 1.0 : Score of 15
-Q5TKP8 - cytokinin phosphoribohydrolase *(LOG) : Jaccard Index of 1.0 : Score of 15
-Q5VQP7 - not classified : Jaccard Index of 1.0 : Score of 15
-Q5ZEJ0 - 3-hydroxyacyl-CoA dehydratase *(HCD) : Jaccard Index of 1.0 : Score of 15
-Q652P9 - not classified : Jaccard Index of 1.0 : Score of 15
-Q652Q0 - not classified : Jaccard Index of 1.0 : Score of 15
-Q655V4 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q67ZF6 - cyt-b561 electron shuttle hemoprotein *(CYBASC) : Jaccard Index of 1.0 : Score of 15
-Q68S02 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q69J40 - component *(NF-YB) of NF-Y transcription factor complex : Jaccard Index of 1.0 : Score of 15
-Q6E2Z6 - 1-Cys peroxiredoxin (1-CysPrx) & EC_1.11 oxidoreductase acting on peroxide as acceptor : Jaccard Index of 1.0 : Score of 15
-Q6ENE4 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q6ENE9 - EC_3.4 hydrolase acting on peptide bond (peptidase) & proteolytic core component *(ClpP1/3-6) of chloroplast Clp-type protease complex : Jaccard Index of 1.0 : Score of 15
-Q6ENH0 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q6ENT9 - EC_3.4 hydrolase acting on peptide bond (peptidase) & proteolytic core component *(ClpP1/3-6) of chloroplast Clp-type protease complex : Jaccard Index of 1.0 : Score of 15
-Q6ENV9 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q6EW44 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q6I544 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6K5P8 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6K5P9 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6K5Q0 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6L372 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q6L377 - EC_3.4 hydrolase acting on peptide bond (peptidase) & proteolytic core component *(ClpP1/3-6) of chloroplast Clp-type protease complex : Jaccard Index of 1.0 : Score of 15
-Q6L395 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q6NKU9 - chloroplast import factor *(PRAT1) : Jaccard Index of 1.0 : Score of 15
-Q6NLS8 - mPTH mitochondrial RNA splicing factor : Jaccard Index of 1.0 : Score of 15
-Q6NQG7 - regulatory ubiquitin-protein ligase *(PRU2) & RING-H2-class ATL-subclass E3 ubiquitin ligase : Jaccard Index of 1.0 : Score of 15
-Q6QHK0 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-Q6UBI3 - atypical 2-Cys peroxiredoxin *(PrxQ) & EC_1.11 oxidoreductase acting on peroxide as acceptor : Jaccard Index of 1.0 : Score of 15
-Q6W8Q2 - 1-Cys peroxiredoxin (1-CysPrx) & EC_1.11 oxidoreductase acting on peroxide as acceptor : Jaccard Index of 1.0 : Score of 15
-Q6YZ97 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6YZ99 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6YZA1 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6YZA4 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6YZA6 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6YZA9 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6YZB2 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6YZY5 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6YZZ2 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6YZZ6 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6YZZ7 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6Z461 - SBP-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q6Z7V2 - class-M-I small heat-shock-responsive protein : Jaccard Index of 1.0 : Score of 15
-Q6Z808 - small GTPase *(ROP) : Jaccard Index of 1.0 : Score of 15
-Q6Z964 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6ZCR3 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6ZL57 - transcriptional repressor *(IAA/AUX) : Jaccard Index of 1.0 : Score of 15
-Q70II3 - subgroup ERF-X transcription factor : Jaccard Index of 1.0 : Score of 15
-Q70XZ9 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q75GK1 - transcriptional repressor *(IAA/AUX) : Jaccard Index of 1.0 : Score of 15
-Q75HJ4 - not classified : Jaccard Index of 1.0 : Score of 15
-Q75IQ4 - outer membrane porin *(OEP24) : Jaccard Index of 1.0 : Score of 15
-Q75IZ7 - component *(NF-YB) of NF-Y transcription factor complex : Jaccard Index of 1.0 : Score of 15
-Q75KE5 - C2H2-type subclass ZAT transcription factor : Jaccard Index of 1.0 : Score of 15
-Q75LU8 - calcium sensor *(CBL) : Jaccard Index of 1.0 : Score of 15
-Q75SY5 - atypical 2-Cys peroxiredoxin *(PrxQ) & EC_1.11 oxidoreductase acting on peroxide as acceptor : Jaccard Index of 1.0 : Score of 15
-Q7F731 - not classified : Jaccard Index of 1.0 : Score of 15
-Q7F7I7 - GTPase *(Ran) : Jaccard Index of 1.0 : Score of 15
-Q7F8S5 - type-2 peroxiredoxin *(PrxII) : Jaccard Index of 1.0 : Score of 15
-Q7FB12 - component *(NdhM) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q7XC27 - calcium sensor *(CBL) : Jaccard Index of 1.0 : Score of 15
-Q7XSZ4 - 3-hydroxyacyl-CoA dehydratase *(HCD) : Jaccard Index of 1.0 : Score of 15
-Q7XU74 - peroxisomal fission factor *(PEX11) : Jaccard Index of 1.0 : Score of 15
-Q7XUW5 - class-ER small heat-shock-responsive protein : Jaccard Index of 1.0 : Score of 15
-Q7XZY1 - not classified : Jaccard Index of 1.0 : Score of 15
-Q7YJW8 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q84JV2 - not classified : Jaccard Index of 1.0 : Score of 15
-Q84LK7 - scaffold protein NFU of plastidial SUF system transfer phase : Jaccard Index of 1.0 : Score of 15
-Q84MC1 - gamma-glutamyl cyclotransferase : Jaccard Index of 1.0 : Score of 15
-Q84NC5 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q84R94 - component *(JAZ) of jasmonic acid receptor complex & TIFY-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q84ZA1 - subgroup ERF-IV/DREB2 transcription factor : Jaccard Index of 1.0 : Score of 15
-Q851J8 - not classified : Jaccard Index of 1.0 : Score of 15
-Q851K0 - not classified : Jaccard Index of 1.0 : Score of 15
-Q85A24 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q85CS9 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q85FI4 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q85FJ3 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q85XC3 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q8GUK6 - phosphatidylinositol synthase *(PIS) & EC_2.7 transferase transferring phosphorus-containing group : Jaccard Index of 1.0 : Score of 15
-Q8GWK1 - C2H2 subclass Di19 transcription factor : Jaccard Index of 1.0 : Score of 15
-Q8GYM1 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q8H021 - not classified : Jaccard Index of 1.0 : Score of 15
-Q8H0F6 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-Q8H0G1 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-Q8H0G2 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-Q8H994 - not classified : Jaccard Index of 1.0 : Score of 15
-Q8L5T5 - AS2/LOB-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q8LBA0 - RING-H2-class ATL-subclass E3 ubiquitin ligase : Jaccard Index of 1.0 : Score of 15
-Q8LDR3 - peptidyl-prolyl cis-trans isomerase *(CYP23) & EC_5.2 cis-trans-isomerase : Jaccard Index of 1.0 : Score of 15
-Q8LR50 - cytokinin phosphoribohydrolase *(LOG) : Jaccard Index of 1.0 : Score of 15
-Q8RWG8 - Ran-activation accessory protein *(RanBP1) : Jaccard Index of 1.0 : Score of 15
-Q8RX29 - RING-H2-class ATL-subclass E3 ubiquitin ligase : Jaccard Index of 1.0 : Score of 15
-Q8S8E7 - not classified : Jaccard Index of 1.0 : Score of 15
-Q8S8X1 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q8S9Z5 - subgroup ERF-III transcription factor : Jaccard Index of 1.0 : Score of 15
-Q8VXU6 - C2H2 subclass Di19 transcription factor : Jaccard Index of 1.0 : Score of 15
-Q8VY69 - R-type component *(VAMP721/VAMP722) of SNARE cell-plate vesicle fusion complex & R-type VAMP7-group component of SNARE longin membrane fusion complex : Jaccard Index of 1.0 : Score of 15
-Q8VY90 - subgroup ERF-IX transcription factor : Jaccard Index of 1.0 : Score of 15
-Q8VZB9 - component *(uL1) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 15
-Q8W463 - component *(bL19c) of large plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q93V78 - halide methyltransferase *(HOL) : Jaccard Index of 1.0 : Score of 15
-Q93VG5 - component *(eS8) of small ribosomal-subunit (SSU) proteome : Jaccard Index of 1.0 : Score of 15
-Q93WY4 - WRKY-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q93XE6 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-Q93ZE5 - not classified : Jaccard Index of 1.0 : Score of 15
-Q942A8 - not classified : Jaccard Index of 1.0 : Score of 15
-Q946J4 - not classified : Jaccard Index of 1.0 : Score of 15
-Q947R4 - MYB class-R2R3 subgroup-15 transcription factor : Jaccard Index of 1.0 : Score of 15
-Q94A65 - not classified : Jaccard Index of 1.0 : Score of 15
-Q94AF0 - component *(CPFS5/CFIm25) of Cleavage Factor I (CF-Im) complex : Jaccard Index of 1.0 : Score of 15
-Q94BY6 - RING-H2-class ATL-subclass E3 ubiquitin ligase : Jaccard Index of 1.0 : Score of 15
-Q94FL5 - processivity component *(REV7) of DNA polymerase zeta complex : Jaccard Index of 1.0 : Score of 15
-Q94HF1 - component *(eIF3k) of eIF3 mRNA-to-PIC binding complex : Jaccard Index of 1.0 : Score of 15
-Q94JF3 - not classified : Jaccard Index of 1.0 : Score of 15
-Q94JX9 - subunit alpha of NAC ribosome-associated chaperone complex : Jaccard Index of 1.0 : Score of 15
-Q96316 - not classified : Jaccard Index of 1.0 : Score of 15
-Q96324 - class phi glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q96334 - component *(PsbP) of PS-II oxygen-evolving center : Jaccard Index of 1.0 : Score of 15
-Q9C5P6 - calcium sensor *(CBL) : Jaccard Index of 1.0 : Score of 15
-Q9C642 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9C682 - transcriptional regulator *(PRI1) of transient metal homeostasis & bHLH-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9C691 - protease *(Deg) : Jaccard Index of 1.0 : Score of 15
-Q9C8M3 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q9C8T1 - ATP-binding protein CcmA of CCM cytochrome c maturation system (system I) : Jaccard Index of 1.0 : Score of 15
-Q9FE79 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q9FG59 - dehydroascorbate reductase *(DHAR) : Jaccard Index of 1.0 : Score of 15
-Q9FGD6 - transcription factor *(DOF) : Jaccard Index of 1.0 : Score of 15
-Q9FGK5 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q9FIC6 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9FIC8 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9FIC9 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9FID0 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9FJN8 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q9FJN9 - regulatory protein of poly(A) RNA polymerase activity : Jaccard Index of 1.0 : Score of 15
-Q9FK59 - RNA-cap-binding factor (4EHP) : Jaccard Index of 1.0 : Score of 15
-Q9FK68 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q9FKW3 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-Q9FKX5 - RING-H2-class ATL-subclass E3 ubiquitin ligase : Jaccard Index of 1.0 : Score of 15
-Q9FL89 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9FLB6 - B-G-class Rab-GDF protein : Jaccard Index of 1.0 : Score of 15
-Q9FMA6 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9FMA8 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9FMA9 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9FMB0 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9FMP0 - component *(MED19) of head module of MEDIATOR transcription co-activator complex : Jaccard Index of 1.0 : Score of 15
-Q9FMR5 - R-type VAMP7-group component of SNARE longin membrane fusion complex : Jaccard Index of 1.0 : Score of 15
-Q9FNQ5 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9FPJ5 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9FQA3 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q9FTZ2 - sterol delta8-delta7 isomerase & EC_5.3 intramolecular oxidoreductase : Jaccard Index of 1.0 : Score of 15
-Q9FUS9 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q9FY50 - component *(uL10) of organelle large ribosomal-subunit proteome & component *(uL10c) of large plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q9FZ27 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9LEA7 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9LK99 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q9LMC9 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9LMP7 - Qb-type GOS-group component of SNARE membrane fusion complex : Jaccard Index of 1.0 : Score of 15
-Q9LP07 - ARF-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9LS99 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9LUR3 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9LVA7 - chaperone involved in spliceosome assembly *(ICLN) : Jaccard Index of 1.0 : Score of 15
-Q9LVU1 - contact site protein (VAP27) of ER-cytoskeleton-plasmamembrane interface : Jaccard Index of 1.0 : Score of 15
-Q9LW12 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9LW49 - subgroup ERF-VIII transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9LYQ4 - B-G-class Rab-GDF protein : Jaccard Index of 1.0 : Score of 15
-Q9LZ08 - regulatory protein *(MOS11) of helicase activity : Jaccard Index of 1.0 : Score of 15
-Q9LZG7 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q9LZI9 - class phi glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q9M012 - B-G-class Rab-GDF protein : Jaccard Index of 1.0 : Score of 15
-Q9M223 - SSU processome assembly factor *(UTP11) : Jaccard Index of 1.0 : Score of 15
-Q9M263 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9M2J7 - AS2/LOB-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9M3M0 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q9M8X3 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9M8X4 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9M8X5 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9M8X6 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9M9F1 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q9MAP3 - component *(uL11c) of large plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q9MAS5 - R-type component *(VAMP721/VAMP722) of SNARE cell-plate vesicle fusion complex & R-type VAMP7-group component of SNARE longin membrane fusion complex : Jaccard Index of 1.0 : Score of 15
-Q9MTP4 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 15
-Q9MUV8 - EC_3.4 hydrolase acting on peptide bond (peptidase) : Jaccard Index of 1.0 : Score of 15
-Q9S772 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9S810 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q9S847 - cytidine deaminase *(CDA) : Jaccard Index of 1.0 : Score of 15
-Q9SCP9 - component *(VPS37) of ESCRT-I complex : Jaccard Index of 1.0 : Score of 15
-Q9SCS7 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9SGA5 - deubiquitinase *(OTU6-12) : Jaccard Index of 1.0 : Score of 15
-Q9SHH7 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q9SIQ9 - R-type VAMP7-group component of SNARE longin membrane fusion complex : Jaccard Index of 1.0 : Score of 15
-Q9SJ52 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9SJL6 - Membrin-group Qb-type SNARE protein : Jaccard Index of 1.0 : Score of 15
-Q9SLB8 - C2H2 subclass ZFP transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9SLC4 - RING-H2-class ATL-subclass E3 ubiquitin ligase : Jaccard Index of 1.0 : Score of 15
-Q9SR36 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q9SR72 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9SRS5 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q9STJ6 - bHLH-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9SUE0 - plastid-nucleoid partitioning factor *(YLMG1) : Jaccard Index of 1.0 : Score of 15
-Q9SV19 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9SXS8 - subgroup ERF-VIII transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9SZA3 - component *(eIF3k) of eIF3 mRNA-to-PIC binding complex : Jaccard Index of 1.0 : Score of 15
-Q9XH32 - lumazine synthase *(RibE) & EC_2.5 transferase transferring alkyl or aryl group, other than methyl group : Jaccard Index of 1.0 : Score of 15
-Q9XQR2 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q9ZU70 - HD-ZIP I/II-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9ZVE0 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9ZVQ4 - class zeta glutathione S-transferase & maleylacetoacetate isomerase *(MAAI) : Jaccard Index of 1.0 : Score of 15
-Q9ZW24 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q9ZW26 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q9ZW27 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q9ZW28 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q9ZW29 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q9ZW30 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q9ZWR1 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-A0A365 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-A0A374 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A0MFH4 - not classified : Jaccard Index of 1.0 : Score of 15
-A0ZZ65 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-A0ZZ73 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A1E9W3 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A1EA38 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-A2RVT6 - ER-tubule curvature-inducing protein *(Reticulon) : Jaccard Index of 1.0 : Score of 15
-A2T372 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A2WSI7 - GTPase *(Ran) : Jaccard Index of 1.0 : Score of 15
-A2X899 - not classified : Jaccard Index of 1.0 : Score of 15
-A2XWL6 - not classified : Jaccard Index of 1.0 : Score of 15
-A2Y0T4 - component *(uL16) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 15
-A2Y7R5 - GTPase *(Ran) : Jaccard Index of 1.0 : Score of 15
-A2Y8S6 - not classified : Jaccard Index of 1.0 : Score of 15
-A2Y9P0 - regulatory protein *(SEPALLATA) of floral meristem identity control & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-A2YEQ6 - GTPase *(Ran) : Jaccard Index of 1.0 : Score of 15
-A2ZCQ7 - component *(uL16) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 15
-A4F1Q8 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-A4GG84 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A4GGB8 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 15
-A4GYU9 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A4PBQ1 - not classified : Jaccard Index of 1.0 : Score of 15
-A4QJF3 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A4QJN7 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A4QJW9 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A4QK56 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A4QKE3 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A4QKN0 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A4QKW9 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A4QL57 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A4QLE4 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A4QLN2 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A4QLX1 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A5HBK6 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-A6H5M0 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A6MM48 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 15
-A6MM75 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A6MMG1 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A6MMP6 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A6MMY3 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A7ISP5 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-A7ISP6 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-A7M934 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A7M9A1 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A7Y3I9 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A8SEE2 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A8W3F9 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A8W3M0 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-A9S1T8 - not classified : Jaccard Index of 1.0 : Score of 15
-A9SB31 - not classified : Jaccard Index of 1.0 : Score of 15
-A9SG36 - not classified : Jaccard Index of 1.0 : Score of 15
-A9SHQ9 - not classified : Jaccard Index of 1.0 : Score of 15
-B0Z4N8 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 15
-B0Z4X2 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 15
-B0Z556 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 15
-B0Z5E0 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 15
-B2Y1Y9 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-B4FAP1 - not classified : Jaccard Index of 1.0 : Score of 15
-B4FBQ7 - not classified : Jaccard Index of 1.0 : Score of 15
-B7EZJ7 - not classified : Jaccard Index of 1.0 : Score of 15
-B7F845 - component *(uL1) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 15
-B8A7Z5 - not classified : Jaccard Index of 1.0 : Score of 15
-B8ABC2 - not classified : Jaccard Index of 1.0 : Score of 15
-B8ART0 - lignin polymerization scaffold protein *(CASP) : Jaccard Index of 1.0 : Score of 15
-B8B9K6 - component *(uL1) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 15
-B9GXD6 - not classified : Jaccard Index of 1.0 : Score of 15
-B9SCX0 - lignin polymerization scaffold protein *(CASP) : Jaccard Index of 1.0 : Score of 15
-C5WNF5 - not classified : Jaccard Index of 1.0 : Score of 15
-C5XKI6 - not classified : Jaccard Index of 1.0 : Score of 15
-C5Y7C7 - not classified : Jaccard Index of 1.0 : Score of 15
-C5YAP3 - lignin polymerization scaffold protein *(CASP) : Jaccard Index of 1.0 : Score of 15
-C6T4E0 - lignin polymerization scaffold protein *(CASP) : Jaccard Index of 1.0 : Score of 15
-D5A8E6 - not classified : Jaccard Index of 1.0 : Score of 15
-D7KBH3 - lignin polymerization scaffold protein *(CASP) : Jaccard Index of 1.0 : Score of 15
-D7LGW9 - lignin polymerization scaffold protein *(CASP) : Jaccard Index of 1.0 : Score of 15
-D8ST12 - not classified : Jaccard Index of 1.0 : Score of 15
-E0CPH4 - component *(AP3) of AP3-PISTILLATA organ-identity heterodimer & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-E6Y2A0 - lignin polymerization scaffold protein *(CASP) : Jaccard Index of 1.0 : Score of 15
-F2E2E4 - not classified : Jaccard Index of 1.0 : Score of 15
-F4IXT6 - solute transporter *(UmamiT) : Jaccard Index of 1.0 : Score of 15
-F4K495 - NDR-activator component *(MOB1/2) of RAM signalling pathway : Jaccard Index of 1.0 : Score of 15
-G7IHF9 - lignin polymerization scaffold protein *(CASP) : Jaccard Index of 1.0 : Score of 15
-M1ETK3 - MYB class-R2R3 subgroup-6 transcription factor : Jaccard Index of 1.0 : Score of 15
-O03077 - not classified : Jaccard Index of 1.0 : Score of 15
-O22431 - component *(uL16) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 15
-O24384 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-O48763 - not classified : Jaccard Index of 1.0 : Score of 15
-O62951 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-O65416 - substrate adaptor *(FBS) of SCF E3 ubiquitin ligase complex : Jaccard Index of 1.0 : Score of 15
-O65693 - 16S-rRNA maturation factor *(RBF1) : Jaccard Index of 1.0 : Score of 15
-O81322 - AS2/LOB-type transcription factor : Jaccard Index of 1.0 : Score of 15
-O81361 - component *(eS8) of small ribosomal-subunit (SSU) proteome : Jaccard Index of 1.0 : Score of 15
-O82531 - beta-type-6 component *(PBF) of 26S proteasome : Jaccard Index of 1.0 : Score of 15
-O98455 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-P04671 - not classified : Jaccard Index of 1.0 : Score of 15
-P06248 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-P06356 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-P06357 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-P06586 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-P06674 - not classified : Jaccard Index of 1.0 : Score of 15
-P07052 - not classified : Jaccard Index of 1.0 : Score of 15
-P08863 - not classified : Jaccard Index of 1.0 : Score of 15
-P08864 - not classified : Jaccard Index of 1.0 : Score of 15
-P08961 - not classified : Jaccard Index of 1.0 : Score of 15
-P0C5D0 - 1-Cys peroxiredoxin (1-CysPrx) & EC_1.11 oxidoreductase acting on peroxide as acceptor : Jaccard Index of 1.0 : Score of 15
-P0DH61 - not classified : Jaccard Index of 1.0 : Score of 15
-P0DH82 - not classified : Jaccard Index of 1.0 : Score of 15
-P0DI23 - not classified : Jaccard Index of 1.0 : Score of 15
-P0DI37 - lignin polymerization scaffold protein *(CASP) : Jaccard Index of 1.0 : Score of 15
-P0DI41 - lignin polymerization scaffold protein *(CASP) : Jaccard Index of 1.0 : Score of 15
-P0DI45 - lignin polymerization scaffold protein *(CASP) : Jaccard Index of 1.0 : Score of 15
-P0DI51 - lignin polymerization scaffold protein *(CASP) : Jaccard Index of 1.0 : Score of 15
-P0DI56 - lignin polymerization scaffold protein *(CASP) : Jaccard Index of 1.0 : Score of 15
-P10917 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-P10965 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-P11651 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-P12949 - not classified : Jaccard Index of 1.0 : Score of 15
-P13046 - not classified : Jaccard Index of 1.0 : Score of 15
-P13347 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-P14298 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-P14715 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-P14716 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-P23706 - component *(AP3) of AP3-PISTILLATA organ-identity heterodimer & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-P27484 - cold-responsive mRNA chaperone *(CSD) & RNA chaperone (CSP) of mRNA quality control : Jaccard Index of 1.0 : Score of 15
-P27919 - not classified : Jaccard Index of 1.0 : Score of 15
-P29675 - LIM-type transcription factor : Jaccard Index of 1.0 : Score of 15
-P30055 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-P30271 - EC_3.2 glycosylase : Jaccard Index of 1.0 : Score of 15
-P31925 - sucrose synthase : Jaccard Index of 1.0 : Score of 15
-P32765 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-P36861 - E-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-P36863 - B-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-P37706 - translation ribosome recycling factor *(RRF) : Jaccard Index of 1.0 : Score of 15
-P38453 - component *(CcmC) of CCM cytochrome c maturation system (system I) : Jaccard Index of 1.0 : Score of 15
-P38546 - GTPase *(Ran) : Jaccard Index of 1.0 : Score of 15
-P38547 - GTPase *(Ran) : Jaccard Index of 1.0 : Score of 15
-P38548 - GTPase *(Ran) : Jaccard Index of 1.0 : Score of 15
-P41089 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-P41628 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-P41635 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-P41918 - GTPase *(Ran) : Jaccard Index of 1.0 : Score of 15
-P41919 - GTPase *(Ran) : Jaccard Index of 1.0 : Score of 15
-P45633 - component *(uL16) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 15
-P46745 - not classified : Jaccard Index of 1.0 : Score of 15
-P49199 - component *(eS8) of small ribosomal-subunit (SSU) proteome : Jaccard Index of 1.0 : Score of 15
-P56321 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-P57108 - class zeta glutathione S-transferase & maleylacetoacetate isomerase *(MAAI) : Jaccard Index of 1.0 : Score of 15
-P81785 - not classified : Jaccard Index of 1.0 : Score of 15
-P82473 - EC_3.4 hydrolase acting on peptide bond (peptidase) : Jaccard Index of 1.0 : Score of 15
-P83646 - component *(PsbQ) of PS-II oxygen-evolving center : Jaccard Index of 1.0 : Score of 15
-P84347 - EC_3.4 hydrolase acting on peptide bond (peptidase) : Jaccard Index of 1.0 : Score of 15
-P84849 - not classified : Jaccard Index of 1.0 : Score of 15
-P86626 - not classified : Jaccard Index of 1.0 : Score of 15
-P92528 - not classified : Jaccard Index of 1.0 : Score of 15
-P93847 - component *(uL16) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 15
-Q00U99 - not classified : Jaccard Index of 1.0 : Score of 15
-Q01111 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q03378 - component *(PISTILLATA) of AP3-PISTILLATA organ-identity heterodimer & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q03662 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q03663 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q03664 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q03666 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 15
-Q03968 - not classified : Jaccard Index of 1.0 : Score of 15
-Q06FM6 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q06GM1 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q06GN0 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q06GV8 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q06GW7 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q06R93 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q06RA2 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q06SE1 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q08069 - component *(eS8) of small ribosomal-subunit (SSU) proteome : Jaccard Index of 1.0 : Score of 15
-Q09FS2 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q09G07 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q09MD9 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q09WX9 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q09WY7 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q0D5P8 - component *(PsbQ) of PS-II oxygen-evolving center : Jaccard Index of 1.0 : Score of 15
-Q0D629 - not classified : Jaccard Index of 1.0 : Score of 15
-Q0DKF0 - component *(uL16) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 15
-Q0DYB1 - cytosolic pyrophosphatase : Jaccard Index of 1.0 : Score of 15
-Q0G9I0 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q0G9I9 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q0G9S3 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q0G9T2 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q0ITS8 - component *(uL16) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 15
-Q0P3M3 - not classified : Jaccard Index of 1.0 : Score of 15
-Q0P3P0 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q0ZIY0 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q0ZIY9 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q14FB9 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q14FC7 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q19VA1 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q19VB0 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q1ACF9 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q1ACH1 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q1KVT2 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q1KXS0 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q1KXS9 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q1PEX3 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q20ET5 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q283L0 - cyclin-dependent kinase inhibitor *(KRP/ICK) : Jaccard Index of 1.0 : Score of 15
-Q2L946 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q2MI62 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q2MI71 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q2MIE9 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q2MIF8 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q2PF16 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-Q2PMP7 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q2PMQ5 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q2R185 - cyclin-dependent kinase inhibitor *(KRP/ICK) : Jaccard Index of 1.0 : Score of 15
-Q2VEE2 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q2VEF0 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q32001 - not classified : Jaccard Index of 1.0 : Score of 15
-Q32RG4 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q32RU5 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q32RV4 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q332T8 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q332U7 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q33BZ3 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q33C02 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q39433 - E-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q39434 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q39570 - B-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q39572 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q39654 - component *(PsaL) of PS-I complex : Jaccard Index of 1.0 : Score of 15
-Q3BAJ8 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q3BAK7 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q3C1L6 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q3C1M5 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q3E703 - subgroup ERF-VIII transcription factor : Jaccard Index of 1.0 : Score of 15
-Q3EAS6 - recombinase *(RecA) : Jaccard Index of 1.0 : Score of 15
-Q3ED38 - regulatory protein *(VQ) of WRKY activity : Jaccard Index of 1.0 : Score of 15
-Q3T5N4 - not classified : Jaccard Index of 1.0 : Score of 15
-Q3V4Z5 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q3Y4F4 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-Q3ZJ10 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q3ZJ85 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q40170 - regulatory protein *(AP1/CAL/FUL) of floral meristem identity control & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q40191 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q40193 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q40194 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q40195 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q40272 - subunit E of V-type ATPase peripheral V1 subcomplex : Jaccard Index of 1.0 : Score of 15
-Q40520 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q40521 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q40522 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q40523 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q40723 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q41121 - not classified : Jaccard Index of 1.0 : Score of 15
-Q41385 - component *(PsaL) of PS-I complex : Jaccard Index of 1.0 : Score of 15
-Q41433 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-Q42464 - regulatory protein *(SEPALLATA) of floral meristem identity control & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q42498 - component *(AP3) of AP3-PISTILLATA organ-identity heterodimer & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q43710 - not classified : Jaccard Index of 1.0 : Score of 15
-Q43754 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-Q49KW0 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q49KW8 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q4FG71 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q4FG72 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q4FG73 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q4VZN0 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q4W6C7 - not classified : Jaccard Index of 1.0 : Score of 15
-Q53B75 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-Q53PN2 - iron cation transporter *(VTL) : Jaccard Index of 1.0 : Score of 15
-Q5SD19 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q5SD23 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q67XV7 - not classified : Jaccard Index of 1.0 : Score of 15
-Q688X9 - C2H2 subclass Di19 transcription factor : Jaccard Index of 1.0 : Score of 15
-Q68RW8 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q68RX7 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q69XM7 - GTPase *(Ran) : Jaccard Index of 1.0 : Score of 15
-Q6BEH3 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 15
-Q6DST1 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6EN90 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6ENS5 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q6ENT4 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q6EP77 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6EW13 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q6EW22 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q6L3G0 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q6NLC8 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6NLQ3 - glycolipid transfer protein *(GLTP) : Jaccard Index of 1.0 : Score of 15
-Q6NM26 - C2H2 subclass Di19 transcription factor : Jaccard Index of 1.0 : Score of 15
-Q6NQP4 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6YUE5 - not classified : Jaccard Index of 1.0 : Score of 15
-Q6YXK8 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q6YXN2 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q6Z541 - not classified : Jaccard Index of 1.0 : Score of 15
-Q70XX2 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q70XX8 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q71KN3 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q71KP4 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q71KQ6 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q7FAT5 - regulatory protein *(CYCP(CYCU) of cell cycle : Jaccard Index of 1.0 : Score of 15
-Q7GD79 - GTPase *(Ran) : Jaccard Index of 1.0 : Score of 15
-Q7XPT0 - not classified : Jaccard Index of 1.0 : Score of 15
-Q7XPU9 - lignin polymerization scaffold protein *(CASP) : Jaccard Index of 1.0 : Score of 15
-Q7YJU0 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q7YJU8 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q84X07 - not classified : Jaccard Index of 1.0 : Score of 15
-Q85WZ0 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q85X07 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q8GUW4 - not classified : Jaccard Index of 1.0 : Score of 15
-Q8GYH6 - ER-tubule curvature-inducing protein *(Reticulon) : Jaccard Index of 1.0 : Score of 15
-Q8H273 - not classified : Jaccard Index of 1.0 : Score of 15
-Q8LB60 - regulatory protein *(CYCP(CYCU) of cell cycle : Jaccard Index of 1.0 : Score of 15
-Q8LG32 - not classified : Jaccard Index of 1.0 : Score of 15
-Q8M9Z4 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q8MCA5 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q8S8V5 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q8S8W0 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q8VZ13 - not classified : Jaccard Index of 1.0 : Score of 15
-Q8W485 - not classified : Jaccard Index of 1.0 : Score of 15
-Q8WHY4 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q8WHZ3 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q93VG8 - deubiquitinase : Jaccard Index of 1.0 : Score of 15
-Q93XC4 - halide methyltransferase *(HOL) : Jaccard Index of 1.0 : Score of 15
-Q93XH4 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q94BY1 - not classified : Jaccard Index of 1.0 : Score of 15
-Q94JF2 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9ARX2 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9BBP8 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q9BBQ6 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q9C591 - subgroup ERF-II transcription factor *(ERF16/17/18) : Jaccard Index of 1.0 : Score of 15
-Q9C8U2 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9FJH0 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q9FKF6 - regulatory protein *(CYCP(CYCU) of cell cycle : Jaccard Index of 1.0 : Score of 15
-Q9FLQ3 - GTPase *(Ran) : Jaccard Index of 1.0 : Score of 15
-Q9FNL3 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9FX28 - Kunitz protease inhibitor : Jaccard Index of 1.0 : Score of 15
-Q9FZ32 - substrate adaptor *(InLYP1) of SCF E3 ubiquitin ligase complex : Jaccard Index of 1.0 : Score of 15
-Q9GCB9 - component *(uS2m) of small mitoribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q9LDZ1 - regulatory protein *(VQ) of WRKY activity : Jaccard Index of 1.0 : Score of 15
-Q9LG15 - GeBP-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9LN27 - channel-forming component *(Tim17) of inner mitochondrion membrane TIM translocation system : Jaccard Index of 1.0 : Score of 15
-Q9LQ36 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9LQI7 - assembly factor of NADH dehydrogenase complex *(NDUFAF1) : Jaccard Index of 1.0 : Score of 15
-Q9LSS7 - deneddylase *(DEN1) : Jaccard Index of 1.0 : Score of 15
-Q9LV63 - substrate adaptor of CUL3-based E3 ubiquitin ligase complex : Jaccard Index of 1.0 : Score of 15
-Q9LVV5 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9LVZ8 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9LWV3 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9LY16 - regulatory protein *(CYCP(CYCU) of cell cycle : Jaccard Index of 1.0 : Score of 15
-Q9LZX1 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9M080 - subgroup ERF-III transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9M0S0 - component *(MED20) of head module of MEDIATOR transcription co-activator complex : Jaccard Index of 1.0 : Score of 15
-Q9M290 - NAC-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9M2W6 - voltage-gated anion channel *(VDAC) : Jaccard Index of 1.0 : Score of 15
-Q9M4H4 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9M5M7 - component *(uL16) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 15
-Q9M897 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9M9A5 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9MTI7 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q9MTJ5 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q9MTK9 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 15
-Q9MUS8 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q9MUV3 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q9SHD3 - regulatory protein *(CYCP(CYCU) of cell cycle : Jaccard Index of 1.0 : Score of 15
-Q9SIP0 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 15
-Q9SJ29 - substrate adaptor of CUL3-based E3 ubiquitin ligase complex : Jaccard Index of 1.0 : Score of 15
-Q9SLV1 - DOG-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9SPB3 - component *(uL16) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 15
-Q9SR92 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9SSM9 - AS2/LOB-type transcription factor : Jaccard Index of 1.0 : Score of 15
-Q9SUW4 - phosphatidate phosphatase *(LPP-beta) : Jaccard Index of 1.0 : Score of 15
-Q9SW33 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9SW75 - component *(uL1) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 15
-Q9SX28 - manganese/calcium cation transporter *(BICAT) : Jaccard Index of 1.0 : Score of 15
-Q9TL20 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 15
-Q9TL31 - apocytochrome b component *(PetB) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 15
-Q9ZPR0 - accessory protein *(COQ4) : Jaccard Index of 1.0 : Score of 15
-Q9ZPV7 - membrane protein cargo receptor *(RER1) : Jaccard Index of 1.0 : Score of 15
-Q9ZQH1 - calcium sensor *(CML) : Jaccard Index of 1.0 : Score of 15
-S4TEF7 - acyl-CoA thioesterase : Jaccard Index of 1.0 : Score of 15
-A0MFL4 - not classified : Jaccard Index of 1.0 : Score of 15
-P04144 - not classified : Jaccard Index of 1.0 : Score of 15
-P29308 - 14-3-3 phosphoprotein-binding protein *(GRF) : Jaccard Index of 1.0 : Score of 15
-P92529 - not classified : Jaccard Index of 1.0 : Score of 15
-Q2R0Z3 - not classified : Jaccard Index of 1.0 : Score of 15
-Q42376 - not classified : Jaccard Index of 1.0 : Score of 15
-Q8GYA8 - not classified : Jaccard Index of 1.0 : Score of 15
-Q8S3M3 - not classified : Jaccard Index of 1.0 : Score of 15
-Q94JI5 - regulatory factor *(TZF) of mRNA stress granule formation : Jaccard Index of 1.0 : Score of 15
-Q9FMW4 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9FMW6 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9FN07 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9FTA0 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9FWT5 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9FWU1 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9LFV9 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9LHQ1 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9LJQ5 - ER-tubule curvature-inducing protein *(Reticulon) : Jaccard Index of 1.0 : Score of 15
-Q9LTA7 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9MUQ5 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9SH27 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9ZPR5 - not classified : Jaccard Index of 1.0 : Score of 15
-Q9ZVJ2 - not classified : Jaccard Index of 1.0 : Score of 15
-
-Seems to be: A0A075QQ08 - component *(eIF4E) of eIF4F mRNA unwinding complex 
-
-Input:       A0A1D8EJF9 - component *(eIF4E) of eIF4F mRNA unwinding complex
-             MAAAEMERTMSFDAAEKLKAADGGGGEVDDELEEGEIVEESNDTASYLGKEITVKHPLEHSWTFWFDNPTTKSRQTAWGSSLRNVYTFSTVEDFWGAYNNIHHPSKLIMGADFHCFKHKIEPKWEDPVCANGGTWKMSFSKGKSDTSWLYTLLAMIGHQFDHGDEICGAVVSVRAKGEKIALWTKNAANETAQVSIGKQWKQFLDYSDSVGFIFHDDAKRLDRNAKNRYTV
-
-Found hashes: 15
-
-./protfin.py find-match ../materials/protein_test.fa  1.58s user 1.74s system 211% cpu 1.568 total
+A0A1D8EJF9 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 16
+A0A1I9LMX5 - CEP precursor polypeptide & systemic nitrogen signalling polypeptide *(CEP) : Jaccard Index of 1.0 : Score of 16
+A0A2J6L8Y7 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 16
+A2RVQ5 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+A2XID3 - allene oxidase cyclase *(AOC) : Jaccard Index of 1.0 : Score of 16
+C0HJY1 - not classified : Jaccard Index of 1.0 : Score of 16
+C6ZJZ3 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 16
+C7AE94 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+C7SG33 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 16
+D3UW26 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 16
+F4JL28 - component *(SHL/EBS) of PRC1 complex : Jaccard Index of 1.0 : Score of 16
+K0P2S0 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 16
+K7MTW9 - lysine acetyltransferase *(NSI) : Jaccard Index of 1.0 : Score of 16
+O22152 - transcription factor *(YABBY) : Jaccard Index of 1.0 : Score of 16
+O22788 - Caleosin-type peroxygenase : Jaccard Index of 1.0 : Score of 16
+O23252 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 16
+O23299 - dodecenoyl-CoA isomerase : Jaccard Index of 1.0 : Score of 16
+O24144 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+O24407 - transcriptional repressor *(IAA/AUX) : Jaccard Index of 1.0 : Score of 16
+O49203 - nucleoside diphosphate kinase & EC_2.7 transferase transferring phosphorus-containing group : Jaccard Index of 1.0 : Score of 16
+O64903 - nucleoside diphosphate kinase & EC_2.7 transferase transferring phosphorus-containing group : Jaccard Index of 1.0 : Score of 16
+O80366 - A-type ARR response regulator of cytokinin signalling : Jaccard Index of 1.0 : Score of 16
+O80845 - peroxisomal fission factor *(PEX11) : Jaccard Index of 1.0 : Score of 16
+O81149 - alpha-type-5 component *(PAE) of 26S proteasome & EC_3.4 hydrolase acting on peptide bond (peptidase) : Jaccard Index of 1.0 : Score of 16
+O81235 - manganese superoxide dismutase *(MSD) : Jaccard Index of 1.0 : Score of 16
+P08902 - not classified : Jaccard Index of 1.0 : Score of 16
+P08980 - EC_1.10 oxidoreductase acting on diphenol or related substance as donor & Rieske iron-sulfur component *(PetC) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 16
+P09233 - manganese superoxide dismutase *(MSD) : Jaccard Index of 1.0 : Score of 16
+P0C7R1 - not classified : Jaccard Index of 1.0 : Score of 16
+P31166 - adenine phosphoribosyltransferase *(APT) & EC_2.4 glycosyltransferase : Jaccard Index of 1.0 : Score of 16
+P35632 - component *(AP3) of AP3-PISTILLATA organ-identity heterodimer & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+P42813 - T2-type RNase *(RNS) : Jaccard Index of 1.0 : Score of 16
+P58907 - not classified : Jaccard Index of 1.0 : Score of 16
+P58908 - not classified : Jaccard Index of 1.0 : Score of 16
+P80269 - component *(NQO9/TYKY) of NADH dehydrogenase electron output (module Q) : Jaccard Index of 1.0 : Score of 16
+P82538 - protein involved in PS-II repair *(PPL1) : Jaccard Index of 1.0 : Score of 16
+P86624 - not classified : Jaccard Index of 1.0 : Score of 16
+P93830 - transcriptional repressor *(IAA/AUX) : Jaccard Index of 1.0 : Score of 16
+Q00LS8 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 16
+Q01667 - component *(LHCa1) of LHC-I complex : Jaccard Index of 1.0 : Score of 16
+Q0IGM7 - BBX class-IV transcription factor : Jaccard Index of 1.0 : Score of 16
+Q0WRJ7 - protein-folding catalyst *(FKBP20-2) & peptidyl-prolyl cis-trans isomerase *(FKBP20-2) : Jaccard Index of 1.0 : Score of 16
+Q38825 - transcriptional repressor *(IAA/AUX) : Jaccard Index of 1.0 : Score of 16
+Q38830 - transcriptional repressor *(IAA/AUX) : Jaccard Index of 1.0 : Score of 16
+Q38876 - regulatory protein *(AP1/CAL/FUL) of floral meristem identity control & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q39258 - subunit E of V-type ATPase peripheral V1 subcomplex : Jaccard Index of 1.0 : Score of 16
+Q42134 - alpha-type-5 component *(PAE) of 26S proteasome & EC_3.4 hydrolase acting on peptide bond (peptidase) : Jaccard Index of 1.0 : Score of 16
+Q42539 - protein-L-isoaspartate methyltransferase & EC_2.1 transferase transferring one-carbon group : Jaccard Index of 1.0 : Score of 16
+Q43209 - protein-L-isoaspartate methyltransferase & EC_2.1 transferase transferring one-carbon group : Jaccard Index of 1.0 : Score of 16
+Q4JL84 - MYB class-R2R3 transcription factor : Jaccard Index of 1.0 : Score of 16
+Q4QTJ1 - not classified : Jaccard Index of 1.0 : Score of 16
+Q4VQY1 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 16
+Q4VQY3 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 16
+Q5ZC82 - cytokinin phosphoribohydrolase *(LOG) : Jaccard Index of 1.0 : Score of 16
+Q67Z52 - cofactor of post-CCT Tubulin folding pathway *(TFC-B) : Jaccard Index of 1.0 : Score of 16
+Q6EPW7 - regulatory protein *(RAR1) of effector-triggered immunity : Jaccard Index of 1.0 : Score of 16
+Q75KD7 - allene oxidase cyclase *(AOC) : Jaccard Index of 1.0 : Score of 16
+Q7PCC6 - bZIP class-A transcription factor & co-activator component *(FD/FDP) of FT-FD floral activator complex : Jaccard Index of 1.0 : Score of 16
+Q7XA66 - pre-mRNA splicing factor *(ZOP1) : Jaccard Index of 1.0 : Score of 16
+Q84JW1 - peroxisomal fission factor *(PEX11) : Jaccard Index of 1.0 : Score of 16
+Q84T68 - component *(RRP46) of exosome EXO9 core complex : Jaccard Index of 1.0 : Score of 16
+Q84W66 - transcription factor *(LEC) involved in seed maturation & component *(NF-YB) of NF-Y transcription factor complex : Jaccard Index of 1.0 : Score of 16
+Q84WN3 - sugar efflux transporter *(SWEET) : Jaccard Index of 1.0 : Score of 16
+Q8GUK7 - E3 ubiquitin ligase *(RMA/MUSE) : Jaccard Index of 1.0 : Score of 16
+Q8GW78 - plant-specific stabilizing component *(ClpT) of chloroplast Clp-type protease complex : Jaccard Index of 1.0 : Score of 16
+Q8GYD2 - component *(MND1) of HOP2-MND1 presynaptic filament stabilization complex : Jaccard Index of 1.0 : Score of 16
+Q8GZA8 - ULT-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q8H0X6 - Cystatin protease inhibitor : Jaccard Index of 1.0 : Score of 16
+Q8L4B2 - component *(NF-YC) of NF-Y transcription factor complex : Jaccard Index of 1.0 : Score of 16
+Q8L7U4 - Hsp90-co-chaperone *(P23) : Jaccard Index of 1.0 : Score of 16
+Q8L856 - cyt-b561 electron shuttle hemoprotein *(CYBASC) : Jaccard Index of 1.0 : Score of 16
+Q8LDF9 - DNA bending architectural protein *(HMG-B) : Jaccard Index of 1.0 : Score of 16
+Q8LDL0 - protein involved in PS-II assembly *(HHL1) : Jaccard Index of 1.0 : Score of 16
+Q8LFH5 - sugar efflux transporter *(SWEET) : Jaccard Index of 1.0 : Score of 16
+Q8VYF7 - recombination mediator *(Whirly) : Jaccard Index of 1.0 : Score of 16
+Q8VZP1 - glycerol-3-phosphatase : Jaccard Index of 1.0 : Score of 16
+Q93W20 - scaffold protein NFU of plastidial SUF system transfer phase : Jaccard Index of 1.0 : Score of 16
+Q93WL3 - plant-specific stabilizing component *(ClpT) of chloroplast Clp-type protease complex : Jaccard Index of 1.0 : Score of 16
+Q940H2 - not classified : Jaccard Index of 1.0 : Score of 16
+Q949U7 - type-2 peroxiredoxin *(PrxII) : Jaccard Index of 1.0 : Score of 16
+Q9C4Z7 - plastid division FtsZ assembly factor *(MinE) : Jaccard Index of 1.0 : Score of 16
+Q9C7Y2 - RNA editing factor *(MORF) : Jaccard Index of 1.0 : Score of 16
+Q9C9W4 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+Q9CAK8 - 2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase & EC_4.6 phosphorus-oxygen lyase : Jaccard Index of 1.0 : Score of 16
+Q9FH37 - transcriptional regulator *(PRI1) of transient metal homeostasis & bHLH-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9FHA7 - bHLH-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9FLN9 - Caleosin-type peroxygenase : Jaccard Index of 1.0 : Score of 16
+Q9FN42 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9FNH6 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9FTA2 - circadian clock repression factor *(CHE) & TCP-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9FVC1 - regulatory protein *(SVP/AGL24) of floral meristem identity control & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9FX36 - MYB class-R2R3 subgroup-21 transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9LDE4 - subgroup ERF-VIII transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9LDT3 - transcription factor *(YABBY) : Jaccard Index of 1.0 : Score of 16
+Q9LIQ6 - methylation reader component *(ING1) : Jaccard Index of 1.0 : Score of 16
+Q9LPZ1 - RNA editing factor *(MORF) : Jaccard Index of 1.0 : Score of 16
+Q9LQ73 - peroxisomal fission factor *(PEX11) : Jaccard Index of 1.0 : Score of 16
+Q9LUR4 - sugar efflux transporter *(SWEET) : Jaccard Index of 1.0 : Score of 16
+Q9LXT4 - cysteine oxidase *(PCO) : Jaccard Index of 1.0 : Score of 16
+Q9M022 - E3 ubiquitin ligase : Jaccard Index of 1.0 : Score of 16
+Q9M1V9 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9M276 - HD-ZIP I/II-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9M2R1 - regulatory protein *(OSD1/UVI4) of ubiquitination : Jaccard Index of 1.0 : Score of 16
+Q9M2W3 - phosphatidylglycerophosphate synthase *(PGPS) : Jaccard Index of 1.0 : Score of 16
+Q9S750 - thymidine kinase *(TK1) & EC_2.7 transferase transferring phosphorus-containing group : Jaccard Index of 1.0 : Score of 16
+Q9SA23 - Qc-type SYP5-group component of SNARE membrane fusion complex : Jaccard Index of 1.0 : Score of 16
+Q9SEZ1 - zf-HD-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9SFD8 - transcription factor *(LEC) involved in seed maturation & component *(NF-YB) of NF-Y transcription factor complex : Jaccard Index of 1.0 : Score of 16
+Q9SHC8 - contact site protein (VAP27) of ER-cytoskeleton-plasmamembrane interface : Jaccard Index of 1.0 : Score of 16
+Q9SHI7 - E2 ubiquitin-conjugating component *(Ubc33/34) of Doa10 E3 ubiquitin ligase complex & E2 ubiquitin-conjugating enzyme *(UBC32) : Jaccard Index of 1.0 : Score of 16
+Q9SI38 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9SIB4 - WOX-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9SID1 - BBX class-IV transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9SJI9 - cysteine oxidase *(PCO) : Jaccard Index of 1.0 : Score of 16
+Q9SN74 - transcriptional regulator *(POPEYE) of iron homeostasis & bHLH-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9SND4 - bHLH-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9SP35 - channel-forming component *(Tim17) of inner mitochondrion membrane TIM translocation system : Jaccard Index of 1.0 : Score of 16
+Q9SSS9 - subunit delta of peripheral CF1 subcomplex of ATP synthase complex : Jaccard Index of 1.0 : Score of 16
+Q9SUC5 - sphingolipid fatty acid 2-hydroxylase : Jaccard Index of 1.0 : Score of 16
+Q9SUP1 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9SWS1 - cyt-b561 electron shuttle hemoprotein *(CYBASC) : Jaccard Index of 1.0 : Score of 16
+Q9SXP7 - lipoyltransferase & EC_2.3 acyltransferase : Jaccard Index of 1.0 : Score of 16
+Q9SY73 - pterin aldehyde reductase : Jaccard Index of 1.0 : Score of 16
+Q9XFB1 - transcription factor *(YABBY) : Jaccard Index of 1.0 : Score of 16
+Q9ZR03 - EC_1.10 oxidoreductase acting on diphenol or related substance as donor & Rieske iron-sulfur component *(PetC) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 16
+Q9ZWS9 - A-type ARR response regulator of cytokinin signalling : Jaccard Index of 1.0 : Score of 16
+V7BSD0 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 16
+A0A023GPI8 - not classified : Jaccard Index of 1.0 : Score of 16
+A0A060LAL9 - Caleosin-type peroxygenase : Jaccard Index of 1.0 : Score of 16
+A0A0S2UWT1 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+A0A1I9R3Y5 - Caleosin-type peroxygenase : Jaccard Index of 1.0 : Score of 16
+A7KWF8 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 16
+A8B479 - Caleosin-type peroxygenase : Jaccard Index of 1.0 : Score of 16
+A9Y0K9 - transcription factor *(ERN1) & subgroup ERF-V transcription factor : Jaccard Index of 1.0 : Score of 16
+B3EWJ2 - not classified : Jaccard Index of 1.0 : Score of 16
+B9FXT3 - bHLH-type transcription factor & transcriptional regulator *(DYT1/AMS) : Jaccard Index of 1.0 : Score of 16
+C0HK81 - not classified : Jaccard Index of 1.0 : Score of 16
+C6TCZ5 - component *(JAZ) of jasmonic acid receptor complex & TIFY-type transcription factor : Jaccard Index of 1.0 : Score of 16
+F4JIE8 - not classified : Jaccard Index of 1.0 : Score of 16
+F4K687 - nicotinamide/nicotinate mononucleotide adenylyltransferase & EC_2.7 transferase transferring phosphorus-containing group : Jaccard Index of 1.0 : Score of 16
+F4KI56 - not classified : Jaccard Index of 1.0 : Score of 16
+I1GN76 - regulatory protein *(AP1/CAL/FUL) of floral meristem identity control & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+J9PBR3 - not classified : Jaccard Index of 1.0 : Score of 16
+M1JJT8 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 16
+O04515 - DOG-type transcription factor : Jaccard Index of 1.0 : Score of 16
+O22533 - C2H2-type subclass ZAT transcription factor : Jaccard Index of 1.0 : Score of 16
+O22922 - component *(U2B) of U2 snRNP complex : Jaccard Index of 1.0 : Score of 16
+O23300 - dodecenoyl-CoA isomerase : Jaccard Index of 1.0 : Score of 16
+O23708 - alpha-type-2 component *(PAB) of 26S proteasome & EC_3.4 hydrolase acting on peptide bond (peptidase) : Jaccard Index of 1.0 : Score of 16
+O48646 - glutathione peroxidase & EC_1.11 oxidoreductase acting on peroxide as acceptor : Jaccard Index of 1.0 : Score of 16
+O48916 - sphingolipid fatty acid 2-hydroxylase : Jaccard Index of 1.0 : Score of 16
+O48950 - component *(cpTatB) of thylakoid membrane Tat translocation system & protein involved in PS-II assembly *(HCF106) : Jaccard Index of 1.0 : Score of 16
+O80324 - T2-type RNase *(RNS) : Jaccard Index of 1.0 : Score of 16
+O80338 - subgroup ERF-IX transcription factor : Jaccard Index of 1.0 : Score of 16
+O80634 - component *(PnsL1) of NDH lumen subcomplex L : Jaccard Index of 1.0 : Score of 16
+O80683 - not classified : Jaccard Index of 1.0 : Score of 16
+O80917 - subgroup ERF-IV/DREB2 transcription factor : Jaccard Index of 1.0 : Score of 16
+O82169 - RNA editing factor *(MORF) : Jaccard Index of 1.0 : Score of 16
+P14279 - component *(LHCb1/2/3) of LHC-II complex : Jaccard Index of 1.0 : Score of 16
+P24146 - not classified : Jaccard Index of 1.0 : Score of 16
+P28034 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+P28493 - not classified : Jaccard Index of 1.0 : Score of 16
+P29738 - EC_3.2 glycosylase : Jaccard Index of 1.0 : Score of 16
+P38564 - transcription factor *(DOF) : Jaccard Index of 1.0 : Score of 16
+P42088 - not classified : Jaccard Index of 1.0 : Score of 16
+P47923 - nucleoside diphosphate kinase & EC_2.7 transferase transferring phosphorus-containing group : Jaccard Index of 1.0 : Score of 16
+P51134 - Rieske iron-sulphur component of cytochrome c reductase complex & EC_1.10 oxidoreductase acting on diphenol or related substance as donor : Jaccard Index of 1.0 : Score of 16
+P52032 - EC_1.11 oxidoreductase acting on peroxide as acceptor & glutathione peroxidase : Jaccard Index of 1.0 : Score of 16
+P60040 - component *(uL30) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 16
+P80022 - T2-type RNase *(RNS) : Jaccard Index of 1.0 : Score of 16
+P81371 - not classified : Jaccard Index of 1.0 : Score of 16
+P81517 - not classified : Jaccard Index of 1.0 : Score of 16
+P81637 - not classified : Jaccard Index of 1.0 : Score of 16
+P82139 - component *(uL10) of organelle large ribosomal-subunit proteome & component *(uL10c) of large plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+P82413 - component *(bL19c) of large plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+P85101 - not classified : Jaccard Index of 1.0 : Score of 16
+P86993 - not classified : Jaccard Index of 1.0 : Score of 16
+P93013 - not classified : Jaccard Index of 1.0 : Score of 16
+Q01402 - nucleoside diphosphate kinase & EC_2.7 transferase transferring phosphorus-containing group : Jaccard Index of 1.0 : Score of 16
+Q08865 - not classified : Jaccard Index of 1.0 : Score of 16
+Q0JKX1 - HD-ZIP I/II-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q0WNB1 - not classified : Jaccard Index of 1.0 : Score of 16
+Q1PDV2 - RNA splicing factor *(SCL28/30/33) : Jaccard Index of 1.0 : Score of 16
+Q2HWG4 - A-type ARR response regulator of cytokinin signalling : Jaccard Index of 1.0 : Score of 16
+Q2V0Z5 - component *(MIS12) of kinetochore MIS12 complex : Jaccard Index of 1.0 : Score of 16
+Q36718 - component *(LHCa4) of LHC-I complex : Jaccard Index of 1.0 : Score of 16
+Q38717 - T2-type RNase *(RNS) : Jaccard Index of 1.0 : Score of 16
+Q38836 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q39262 - C2H2 subclass ZFP transcription factor : Jaccard Index of 1.0 : Score of 16
+Q40704 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q4G2J6 - component *(DFM1) of ER-associated protein degradation (ERAD) machinery : Jaccard Index of 1.0 : Score of 16
+Q4QTJ2 - not classified : Jaccard Index of 1.0 : Score of 16
+Q5JNJ5 - not classified : Jaccard Index of 1.0 : Score of 16
+Q5MK24 - not classified : Jaccard Index of 1.0 : Score of 16
+Q5VRN0 - uridylate kinase *(UMK) & EC_2.7 transferase transferring phosphorus-containing group : Jaccard Index of 1.0 : Score of 16
+Q69GY7 - EC_1.10 oxidoreductase acting on diphenol or related substance as donor & Rieske iron-sulfur component *(PetC) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 16
+Q69P94 - TIFY-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q6H6M5 - regulatory protein *(INP1) of pollen aperture formation : Jaccard Index of 1.0 : Score of 16
+Q6I681 - cyt-b561 electron shuttle hemoprotein *(CYBASC) : Jaccard Index of 1.0 : Score of 16
+Q6L568 - sugar efflux transporter *(SWEET) : Jaccard Index of 1.0 : Score of 16
+Q6NLB0 - class lambda glutathione S-transferase & class lambda glutathione S-transferase : Jaccard Index of 1.0 : Score of 16
+Q6NPL9 - CCT-interacting tubulin folding cofactor *(PLP3) : Jaccard Index of 1.0 : Score of 16
+Q6Z6W2 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q7XMI0 - uridylate kinase *(UMK) & EC_2.7 transferase transferring phosphorus-containing group : Jaccard Index of 1.0 : Score of 16
+Q84L14 - component CBP20 of CBP80-CBP20 mRNA Cap-Binding complex : Jaccard Index of 1.0 : Score of 16
+Q84RQ7 - scaffold protein NFU of plastidial SUF system transfer phase : Jaccard Index of 1.0 : Score of 16
+Q852S5 - nucleoside diphosphate kinase & EC_2.7 transferase transferring phosphorus-containing group : Jaccard Index of 1.0 : Score of 16
+Q8GT74 - RING-H2-class ATL-subclass E3 ubiquitin ligase : Jaccard Index of 1.0 : Score of 16
+Q8GWQ6 - transcriptional coregulator *(CSU4) of CCA1 activity : Jaccard Index of 1.0 : Score of 16
+Q8L4A7 - alpha-type-2 component *(PAB) of 26S proteasome & EC_3.4 hydrolase acting on peptide bond (peptidase) : Jaccard Index of 1.0 : Score of 16
+Q8LAH8 - nucleoside diphosphate kinase & EC_2.7 transferase transferring phosphorus-containing group : Jaccard Index of 1.0 : Score of 16
+Q8LCT3 - atypical thioredoxin *(ACHT) : Jaccard Index of 1.0 : Score of 16
+Q8LCV1 - CCT-interacting tubulin folding cofactor *(PLP3) : Jaccard Index of 1.0 : Score of 16
+Q8LD27 - beta-type-1 component *(PBA) of 26S proteasome : Jaccard Index of 1.0 : Score of 16
+Q8LF65 - RING-H2-class ATL-subclass E3 ubiquitin ligase : Jaccard Index of 1.0 : Score of 16
+Q8RXA8 - nucleoside diphosphate kinase & EC_2.7 transferase transferring phosphorus-containing group : Jaccard Index of 1.0 : Score of 16
+Q8VYM0 - subgroup ERF-IX transcription factor : Jaccard Index of 1.0 : Score of 16
+Q8VYN9 - not classified : Jaccard Index of 1.0 : Score of 16
+Q93Z96 - oxygen-dependent coproporphyrinogen III oxidase *(HEMF) & EC_1.3 oxidoreductase acting on CH-CH group of donor : Jaccard Index of 1.0 : Score of 16
+Q94KK7 - Qc-type SYP5-group component of SNARE membrane fusion complex : Jaccard Index of 1.0 : Score of 16
+Q96251 - subunit delta *(OSCP) of ATP synthase peripheral MF1 subcomplex : Jaccard Index of 1.0 : Score of 16
+Q9C835 - peptidyl-prolyl cis-trans isomerase *(CYP21-3) & EC_5.2 cis-trans-isomerase : Jaccard Index of 1.0 : Score of 16
+Q9FFB3 - component *(VPS24) of ESCRT-III complex : Jaccard Index of 1.0 : Score of 16
+Q9FFF5 - methylation reader Alfin of PRC1 complex : Jaccard Index of 1.0 : Score of 16
+Q9FI55 - component *(MHF1) of FANCM-MHF DNA remodeling complex : Jaccard Index of 1.0 : Score of 16
+Q9FK29 - E2 ubiquitin-conjugating component *(Ubc33/34) of Doa10 E3 ubiquitin ligase complex & E2 ubiquitin-conjugating enzyme *(UBC32) : Jaccard Index of 1.0 : Score of 16
+Q9FL44 - protein involved in photoprotection *(MPH1) : Jaccard Index of 1.0 : Score of 16
+Q9FM10 - sugar efflux transporter *(SWEET) : Jaccard Index of 1.0 : Score of 16
+Q9FMY7 - zf-HD-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9FUT1 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 16
+Q9LEZ9 - TCP-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9LM71 - peptidyl-prolyl cis-trans isomerase *(FKBP18) : Jaccard Index of 1.0 : Score of 16
+Q9LNK1 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 16
+Q9LSN7 - bHLH-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9LTV4 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9LX74 - component *(RRP46) of exosome EXO9 core complex : Jaccard Index of 1.0 : Score of 16
+Q9LZR0 - regulatory protein *(LMI1) of floral meristem identity control & HD-ZIP I/II-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9M1E8 - catalytic component *(SEN1/2) : Jaccard Index of 1.0 : Score of 16
+Q9M246 - TIFY-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9M376 - R-type VAMP7-group component of SNARE longin membrane fusion complex : Jaccard Index of 1.0 : Score of 16
+Q9SFE4 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9SGE3 - histone *(H2B) : Jaccard Index of 1.0 : Score of 16
+Q9SJ12 - component *(24kDa/FAd) of ATP synthase membrane MF0 subcomplex : Jaccard Index of 1.0 : Score of 16
+Q9SMP0 - component *(NF-YC) of NF-Y transcription factor complex : Jaccard Index of 1.0 : Score of 16
+Q9SP08 - component *(RRP41) of exosome EXO9 core complex : Jaccard Index of 1.0 : Score of 16
+Q9SRS3 - plastid-nucleoid partitioning factor *(YLMG1) : Jaccard Index of 1.0 : Score of 16
+Q9SYL9 - component *(uL13c) of large plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q9XH38 - HD-ZIP I/II-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9XJ60 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9ZQH0 - dephospho-coenzyme A kinase : Jaccard Index of 1.0 : Score of 16
+Q9ZV06 - polyamine N-acetyltransferase *(NATA) : Jaccard Index of 1.0 : Score of 16
+Q9ZVB5 - bHLH-Ib-class transcriptional regulator of copper/iron homeostasis & bHLH-type transcription factor : Jaccard Index of 1.0 : Score of 16
+R4HYA4 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 16
+S5DQS6 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+A0A067XG71 - not classified : Jaccard Index of 1.0 : Score of 16
+A0A077EWA5 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+A0A2H5AIZ6 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+A0A339 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 16
+A1A6K6 - RNA splicing regulator *(NSR) : Jaccard Index of 1.0 : Score of 16
+A1E9M9 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A1EA47 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A2XDK5 - HD-ZIP I/II-type transcription factor : Jaccard Index of 1.0 : Score of 16
+A2XFQ8 - peroxisomal fission factor *(PEX11) : Jaccard Index of 1.0 : Score of 16
+A2XLV9 - transcriptional repressor *(IAA/AUX) : Jaccard Index of 1.0 : Score of 16
+A2XMN2 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 16
+A2YVR7 - alpha-type-2 component *(PAB) of 26S proteasome & EC_3.4 hydrolase acting on peptide bond (peptidase) : Jaccard Index of 1.0 : Score of 16
+A2Z1N3 - TIFY-type transcription factor : Jaccard Index of 1.0 : Score of 16
+A3AJ77 - not classified : Jaccard Index of 1.0 : Score of 16
+A4QJB9 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 16
+A4QJK3 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 16
+A7M8Z3 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A7M955 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A7Y3E1 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 16
+A8Y9C5 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A9LYA5 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 16
+B1VKF5 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 16
+B8AM21 - component *(U2B) of U2 snRNP complex : Jaccard Index of 1.0 : Score of 16
+B9DG24 - component *(TAF7) of TFIId basal transcription regulation complex : Jaccard Index of 1.0 : Score of 16
+C5XZK6 - component *(U1C) of U1 snRNP complex : Jaccard Index of 1.0 : Score of 16
+D9J034 - recombination mediator *(Whirly) : Jaccard Index of 1.0 : Score of 16
+F4I8F9 - bHLH-Ib-class transcriptional regulator of copper/iron homeostasis & bHLH-type transcription factor : Jaccard Index of 1.0 : Score of 16
+F4JGB7 - component *(SHL/EBS) of PRC1 complex : Jaccard Index of 1.0 : Score of 16
+M1C5M7 - not classified : Jaccard Index of 1.0 : Score of 16
+O04469 - dodecenoyl-CoA isomerase : Jaccard Index of 1.0 : Score of 16
+O04899 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+O24143 - component *(NQO9/TYKY) of NADH dehydrogenase electron output (module Q) : Jaccard Index of 1.0 : Score of 16
+O24149 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+O24150 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+O24151 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+O24464 - uridylate kinase *(UMK) & EC_2.7 transferase transferring phosphorus-containing group : Jaccard Index of 1.0 : Score of 16
+O48964 - isopentenyl diphosphate isomerase & EC_5.3 intramolecular oxidoreductase : Jaccard Index of 1.0 : Score of 16
+O49078 - EC_1.10 oxidoreductase acting on diphenol or related substance as donor & Rieske iron-sulfur component *(PetC) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 16
+O49743 - transcription factor *(A/B-GATA) : Jaccard Index of 1.0 : Score of 16
+O63075 - subunit a of membrane CF0 subcomplex of ATP synthase complex : Jaccard Index of 1.0 : Score of 16
+O65515 - transcription factor *(A/B-GATA) : Jaccard Index of 1.0 : Score of 16
+O80493 - gamete fusion factor *(DMP8-9) : Jaccard Index of 1.0 : Score of 16
+O80927 - not classified : Jaccard Index of 1.0 : Score of 16
+O81864 - peptidyl-prolyl cis-trans isomerase *(FKBP17-1) : Jaccard Index of 1.0 : Score of 16
+O82246 - lipid droplet-associated factor *(LDAP) : Jaccard Index of 1.0 : Score of 16
+P02871 - not classified : Jaccard Index of 1.0 : Score of 16
+P02874 - not classified : Jaccard Index of 1.0 : Score of 16
+P02883 - not classified : Jaccard Index of 1.0 : Score of 16
+P06410 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 16
+P08242 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+P09672 - EC_1.2 oxidoreductase acting on aldehyde or oxo group of donor & glyceraldehyde 3-phosphate dehydrogenase *(GAPDH) : Jaccard Index of 1.0 : Score of 16
+P0C484 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+P0C485 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+P0C5B2 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+P0CAN7 - subunit E of V-type ATPase peripheral V1 subcomplex : Jaccard Index of 1.0 : Score of 16
+P0CH33 - UBQ ubiquitin-fold protein : Jaccard Index of 1.0 : Score of 16
+P11600 - EC_6.3 ligase forming carbon-nitrogen bond : Jaccard Index of 1.0 : Score of 16
+P11650 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 16
+P12301 - component *(PsbQ) of PS-II oxygen-evolving center : Jaccard Index of 1.0 : Score of 16
+P12355 - component *(PsaF) of PS-I complex : Jaccard Index of 1.0 : Score of 16
+P13192 - component *(PsaF) of PS-I complex : Jaccard Index of 1.0 : Score of 16
+P13993 - not classified : Jaccard Index of 1.0 : Score of 16
+P14233 - transcription factor *(bZIP17/28)) : Jaccard Index of 1.0 : Score of 16
+P22177 - sliding clamp protein *(PCNA) : Jaccard Index of 1.0 : Score of 16
+P22778 - subunit delta *(OSCP) of ATP synthase peripheral MF1 subcomplex : Jaccard Index of 1.0 : Score of 16
+P22971 - not classified : Jaccard Index of 1.0 : Score of 16
+P22972 - not classified : Jaccard Index of 1.0 : Score of 16
+P26291 - EC_1.10 oxidoreductase acting on diphenol or related substance as donor & Rieske iron-sulfur component *(PetC) of cytochrome b6/f complex : Jaccard Index of 1.0 : Score of 16
+P26356 - TATA-box-binding component of TFIId basal transcription regulation complex & TATA-box-binding protein of RNA polymerase III-dependent transcription : Jaccard Index of 1.0 : Score of 16
+P27084 - manganese superoxide dismutase *(MSD) : Jaccard Index of 1.0 : Score of 16
+P27560 - not classified : Jaccard Index of 1.0 : Score of 16
+P27806 - linker histone *(H1) : Jaccard Index of 1.0 : Score of 16
+P30078 - EC_2.3 acyltransferase : Jaccard Index of 1.0 : Score of 16
+P30110 - class phi glutathione S-transferase : Jaccard Index of 1.0 : Score of 16
+P31155 - S-adenosyl methionine synthetase & EC_2.5 transferase transferring alkyl or aryl group, other than methyl group : Jaccard Index of 1.0 : Score of 16
+P33632 - not classified : Jaccard Index of 1.0 : Score of 16
+P35017 - manganese superoxide dismutase *(MSD) : Jaccard Index of 1.0 : Score of 16
+P35512 - phenylalanine ammonia lyase *(PAL) & EC_4.3 carbon-nitrogen lyase : Jaccard Index of 1.0 : Score of 16
+P38662 - not classified : Jaccard Index of 1.0 : Score of 16
+P39871 - EC_1.7 oxidoreductase acting on other nitrogenous compound as donor : Jaccard Index of 1.0 : Score of 16
+P41978 - manganese superoxide dismutase *(MSD) : Jaccard Index of 1.0 : Score of 16
+P41979 - manganese superoxide dismutase *(MSD) : Jaccard Index of 1.0 : Score of 16
+P41980 - manganese superoxide dismutase *(MSD) : Jaccard Index of 1.0 : Score of 16
+P42797 - component *(uS10m) of small mitoribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+P45852 - not classified : Jaccard Index of 1.0 : Score of 16
+P48006 - component *(eEF1B-beta/-delta) of eEF1B eEF1A-GDP-recycling complex : Jaccard Index of 1.0 : Score of 16
+P55915 - not classified : Jaccard Index of 1.0 : Score of 16
+P56344 - not classified : Jaccard Index of 1.0 : Score of 16
+P80196 - T2-type RNase *(RNS) : Jaccard Index of 1.0 : Score of 16
+P81461 - not classified : Jaccard Index of 1.0 : Score of 16
+P81760 - not classified : Jaccard Index of 1.0 : Score of 16
+P83410 - not classified : Jaccard Index of 1.0 : Score of 16
+P83618 - T2-type RNase *(RNS) : Jaccard Index of 1.0 : Score of 16
+P83721 - not classified : Jaccard Index of 1.0 : Score of 16
+P85084 - basic chitinase *(CHIB) : Jaccard Index of 1.0 : Score of 16
+P85193 - EC_2.7 transferase transferring phosphorus-containing group : Jaccard Index of 1.0 : Score of 16
+P86184 - not classified : Jaccard Index of 1.0 : Score of 16
+P86353 - not classified : Jaccard Index of 1.0 : Score of 16
+P86795 - not classified : Jaccard Index of 1.0 : Score of 16
+P86893 - not classified : Jaccard Index of 1.0 : Score of 16
+P93045 - SMARCB component *(BSH) of chromatin remodeling complex : Jaccard Index of 1.0 : Score of 16
+P93395 - beta-type-1 component *(PBA) of 26S proteasome : Jaccard Index of 1.0 : Score of 16
+P93711 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+Q03489 - regulatory protein *(SEPALLATA) of floral meristem identity control & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q06397 - component *(DFM1) of ER-associated protein degradation (ERAD) machinery : Jaccard Index of 1.0 : Score of 16
+Q06398 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 16
+Q06GQ6 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 16
+Q06RB0 - component *(bS18c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q07472 - component *(AP3) of AP3-PISTILLATA organ-identity heterodimer & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q08479 - adenylate kinase & EC_2.7 transferase transferring phosphorus-containing group : Jaccard Index of 1.0 : Score of 16
+Q08480 - adenylate kinase & EC_2.7 transferase transferring phosphorus-containing group : Jaccard Index of 1.0 : Score of 16
+Q08704 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 16
+Q10BU2 - not classified : Jaccard Index of 1.0 : Score of 16
+Q10CE7 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 16
+Q10DV5 - zf-HD-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q10KF0 - alpha-type-2 component *(PAB) of 26S proteasome & EC_3.4 hydrolase acting on peptide bond (peptidase) : Jaccard Index of 1.0 : Score of 16
+Q10MN2 - peroxisomal fission factor *(PEX11) : Jaccard Index of 1.0 : Score of 16
+Q10MR0 - component *(U2B) of U2 snRNP complex : Jaccard Index of 1.0 : Score of 16
+Q10P60 - class-P small heat-shock-responsive protein : Jaccard Index of 1.0 : Score of 16
+Q10QF2 - HD-ZIP I/II-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q10RK1 - alpha-class expansin : Jaccard Index of 1.0 : Score of 16
+Q10SM7 - peroxisomal fission factor *(PEX11) : Jaccard Index of 1.0 : Score of 16
+Q1ACK5 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 16
+Q2QQA3 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q2QXJ0 - not classified : Jaccard Index of 1.0 : Score of 16
+Q2QXJ1 - not classified : Jaccard Index of 1.0 : Score of 16
+Q2QXJ2 - not classified : Jaccard Index of 1.0 : Score of 16
+Q2QXJ4 - not classified : Jaccard Index of 1.0 : Score of 16
+Q38716 - T2-type RNase *(RNS) : Jaccard Index of 1.0 : Score of 16
+Q38851 - MYB class-R2R3 subgroup-4 transcription factor : Jaccard Index of 1.0 : Score of 16
+Q3E7K8 - UBQ ubiquitin-fold protein : Jaccard Index of 1.0 : Score of 16
+Q3V530 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 16
+Q40286 - EC_2.4 glycosyltransferase : Jaccard Index of 1.0 : Score of 16
+Q40476 - subgroup ERF-IX transcription factor : Jaccard Index of 1.0 : Score of 16
+Q40479 - subgroup ERF-IX transcription factor : Jaccard Index of 1.0 : Score of 16
+Q41114 - not classified : Jaccard Index of 1.0 : Score of 16
+Q43008 - manganese superoxide dismutase *(MSD) : Jaccard Index of 1.0 : Score of 16
+Q43161 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+Q43237 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+Q43418 - not classified : Jaccard Index of 1.0 : Score of 16
+Q4G2J5 - component *(DFM1) of ER-associated protein degradation (ERAD) machinery : Jaccard Index of 1.0 : Score of 16
+Q4GZK7 - A-type ARR response regulator of cytokinin signalling : Jaccard Index of 1.0 : Score of 16
+Q4GZL0 - A-type ARR response regulator of cytokinin signalling : Jaccard Index of 1.0 : Score of 16
+Q4JL76 - MYB class-R2R3 transcription factor : Jaccard Index of 1.0 : Score of 16
+Q52K82 - calcium sensor *(CML) : Jaccard Index of 1.0 : Score of 16
+Q5JJY5 - sugar efflux transporter *(SWEET) : Jaccard Index of 1.0 : Score of 16
+Q5N8J1 - sugar efflux transporter *(SWEET) : Jaccard Index of 1.0 : Score of 16
+Q5VM82 - zf-HD-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q5VRJ8 - peroxisomal fission factor *(PEX11) : Jaccard Index of 1.0 : Score of 16
+Q64MA1 - not classified : Jaccard Index of 1.0 : Score of 16
+Q688L5 - not classified : Jaccard Index of 1.0 : Score of 16
+Q69TY4 - type-2 peroxiredoxin *(PrxII) : Jaccard Index of 1.0 : Score of 16
+Q6AWX7 - component *(GRF) of GRF-GIF transcriptional complex : Jaccard Index of 1.0 : Score of 16
+Q6DBN1 - substrate adaptor of CUL3-based E3 ubiquitin ligase complex & substrate(LHP1) adaptor of CUL3-BTB E3 ubiquitin ligase : Jaccard Index of 1.0 : Score of 16
+Q6EP49 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q6ESF0 - not classified : Jaccard Index of 1.0 : Score of 16
+Q6Q9H6 - regulatory protein *(SEPALLATA) of floral meristem identity control & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q75GK0 - transcriptional repressor *(IAA/AUX) : Jaccard Index of 1.0 : Score of 16
+Q7XI85 - HD-ZIP I/II-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q7XTV3 - WOX-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q84WK5 - component *(GID8) of GID ubiquitination complex : Jaccard Index of 1.0 : Score of 16
+Q84WW5 - contact site protein (VAP27) of ER-cytoskeleton-plasmamembrane interface : Jaccard Index of 1.0 : Score of 16
+Q84ZA1 - subgroup ERF-IV/DREB2 transcription factor : Jaccard Index of 1.0 : Score of 16
+Q851C7 - cytokinin phosphoribohydrolase *(LOG) : Jaccard Index of 1.0 : Score of 16
+Q851J9 - not classified : Jaccard Index of 1.0 : Score of 16
+Q851K1 - not classified : Jaccard Index of 1.0 : Score of 16
+Q8GT75 - RING-H2-class ATL-subclass E3 ubiquitin ligase : Jaccard Index of 1.0 : Score of 16
+Q8GXU9 - not classified : Jaccard Index of 1.0 : Score of 16
+Q8GYW0 - deubiquitinase *(OTU3-4) : Jaccard Index of 1.0 : Score of 16
+Q8H994 - not classified : Jaccard Index of 1.0 : Score of 16
+Q8H996 - not classified : Jaccard Index of 1.0 : Score of 16
+Q8H9B6 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+Q8L9W8 - not classified : Jaccard Index of 1.0 : Score of 16
+Q8LB65 - peptidyl-prolyl cis-trans isomerase *(FKBP17-2/3) : Jaccard Index of 1.0 : Score of 16
+Q8LC76 - Cystatin protease inhibitor : Jaccard Index of 1.0 : Score of 16
+Q8LDS5 - component *(THOC7) of mRNP trafficking THO subcomplex : Jaccard Index of 1.0 : Score of 16
+Q8LE94 - E3 ubiquitin ligase *(AIRP1) : Jaccard Index of 1.0 : Score of 16
+Q8LKP9 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 16
+Q8LLR0 - regulatory protein *(SEPALLATA) of floral meristem identity control & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q8M9X9 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 16
+Q8RX33 - meiotic double strand break initiation accessory protein *(DFO) : Jaccard Index of 1.0 : Score of 16
+Q8RXX5 - component *(bL19c) of large plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q8S3X0 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 16
+Q8VXQ7 - EC_1.2 oxidoreductase acting on aldehyde or oxo group of donor : Jaccard Index of 1.0 : Score of 16
+Q8VY52 - not classified : Jaccard Index of 1.0 : Score of 16
+Q93W77 - scaffold protein NFU of plastidial SUF system transfer phase : Jaccard Index of 1.0 : Score of 16
+Q941D3 - not classified : Jaccard Index of 1.0 : Score of 16
+Q942A1 - A-type ARR response regulator of cytokinin signalling : Jaccard Index of 1.0 : Score of 16
+Q942A7 - not classified : Jaccard Index of 1.0 : Score of 16
+Q94A32 - fatty acid transporter *(FAX) : Jaccard Index of 1.0 : Score of 16
+Q94F39 - transcriptional co-repressor *(AFP/NINJA) : Jaccard Index of 1.0 : Score of 16
+Q95661 - class-P small heat-shock-responsive protein : Jaccard Index of 1.0 : Score of 16
+Q95H49 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q9BBT7 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 16
+Q9C540 - cyt-b561 electron shuttle hemoprotein *(CYBASC) : Jaccard Index of 1.0 : Score of 16
+Q9C5D0 - regulatory protein *(LEJ1/2) of thiol-based redox regulation : Jaccard Index of 1.0 : Score of 16
+Q9C5D7 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+Q9C6H5 - WRKY-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9C6M1 - manganese/calcium cation transporter *(BICAT) : Jaccard Index of 1.0 : Score of 16
+Q9C7P2 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 16
+Q9C7P6 - component *(eIF4E) of eIF4F mRNA unwinding complex : Jaccard Index of 1.0 : Score of 16
+Q9C8T1 - ATP-binding protein CcmA of CCM cytochrome c maturation system (system I) : Jaccard Index of 1.0 : Score of 16
+Q9C8U5 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9C9C5 - component *(eL6) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 16
+Q9C9C6 - component *(eL6) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 16
+Q9C9W3 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+Q9C9Z8 - subunit E of V-type ATPase peripheral V1 subcomplex : Jaccard Index of 1.0 : Score of 16
+Q9CA57 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 16
+Q9CAS6 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 16
+Q9FG30 - regulatory protein *(KHZ) of autonomous floral-promotion pathway : Jaccard Index of 1.0 : Score of 16
+Q9FH51 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9FHY0 - regulatory component *(RPN12) of 26S proteasome : Jaccard Index of 1.0 : Score of 16
+Q9FHZ3 - regulatory protein *(VQ) of WRKY activity : Jaccard Index of 1.0 : Score of 16
+Q9FJ90 - subgroup ERF-III transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9FK43 - small basic intrinsic protein *(SIP) : Jaccard Index of 1.0 : Score of 16
+Q9FKG1 - subgroup ERF-IX transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9FLM6 - TCP-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9FUT0 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 16
+Q9FVZ7 - Cyt-P450 hydroxylase scaffold protein *(MSBP) : Jaccard Index of 1.0 : Score of 16
+Q9FYE6 - bHLH-Ib-class transcriptional regulator of copper/iron homeostasis & bHLH-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9FYF7 - lipid droplet-associated factor *(LDAP) : Jaccard Index of 1.0 : Score of 16
+Q9FZ76 - component *(eL6) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 16
+Q9LDY9 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9LET0 - bHLH-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9LG86 - transcriptional repressor *(IAA/AUX) : Jaccard Index of 1.0 : Score of 16
+Q9LH79 - sugar efflux transporter *(SWEET) : Jaccard Index of 1.0 : Score of 16
+Q9LIK6 - EC_5.2 cis-trans-isomerase : Jaccard Index of 1.0 : Score of 16
+Q9LKA1 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9LPN5 - associated protein of ESCRT-III complex *(VPS60) : Jaccard Index of 1.0 : Score of 16
+Q9LQ48 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 16
+Q9LSU1 - alpha-type-5 component *(PAE) of 26S proteasome & EC_3.4 hydrolase acting on peptide bond (peptidase) : Jaccard Index of 1.0 : Score of 16
+Q9LU18 - subgroup ERF-III transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9LU85 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9LVA7 - chaperone involved in spliceosome assembly *(ICLN) : Jaccard Index of 1.0 : Score of 16
+Q9LW50 - subgroup ERF-IX transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9LXM4 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9LYD3 - subgroup ERF-III transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9LYK8 - manganese superoxide dismutase *(MSD) : Jaccard Index of 1.0 : Score of 16
+Q9LZ06 - class lambda glutathione S-transferase & class lambda glutathione S-transferase : Jaccard Index of 1.0 : Score of 16
+Q9M1H8 - component *(NRPE5) of RNA polymerase V complex : Jaccard Index of 1.0 : Score of 16
+Q9M1K3 - small basic intrinsic protein *(SIP) : Jaccard Index of 1.0 : Score of 16
+Q9M2Z4 - Cyt-P450 hydroxylase scaffold protein *(MSBP) : Jaccard Index of 1.0 : Score of 16
+Q9M4T8 - alpha-type-5 component *(PAE) of 26S proteasome & EC_3.4 hydrolase acting on peptide bond (peptidase) : Jaccard Index of 1.0 : Score of 16
+Q9M4W3 - 2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase & EC_4.6 phosphorus-oxygen lyase : Jaccard Index of 1.0 : Score of 16
+Q9M5W4 - linker histone *(H1) : Jaccard Index of 1.0 : Score of 16
+Q9M8T6 - component *(THOC7) of mRNP trafficking THO subcomplex : Jaccard Index of 1.0 : Score of 16
+Q9M8W5 - small basic intrinsic protein *(SIP) : Jaccard Index of 1.0 : Score of 16
+Q9M8X1 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9MUV8 - EC_3.4 hydrolase acting on peptide bond (peptidase) : Jaccard Index of 1.0 : Score of 16
+Q9SD42 - regulatory protein *(RTE/RTH) of ethylene receptor activity : Jaccard Index of 1.0 : Score of 16
+Q9SFC6 - guanine nucleotide dissociation inhibitor *(RopGDI) : Jaccard Index of 1.0 : Score of 16
+Q9SFF9 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9SI20 - component *(eEF1B-beta/-delta) of eEF1B eEF1A-GDP-recycling complex : Jaccard Index of 1.0 : Score of 16
+Q9SJJ7 - RING-H2-class ATL-subclass E3 ubiquitin ligase : Jaccard Index of 1.0 : Score of 16
+Q9SKY9 - transcriptional co-regulator *(OFP) : Jaccard Index of 1.0 : Score of 16
+Q9SLC3 - RING-H2-class ATL-subclass E3 ubiquitin ligase : Jaccard Index of 1.0 : Score of 16
+Q9SLP8 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+Q9SN28 - RING-H2-class ATL-subclass E3 ubiquitin ligase : Jaccard Index of 1.0 : Score of 16
+Q9SR70 - peptidyl-prolyl cis-trans isomerase *(FKBP16-4) : Jaccard Index of 1.0 : Score of 16
+Q9SRN1 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9SSQ8 - class-M-II small heat-shock-responsive protein : Jaccard Index of 1.0 : Score of 16
+Q9SV73 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9SWB6 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9SZ54 - glutathione peroxidase & EC_1.11 oxidoreductase acting on peroxide as acceptor : Jaccard Index of 1.0 : Score of 16
+Q9TKY0 - component *(NdhK) of NDH subcomplex A : Jaccard Index of 1.0 : Score of 16
+Q9XHZ3 - urease accessory protein *(UreF) : Jaccard Index of 1.0 : Score of 16
+Q9XIF8 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 16
+Q9ZVY7 - lipid droplet-associated factor *(OBAP) : Jaccard Index of 1.0 : Score of 16
+A0A077ES70 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+A0A077ESS0 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+A0A077EW86 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+A0A077EYL8 - EC_2.1 transferase transferring one-carbon group & caffeoyl-CoA 3-O-methyltransferase *(CCoA-OMT) : Jaccard Index of 1.0 : Score of 16
+A0A324 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A0A347 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A0ZZ24 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A0ZZ47 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A1E260 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 16
+A1E261 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 16
+A1E9I4 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A1E9K2 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A1E9R7 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A1E9T6 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A1EA01 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A1EA20 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A1XFW7 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A1XGM7 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A2T321 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A2WR31 - sugar efflux transporter *(SWEET) : Jaccard Index of 1.0 : Score of 16
+A2WSZ6 - zf-HD-type transcription factor : Jaccard Index of 1.0 : Score of 16
+A2XLF4 - zf-HD-type transcription factor : Jaccard Index of 1.0 : Score of 16
+A2XNF0 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 16
+A2Y5N0 - plant-specific ALOG-type transcription factor : Jaccard Index of 1.0 : Score of 16
+A2YQB8 - lignin polymerization scaffold protein *(CASP) : Jaccard Index of 1.0 : Score of 16
+A2YXQ7 - not classified : Jaccard Index of 1.0 : Score of 16
+A2Z389 - not classified : Jaccard Index of 1.0 : Score of 16
+A2Z9Q7 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+A2ZIM4 - sugar efflux transporter *(SWEET) : Jaccard Index of 1.0 : Score of 16
+A3A9H6 - cyt-b561 electron shuttle hemoprotein *(CYBASC) : Jaccard Index of 1.0 : Score of 16
+A3RCV9 - RNA-cap-binding factor (4EHP) : Jaccard Index of 1.0 : Score of 16
+A4GGA8 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A4GYP7 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A4QJA4 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A4QJC7 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A4QJI8 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A4QJL1 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A4QJS2 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A4QJU5 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A4QK07 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A4QK30 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A4QK94 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A4QKB7 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A4QKI1 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A4QKK4 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A4QKS0 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A4QKU3 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A4QL08 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A4QL31 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A4QL95 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A4QLB8 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A4QLK6 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A4QLS2 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A4QLU5 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A5ANT9 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 16
+A6H5F6 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A6H5J0 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A6MM25 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A6MMB1 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A6MMD4 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A6MMJ6 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A6MML9 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A6MMT3 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A6MMV6 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A7M974 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A7Q5X9 - component *(eS1) of small ribosomal-subunit (SSU) proteome : Jaccard Index of 1.0 : Score of 16
+A7Y3B3 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A7Y3F4 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A8SE74 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A8SEB5 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A8W3B3 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A8W3D2 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A8W3H9 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A8Y9G3 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A8Y9I1 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A9L985 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+A9LYB2 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+A9LYH4 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+B0YPM1 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+B0Z4M8 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+B0Z4W2 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+B0Z546 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+B0Z5D0 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+B1A924 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+B1A947 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+B1NWD9 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+B1NWG2 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+B1VKH6 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+B2LMI3 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+B2LMK5 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+B4FFZ9 - lipid droplet-associated factor *(OBAP) : Jaccard Index of 1.0 : Score of 16
+B4FUS3 - not classified : Jaccard Index of 1.0 : Score of 16
+B6SGC5 - not classified : Jaccard Index of 1.0 : Score of 16
+B8A833 - sugar efflux transporter *(SWEET) : Jaccard Index of 1.0 : Score of 16
+B8AH02 - plant-specific ALOG-type transcription factor : Jaccard Index of 1.0 : Score of 16
+B8AXU2 - Nt-glutamine amidase *(NTAQ) : Jaccard Index of 1.0 : Score of 16
+B8LQF9 - not classified : Jaccard Index of 1.0 : Score of 16
+B9G125 - manganese/calcium cation transporter *(BICAT) : Jaccard Index of 1.0 : Score of 16
+B9GHX8 - not classified : Jaccard Index of 1.0 : Score of 16
+B9HQ42 - lignin polymerization scaffold protein *(CASP) : Jaccard Index of 1.0 : Score of 16
+C4IYS8 - cyt-b561 electron shuttle hemoprotein *(CYBASC) : Jaccard Index of 1.0 : Score of 16
+C5YAP3 - lignin polymerization scaffold protein *(CASP) : Jaccard Index of 1.0 : Score of 16
+C5YLC9 - lignin polymerization scaffold protein *(CASP) : Jaccard Index of 1.0 : Score of 16
+K4BND8 - regulatory protein *(SEPALLATA) of floral meristem identity control & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+O22591 - component *(PsbQ) of PS-II oxygen-evolving center : Jaccard Index of 1.0 : Score of 16
+O22604 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 16
+O23193 - regulatory protein *(LEJ1/2) of thiol-based redox regulation : Jaccard Index of 1.0 : Score of 16
+O23948 - subunit E of V-type ATPase peripheral V1 subcomplex : Jaccard Index of 1.0 : Score of 16
+O24088 - not classified : Jaccard Index of 1.0 : Score of 16
+O24296 - glutathione peroxidase & EC_1.11 oxidoreductase acting on peroxide as acceptor : Jaccard Index of 1.0 : Score of 16
+O24313 - not classified : Jaccard Index of 1.0 : Score of 16
+O48529 - not classified : Jaccard Index of 1.0 : Score of 16
+O81918 - component *(eEF1B-beta/-delta) of eEF1B eEF1A-GDP-recycling complex : Jaccard Index of 1.0 : Score of 16
+P02859 - not classified : Jaccard Index of 1.0 : Score of 16
+P02884 - not classified : Jaccard Index of 1.0 : Score of 16
+P04702 - not classified : Jaccard Index of 1.0 : Score of 16
+P04703 - not classified : Jaccard Index of 1.0 : Score of 16
+P04704 - not classified : Jaccard Index of 1.0 : Score of 16
+P06354 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+P06355 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+P06674 - not classified : Jaccard Index of 1.0 : Score of 16
+P06675 - not classified : Jaccard Index of 1.0 : Score of 16
+P06676 - not classified : Jaccard Index of 1.0 : Score of 16
+P06677 - not classified : Jaccard Index of 1.0 : Score of 16
+P06678 - not classified : Jaccard Index of 1.0 : Score of 16
+P08241 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+P08416 - not classified : Jaccard Index of 1.0 : Score of 16
+P08688 - not classified : Jaccard Index of 1.0 : Score of 16
+P09886 - class-P small heat-shock-responsive protein : Jaccard Index of 1.0 : Score of 16
+P0C302 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+P0C303 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+P0C480 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+P0C481 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+P0C482 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+P0C483 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+P0DKJ4 - sugar efflux transporter *(SWEET) : Jaccard Index of 1.0 : Score of 16
+P12212 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+P12213 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+P13089 - transcriptional repressor *(IAA/AUX) : Jaccard Index of 1.0 : Score of 16
+P14895 - LHC-related protein *(ELIP) : Jaccard Index of 1.0 : Score of 16
+P16037 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+P17933 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+P19664 - not classified : Jaccard Index of 1.0 : Score of 16
+P20150 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+P24449 - not classified : Jaccard Index of 1.0 : Score of 16
+P24450 - not classified : Jaccard Index of 1.0 : Score of 16
+P26864 - component *(uS2m) of small mitoribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+P27068 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+P28640 - not classified : Jaccard Index of 1.0 : Score of 16
+P28641 - not classified : Jaccard Index of 1.0 : Score of 16
+P28644 - plastidial ribonucleoprotein *(CP31) : Jaccard Index of 1.0 : Score of 16
+P30222 - class-P small heat-shock-responsive protein : Jaccard Index of 1.0 : Score of 16
+P34091 - component *(eL6) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 16
+P41605 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+P46486 - component *(PsaF) of PS-I complex : Jaccard Index of 1.0 : Score of 16
+P46641 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+P46749 - not classified : Jaccard Index of 1.0 : Score of 16
+P49160 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+P49248 - class lambda glutathione S-transferase & class lambda glutathione S-transferase : Jaccard Index of 1.0 : Score of 16
+P50374 - translation elongation factor *(EF-Tu) : Jaccard Index of 1.0 : Score of 16
+P50375 - translation elongation factor *(EF-Tu) : Jaccard Index of 1.0 : Score of 16
+P50378 - translation elongation factor *(EF-Tu) : Jaccard Index of 1.0 : Score of 16
+P50379 - translation elongation factor *(EF-Tu) : Jaccard Index of 1.0 : Score of 16
+P50380 - translation elongation factor *(EF-Tu) : Jaccard Index of 1.0 : Score of 16
+P50472 - class tau glutathione S-transferase : Jaccard Index of 1.0 : Score of 16
+P50699 - not classified : Jaccard Index of 1.0 : Score of 16
+P51117 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 16
+P56365 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+P56783 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+P56797 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+P58155 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+P60039 - component *(uL30) of large ribosomal-subunit (LSU) proteome : Jaccard Index of 1.0 : Score of 16
+P69373 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+P81364 - not classified : Jaccard Index of 1.0 : Score of 16
+P81393 - MYB class-R2R3 subgroup-4 transcription factor : Jaccard Index of 1.0 : Score of 16
+P81460 - not classified : Jaccard Index of 1.0 : Score of 16
+P82658 - not classified : Jaccard Index of 1.0 : Score of 16
+P83335 - not classified : Jaccard Index of 1.0 : Score of 16
+P84530 - not classified : Jaccard Index of 1.0 : Score of 16
+P85199 - not classified : Jaccard Index of 1.0 : Score of 16
+P92511 - not classified : Jaccard Index of 1.0 : Score of 16
+Q00445 - class-P small heat-shock-responsive protein : Jaccard Index of 1.0 : Score of 16
+Q01197 - not classified : Jaccard Index of 1.0 : Score of 16
+Q01591 - not classified : Jaccard Index of 1.0 : Score of 16
+Q06FL4 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q06GP8 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q06GS1 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q06GY5 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q06H08 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q06RC0 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q06RE2 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q09FU9 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q09FX2 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q09G34 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q09G57 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q09MG6 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q09MI9 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q09X05 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q09X28 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q0DZF3 - plant-specific ALOG-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q0G9K7 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q0G9N0 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q0G9V0 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q0G9X3 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q0J3Y7 - not classified : Jaccard Index of 1.0 : Score of 16
+Q0J968 - protein deacetylasen *(TIPSY) & immunity suppressor (SOBER/TIPSY) of effector-triggered immunity (ETI) network : Jaccard Index of 1.0 : Score of 16
+Q0JDA2 - component *(SDH5) of succinate dehydrogenase complex : Jaccard Index of 1.0 : Score of 16
+Q0P3K8 - subunit a of membrane CF0 subcomplex of ATP synthase complex : Jaccard Index of 1.0 : Score of 16
+Q0WQN4 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 16
+Q0WQQ1 - class II ARF-GAP ARF-GTPase-activating protein : Jaccard Index of 1.0 : Score of 16
+Q0ZJ08 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q0ZJ31 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q10D34 - transcriptional repressor *(IAA/AUX) : Jaccard Index of 1.0 : Score of 16
+Q10N44 - class lambda glutathione S-transferase & class lambda glutathione S-transferase : Jaccard Index of 1.0 : Score of 16
+Q14FG8 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q19V69 - regulatory protein *(DLDG1) of non-photochemical quenching & regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q1ACN3 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q1KVW8 - subunit a of membrane CF0 subcomplex of ATP synthase complex : Jaccard Index of 1.0 : Score of 16
+Q1KXU7 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q1KXW9 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q20EV5 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q20F10 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q25AM2 - WOX-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q2EEW0 - not classified : Jaccard Index of 1.0 : Score of 16
+Q2L8Z6 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q2L922 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q2MI88 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q2MIB1 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q2MIH5 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q2MIJ8 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q2PMT2 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q2QD77 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q2QWX8 - sugar efflux transporter *(SWEET) : Jaccard Index of 1.0 : Score of 16
+Q2R1D5 - 14-3-3 phosphoprotein-binding protein *(GRF) : Jaccard Index of 1.0 : Score of 16
+Q2VEG5 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q2VEI7 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q32RN6 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q32RQ0 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q32RY1 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q332W6 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q33C21 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q33C49 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q38732 - RNA editing factor *(MORF) : Jaccard Index of 1.0 : Score of 16
+Q39685 - regulatory protein *(SEPALLATA) of floral meristem identity control & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q39962 - not classified : Jaccard Index of 1.0 : Score of 16
+Q3BAM9 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q3BAQ3 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q3C1H0 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q3C1I9 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q3V523 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q3V545 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q3ZJ85 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q40358 - not classified : Jaccard Index of 1.0 : Score of 16
+Q40872 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q40885 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q41274 - regulatory protein *(AP1/CAL/FUL) of floral meristem identity control & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q41348 - synthase component of pyridoxal 5-phosphate synthase complex : Jaccard Index of 1.0 : Score of 16
+Q41396 - subunit E of V-type ATPase peripheral V1 subcomplex : Jaccard Index of 1.0 : Score of 16
+Q42663 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 16
+Q45QI7 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 16
+Q49KY6 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q49L09 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q4AE11 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 16
+Q4AE12 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 16
+Q4FG66 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q4FGG7 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q4VZP4 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q4W6C7 - not classified : Jaccard Index of 1.0 : Score of 16
+Q53N90 - not classified : Jaccard Index of 1.0 : Score of 16
+Q53NK6 - MYB class-R2R3 transcription factor : Jaccard Index of 1.0 : Score of 16
+Q56P10 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q5DWG1 - not classified : Jaccard Index of 1.0 : Score of 16
+Q5JLA7 - not classified : Jaccard Index of 1.0 : Score of 16
+Q5SCY1 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q5SND2 - calcium sensor *(CML) : Jaccard Index of 1.0 : Score of 16
+Q5W794 - C2H2 subclass Di19 transcription factor : Jaccard Index of 1.0 : Score of 16
+Q60E61 - Nt-glutamine amidase *(NTAQ) : Jaccard Index of 1.0 : Score of 16
+Q68RZ4 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q68S17 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q6ATW6 - plant-specific ALOG-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q6DBN2 - not classified : Jaccard Index of 1.0 : Score of 16
+Q6E6S7 - regulatory protein *(AP1/CAL/FUL) of floral meristem identity control & MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q6END5 - component *(uS3c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q6ENG1 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q6ENI1 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q6ENV2 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q6ENX0 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q6ETK9 - not classified : Jaccard Index of 1.0 : Score of 16
+Q6EW41 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q6EW59 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q6H658 - iron cation transporter *(VTL) : Jaccard Index of 1.0 : Score of 16
+Q6L388 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q6L3A4 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q6NMR9 - not classified : Jaccard Index of 1.0 : Score of 16
+Q6YXJ9 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q6Z1Y7 - lignin polymerization scaffold protein *(CASP) : Jaccard Index of 1.0 : Score of 16
+Q70XZ1 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q70XZ2 - protein involved in PS-I assembly *(YCF4) : Jaccard Index of 1.0 : Score of 16
+Q70Y11 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q71E53 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q75HV0 - regulatory protein *(CYCP(CYCU) of cell cycle : Jaccard Index of 1.0 : Score of 16
+Q7FNT2 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q7XMK3 - cyt-b561 electron shuttle hemoprotein *(CYBASC) : Jaccard Index of 1.0 : Score of 16
+Q7XR62 - protein deacetylasen *(TIPSY) & immunity suppressor (SOBER/TIPSY) of effector-triggered immunity (ETI) network : Jaccard Index of 1.0 : Score of 16
+Q7Y225 - not classified : Jaccard Index of 1.0 : Score of 16
+Q7YJW1 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q7YJY1 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q84JC2 - DOG-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q84JK8 - not classified : Jaccard Index of 1.0 : Score of 16
+Q84T92 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 16
+Q852K8 - not classified : Jaccard Index of 1.0 : Score of 16
+Q85AW7 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q85FN0 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q85X64 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q8GWE1 - ubiquitin carboxyl-terminal hydrolase *(UCH3) & ubiquitin carboxyl-terminal hydrolase *(UCH3) & EC_3.4 hydrolase acting on peptide bond (peptidase) : Jaccard Index of 1.0 : Score of 16
+Q8H398 - regulatory protein *(SPX) of phosphate signalling : Jaccard Index of 1.0 : Score of 16
+Q8H995 - not classified : Jaccard Index of 1.0 : Score of 16
+Q8LFP1 - H-class Rab-GDF protein : Jaccard Index of 1.0 : Score of 16
+Q8MA08 - subunit a of membrane CF0 subcomplex of ATP synthase complex : Jaccard Index of 1.0 : Score of 16
+Q8MA09 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q8S1Z1 - SSU processome assembly factor *(UTP11) : Jaccard Index of 1.0 : Score of 16
+Q8S8W5 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q8S911 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 16
+Q8VY63 - not classified : Jaccard Index of 1.0 : Score of 16
+Q8VYI2 - GARP subgroup PHL transcription factor : Jaccard Index of 1.0 : Score of 16
+Q8WI27 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q93YV9 - substrate adaptor of SCF E3 ubiquitin ligase complex : Jaccard Index of 1.0 : Score of 16
+Q94DH3 - component *(LUX) of circadian clock Evening complex (EC) : Jaccard Index of 1.0 : Score of 16
+Q9ATM2 - small basic intrinsic protein *(SIP) : Jaccard Index of 1.0 : Score of 16
+Q9BBS6 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q9C5X2 - regulatory protein *(CYCJ18) of cell cycle : Jaccard Index of 1.0 : Score of 16
+Q9C9U7 - A-class RAB GTPase : Jaccard Index of 1.0 : Score of 16
+Q9CA30 - AS2/LOB-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9CAP4 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9FM04 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9FMC5 - associated protein of ESCRT-III complex *(VPS60) : Jaccard Index of 1.0 : Score of 16
+Q9FMR3 - NAC-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9LF14 - component *(CRS2) of CRS2-CAF plastidial RNA splicing factor complexes : Jaccard Index of 1.0 : Score of 16
+Q9LK32 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9LM90 - REM-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9LNN1 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9LRN6 - calcium sensor *(CML) : Jaccard Index of 1.0 : Score of 16
+Q9LTI3 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9LU33 - glycolipid transfer protein *(GLTP) : Jaccard Index of 1.0 : Score of 16
+Q9M063 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9M122 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9M205 - regulatory protein *(CYCP(CYCU) of cell cycle : Jaccard Index of 1.0 : Score of 16
+Q9M3L4 - regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q9M5B3 - EC_5.5 intramolecular lyase & chalcone isomerase : Jaccard Index of 1.0 : Score of 16
+Q9M8M6 - WRKY-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9MB46 - subunit E of V-type ATPase peripheral V1 subcomplex : Jaccard Index of 1.0 : Score of 16
+Q9MTM2 - component *(uS2c) of small plastid ribosomal-subunit proteome : Jaccard Index of 1.0 : Score of 16
+Q9MUN7 - regulatory protein *(DLDG1) of non-photochemical quenching & regulatory protein *(YCF10) of non-photochemical quenching : Jaccard Index of 1.0 : Score of 16
+Q9SCP1 - MYB class-R2R3 transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9SCS3 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9SK08 - AS2/LOB-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9SMH2 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9SUB0 - transcription factor *(DOF) : Jaccard Index of 1.0 : Score of 16
+Q9SWE7 - subunit E of V-type ATPase peripheral V1 subcomplex : Jaccard Index of 1.0 : Score of 16
+Q9SZE8 - AS2/LOB-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9TL13 - subunit a of membrane CF0 subcomplex of ATP synthase complex : Jaccard Index of 1.0 : Score of 16
+Q9XGJ4 - MADS/AGL-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9ZV39 - REM-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q9ZW96 - AS2/LOB-type transcription factor : Jaccard Index of 1.0 : Score of 16
+O20133 - not classified : Jaccard Index of 1.0 : Score of 16
+O22288 - not classified : Jaccard Index of 1.0 : Score of 16
+O49698 - not classified : Jaccard Index of 1.0 : Score of 16
+O82370 - not classified : Jaccard Index of 1.0 : Score of 16
+P16273 - not classified : Jaccard Index of 1.0 : Score of 16
+P92519 - not classified : Jaccard Index of 1.0 : Score of 16
+Q10QS9 - REM-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q1PEN2 - not classified : Jaccard Index of 1.0 : Score of 16
+Q3ECQ9 - not classified : Jaccard Index of 1.0 : Score of 16
+Q69V36 - REM-type transcription factor : Jaccard Index of 1.0 : Score of 16
+Q6I5B2 - not classified : Jaccard Index of 1.0 : Score of 16
+Q8GWR2 - lipid droplet-associated factor *(OBAP) : Jaccard Index of 1.0 : Score of 16
+Q9C7N3 - lipid droplet-associated factor *(OBAP) : Jaccard Index of 1.0 : Score of 16
+Q9FHW4 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9LUM1 - not classified : Jaccard Index of 1.0 : Score of 16
+Q9LXX3 - not classified : Jaccard Index of 1.0 : Score of 16
