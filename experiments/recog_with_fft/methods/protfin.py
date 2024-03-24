@@ -4,10 +4,11 @@ A tool to find a protein and its relatives based on chemical-physical
 features of their amino acid sequences
 """
 
-from typing import List, Dict, Tuple
 import pickle
 import argparse
 from tools import *
+from os import environ as env
+from typing import List, Dict, Tuple
 from signal import signal, SIGPIPE, SIG_DFL
 signal(SIGPIPE, SIG_DFL)  # fixes weird python error, look: https://newbebweb.blogspot.com/2012/02/python-head-ioerror-errno-32-broken.html
 
@@ -15,11 +16,14 @@ KIDERA_FACTOR = ["Helix/bend preference", "Side-chain size", "Extended structure
     .index("Hydrophobicity")
 
 # parameters for the STFT
-WINDOW_SIZE = 30
-WINDOW_TYPE = ["boxcar", "triang", "blackman", "hamming", "hann", "bartlett", "flattop", "parzen", "bohman", "blackmanharris", "nuttall", "barthann", "cosine", "exponential", "tukey", "taylor", "lanczos"]\
-              [0]
-OVERLAP = 15
-N_PEAKS = 0  # 0 means all
+WINDOW_SIZE = int(env.get("WINDOW_SIZE", 30))
+WINDOW_TYPE = env.get("WINDOW_TYPE", ["boxcar", "triang", "blackman", "hamming", "hann", "bartlett", "flattop", "parzen", "bohman", "blackmanharris", "nuttall", "barthann", "cosine", "exponential", "tukey", "taylor", "lanczos"]\
+                                     [0])
+OVERLAP = int(env.get("OVERLAP", 15))
+N_PEAKS = int(env.get("N_PEAKS", 0))  # 0 means all
+
+DB_DEFAULT = "database.pickle"
+LOOKUP_DEFAULT = "protein_lookup.pickle"
 
 
 def main():
@@ -37,12 +41,14 @@ def main():
     # protfin.py create-db <fasta-file>
     create_db_parser = sub_commands.add_parser("create-db", help="Create Database")
     create_db_parser.add_argument("fasta-file")
-    create_db_parser.set_defaults(func=lambda args: create_db(getattr(args, "fasta-file")))
+    create_db_parser.add_argument("-p", "--path", default=DB_DEFAULT)
+    create_db_parser.set_defaults(func=lambda args: create_db(getattr(args, "fasta-file"), db_out=args.path))
 
     # protfin.py find-match <fasta-file>
     find_match_parser = sub_commands.add_parser("find-match", help="Find Matches for Proteins")
     find_match_parser.add_argument("fasta-file")
-    find_match_parser.set_defaults(func=lambda args: find_match(getattr(args, "fasta-file")))
+    find_match_parser.add_argument("-d", "--database", default=DB_DEFAULT)
+    find_match_parser.set_defaults(func=lambda args: find_match(getattr(args, "fasta-file"), db_in=args.database))
 
     args = parser.parse_args()
     args.func(args)
@@ -50,8 +56,8 @@ def main():
 
 def create_db(
         prot_file: str,
-        db_out="database.pickle",
-        lookup_out="protein_lookup.pickle"
+        db_out=DB_DEFAULT,
+        lookup_out=LOOKUP_DEFAULT
         ):
     """
     Creates a database of combinatorial hashes for all protein sequences in the
@@ -99,8 +105,8 @@ def create_db(
 
 def find_match(
         fasta_file: str,
-        db_in="database.pickle",
-        lookup_in="protein_lookup.pickle"
+        db_in=DB_DEFAULT,
+        lookup_in=LOOKUP_DEFAULT
         ):
     """
     Find matches for the proteins defined in the FASTA file
@@ -134,6 +140,10 @@ def find_match(
         scores: Scores = \
             score_prots(hashes, database, protein_lookup)
 
+        if scores:
+            top_scored = filter(lambda score: scores[0][1][1] == score[1][1] and scores[0][1][2] == score[1][2], scores)
+            scores = list(top_scored)
+
         # print the matches with description and score
         for prot_index, (_, score, jacc_sim_index) in scores:
             match_prot_description, _ = protein_lookup[prot_index]
@@ -147,7 +157,10 @@ def find_match(
         else:
             print("\nNo matches found")
 
-        print("\nInput:       %s - %s\n             %s" % (prot_id, description, seq))
+        print("\nInput:       %s - %s" % (prot_id, description))
+        print(seq)
+        _, score, jsi = sorted(scores, key=lambda match: match[0] == prot_id)[-1][1]
+        print("Input-JSI: %s  -  Input-Score: %s" % (jsi, score))
         print("\nFound hashes: %d" % len(hashes))
 
 
