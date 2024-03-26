@@ -15,6 +15,7 @@ Go to `/mnt/data/hakimeh/prot-fin` to find the local clone of this repository.
 ### Project structure
 
 The following directories contain the content indicated by their names:
+- `docs`
 - `experiments`
 - `materials`
 
