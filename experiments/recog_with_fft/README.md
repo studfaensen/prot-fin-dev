@@ -11,7 +11,7 @@ Now, instead of looking on text-based likelihood, the goal is to identify a prot
 ## Usage
 1. go to `./methods`
 2. create a database of reference proteins: `python3 protfin.py create-db <ref-fasta>`
-3. find best scored matches for protein sequence samples: `python3 protfin.py find-match <samples-fasta>`
+3. find best scored matches for protein sequence samples: `python3 protfin.py find-matches <samples-fasta>`
 
 ## Methods (`methods/*`)
 <ul>
@@ -21,19 +21,19 @@ Now, instead of looking on text-based likelihood, the goal is to identify a prot
             <table>
                 <th>method</th><th>steps</th>
                 <tr>
-                    <td><code>get_aa_vector(seq, factor, normalize, file)</code></td>
+                    <td>actions.algorithm.kidera:<br><code>get_aa_vector(seq, factor, normalize, file)</code></td>
                     <td>
                         <ul><li>defaults: <code>normalize=True</code>, <code>file="../../../materials/Amino_Acid_Kidera_Factors.csv"</code></li></ul>
                         <ol type="1">
                             <li>read kidera factor values for all amino acids from <code>file</code></li>
-                            <li>normalize values by global table mean if <code>normalize</code> is <code>True</code></li>
+                            <li>normalize values by adding the global table mean if <code>normalize</code> is <code>True</code></li>
                             <li>extend value table with columns for symbols representing multiple amino acids, by forming the mean of the corresponding amino acids' vectors</li>
                             <li>extend value table with columns for non-valued amino acids 'O' and 'U', by treating their value as zero</li>
                         </ol>
                     </td>
                 </tr>
                 <tr>
-                    <td><code>create_constellation(aa_vec, window_size, n_peaks, window, **kwargs)</code></td>
+                    <td>actions.algorithm.constellation:<br><code>create_constellation(aa_vec, window_size, n_peaks, window, **kwargs)</code></td>
                     <td>
                         <ul><li>defaults: <code>n_peaks=0</code>, <code>window="boxcar"</code>, <code>overlap@kwargs=window_size//2</code></li></ul>
                         <ol type="1">
@@ -45,7 +45,7 @@ Now, instead of looking on text-based likelihood, the goal is to identify a prot
                     </td>
                 </tr>
                 <tr>
-                    <td><code>create_hashes(constellation_map, prot_id)</code></td>
+                    <td>actions.algorithm.hash_gen:<br><code>create_hashes(constellation_map, prot_id)</code></td>
                     <td>
                         <ol type="1">
                             <li>
@@ -58,7 +58,7 @@ Now, instead of looking on text-based likelihood, the goal is to identify a prot
                     </td>
                 </tr>
                 <tr>
-                    <td><code>score_prots(hashes, database, protein_index_map)</code></td>
+                    <td>actions.find_matches:<br><code>score_prots(hashes, database, protein_index_map)</code></td>
                     <td>
                         <ol type="1">
                             <li>for each hash, collect for each protein its offsets to its occurences in the protein sequence</li>
@@ -69,7 +69,7 @@ Now, instead of looking on text-based likelihood, the goal is to identify a prot
                     </td>
                 </tr>
                 <tr>
-                    <td><code>create_db(prot_file, db_out, lookup_out)</code></td>
+                    <td>actions.create_db:<br><code>create_db(prot_file, db_out, lookup_out)</code></td>
                     <td>
                         <ol type="1">
                             <li>create a database for all proteins in the file by joining the results of <code>create_hashes</code> and write it to <code>db_out</code></li>
@@ -78,7 +78,7 @@ Now, instead of looking on text-based likelihood, the goal is to identify a prot
                     </td>
                 </tr>
                 <tr>
-                    <td><code>find_match(fasta_file)</code></td>
+                    <td>actions.find_matches:<br><code>find_matches(fasta_file)</code></td>
                     <td>
                         <ol type="1">
                             <li>for each protein in the file, find all match(es), using the databases from <code>db_in</code> and <code>lookup_in</code>, and print only the matches with the best score to stdout, as there are currently multiple of them</li>
@@ -87,14 +87,18 @@ Now, instead of looking on text-based likelihood, the goal is to identify a prot
                 </tr>
             </table>
             <h3>Convenience</h3>
-            <code>hashes_from_seq(seq, prot_id)</code>
+            <code>actions.algorithm.hashes_from_seq(seq, prot_id)</code>
             <ul>
                 <li>just the workflow <code>seq_to_vectors</code> $\rightarrow$ <code>create_constellation</code> $\rightarrow$ <code>create_hashes</code></li>
             </ul>
-            <code>class Fasta(fasta_file)</code>
+            <code>tools.Fasta(fasta_file)</code>
             <ul>
                 <li>a class to iterate easily through the fasta file's contents, adding also a progress bar to indicate processed proteins</li>
                 <li>currently not validating the file</li>
+            </ul>
+            <code>tools.count_appearances_in_file(pattern, file)</code>
+            <ul>
+                <li>used to count fastly e.g. the number of proteins in a file, which is necessary to create an appropriate progress bar</li>
             </ul>
         </details>
     </li>
@@ -145,7 +149,7 @@ cd methods
 materials=../../../materials
 python3 protfin.py create-db $materials/protein.fa
 python3 evaluation.py select-samples $materials/mapmanreferencebins.results.txt $materials/protein.fa -s 7 > ../results/_test_selection.fa
-python3 protfin.py find-match ../results/_test_selection.fa > ../results/_test_selection.matches
+python3 protfin.py find-matches ../results/_test_selection.fa > ../results/_test_selection.matches
 python3 evaluation.py eval ../results/_test_selection.matches > ../results/test_selection.summary.csv
 ```
 

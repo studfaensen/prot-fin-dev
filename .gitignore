@@ -1,12 +1,9 @@
 materials/*.fa
 materials/mapman*
-experiments/*/*/*.pickle
 
-.*
+**/.*
+**/_*
+**/*.pickle
+
 !.gitignore
-*/.*
-*/*/.*
-_*
-*/_*
-*/*/_*
-
+!**/__init__.py
