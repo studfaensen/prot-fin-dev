@@ -3,9 +3,9 @@ from tools import *
 from .algorithm import hashes_from_seq
 import pickle
 
-MatchesPerProt = Dict[ProteinID, List[Tuple[int, int]]]
-ScoresByOffset = Dict[int, int]
-ScoresMap = Dict[ProteinID, Tuple[int, int, float]]
+MatchesPerProt = Dict[ProteinID, List[Tuple[WindowIndex, WindowIndex]]]
+ScoresByOffset = Dict[WindowIndex, Score]
+ScoresMap = Dict[ProteinID, Tuple[WindowIndex, Score, JSI]]
 
 
 def find_matches(
@@ -130,7 +130,7 @@ def sort_scores_descending(scores_map: ScoresMap) -> Scores:
     return scores
 
 
-def get_max_offset(prot_scores_by_offset: ScoresByOffset) -> (int, int):
+def get_max_offset(prot_scores_by_offset: ScoresByOffset) -> (WindowIndex, Score):
     max_ = (0, 0)
     for offset, frequency in prot_scores_by_offset.items():
         if frequency > max_[1]:
@@ -139,12 +139,12 @@ def get_max_offset(prot_scores_by_offset: ScoresByOffset) -> (int, int):
     return max_
 
 
-def count_offsets(matches: List[Tuple[int, int]]) -> ScoresByOffset:
+def count_offsets(matches: List[Tuple[WindowIndex, WindowIndex]]) -> ScoresByOffset:
     prot_scores_by_offset: ScoresByOffset = {}
 
     for sample_index, source_index in matches:
         # calculate the offset
-        delta: int = source_index - sample_index
+        delta: WindowIndex = source_index - sample_index
 
         # initialize with zero if necessary and count
         if delta not in prot_scores_by_offset:

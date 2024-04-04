@@ -2,22 +2,55 @@
 Some essential and useful functions for the algorithm behind prot-fin
 """
 
-from typing import List, Dict, Tuple, Generator, TextIO
+from typing import List, Dict, Tuple, Generator, TextIO, _GenericAlias
 from sys import stderr
 from tqdm import tqdm
+import numpy as np
 import re
 
 # type aliases
 Hash = int
+WindowIndex = np.float64
 ProteinID = str
 Score = int
 JSI = float
 Hashes = Dict[Hash, Tuple[int, ProteinID]]
-Scores = List[Tuple[ProteinID, Tuple[int, Score, JSI]]]
-HashOccurence = Tuple[float, ProteinID]
+Scores = List[Tuple[ProteinID, Tuple[WindowIndex, Score, JSI]]]
+HashOccurence = Tuple[WindowIndex, ProteinID]
 Database = Dict[Hash, List[HashOccurence]]
 ProteinLookup = Dict[ProteinID, Tuple[str, int]]
-ConstellationMap = List[Tuple[int, float]]
+ConstellationMap = List[Tuple[WindowIndex, float]]
+
+
+def verify_type(var, ty) -> bool:
+    if isinstance(ty, type):
+        assert ty not in (dict, list, tuple), \
+            "verify_type: Use types from typing instead of builtins for dict, list, tuple - got: " + ty.__name__
+        return type(var) is ty
+
+    if ty.__origin__ is list:
+        if not isinstance(var, list):
+            return False
+        if False in [verify_type(item, ty.__args__[0]) for item in var]:
+            return False
+
+    elif ty.__origin__ is dict:
+        if not isinstance(var, dict):
+            return False
+        if False in [verify_type(item, ty.__args__[0]) for item in var.keys()]:
+            return False
+        if False in [verify_type(item, ty.__args__[1]) for item in var.values()]:
+            return False
+
+    elif ty.__origin__ is tuple:
+        if not isinstance(var, tuple):
+            return False
+        if len(var) != len(ty.__args__):
+            return False
+        if False in [verify_type(item, type_) for item, type_ in zip(var, ty.__args__)]:
+            return False
+
+    return True
 
 
 class Fasta:

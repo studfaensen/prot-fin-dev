@@ -32,7 +32,7 @@ def get_cli():
     parser.set_defaults(func=lambda _: parser.print_help())
     sub_commands = parser.add_subparsers()
 
-    # protfin.py create-db [-d] <fasta-file>
+    # protfin.py create-db [-p] <fasta-file>
     create_db_parser = sub_commands.add_parser("create-db", help="Create Database")
     create_db_parser.add_argument("fasta-file")
     create_db_parser.add_argument("-p", "--path", default=DB_DEFAULT)
