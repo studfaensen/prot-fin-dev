@@ -1,3 +1,5 @@
+from typing import Type, Any
+from functools import reduce
 from tools import *
 import unittest as ut
 import pickle
@@ -14,7 +16,7 @@ class TestCreateDB(ut.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        create_db(cls.protein_file, cls.db_out)
+        cls.assertIsNone(cls, create_db(cls.protein_file, cls.db_out))
 
     @classmethod
     def tearDownClass(cls):
@@ -50,9 +52,16 @@ class TestFindMatches(ut.TestCase):
     db_in = "test/find_matches.pickle"
     stdout_pipe = "test/find_matches.matches.tmp"
 
+    def create_valid(self, ty: Type, value: Any) -> Type:
+        type_name = str(locals()["ty"])
+        self.assertTrue(verify_type(value, ty), "Value of wrong type, expected: " + type_name)
+        return value
+
     @classmethod
     def setUpClass(cls):
-        create_db(cls.protein_file, cls.db_in)
+        cls.assertIsNone(cls, create_db(cls.protein_file, cls.db_in))
+        with open(cls.db_in, "rb") as f:
+            cls.db, cls.lookup = pickle.load(f)
 
     @classmethod
     def tearDownClass(cls):
@@ -74,22 +83,100 @@ class TestFindMatches(ut.TestCase):
         with open(self.db_in, "rb") as f:
             db, lookup = pickle.load(f)
 
-        hashes = {hash_: (i, "") for i, hash_ in enumerate(db.keys())}
-        self.assertTrue(verify_type(hashes, Hashes), "Created test hashes of wrong type")
-        scores = score_prots(hashes, db, lookup)
-        self.assertTrue(verify_type(scores, Scores), "Returned scores of wrong type")
+        hashes: Hashes = self.create_valid(
+            Hashes,
+            {hash_: (WindowIndex(i), ProteinID("")) for i, hash_ in enumerate(db.keys())}
+        )
+        scores: Scores = self.create_valid(
+            Scores,
+            score_prots(hashes, db, lookup)
+        )
+        self.assertEqual(db, self.db, "Database has changed")
+        self.assertEqual(lookup, self.lookup, "Database has changed")
 
     def test_get_matches_per_prot(self):
-        pass
+        hashes: Hashes = self.create_valid(
+            Hashes,
+            {123: (WindowIndex(1), ProteinID(""))}
+        )
+        proteins = [(WindowIndex(0), ProteinID(i)) for i in range(10)]
+        db = self.create_valid(
+            Database,
+            {123: proteins}
+        )
+        matches: MatchesPerProt = self.create_valid(
+            MatchesPerProt,
+            get_matches_per_prot(hashes, db)
+        )
+        self.assertEqual(len(matches), len(proteins), "Returned matches not complete")
+        for idx, prot_id in proteins:
+            self.assertIn(prot_id, matches, f"Protein identifier '{prot_id}' missing")
+            original_matches = [(list(hashes.values())[0][0], idx)]
+            self.assertEqual(
+                matches[prot_id],
+                original_matches,
+                f"Found matches for protein id '{prot_id}' wrong"
+            )
 
     def test_count_offsets(self):
-        pass
+        matches_per_offset = {
+            WindowIndex(-1): [
+                (WindowIndex(10), WindowIndex(11)),
+                (WindowIndex(100), WindowIndex(101))
+            ],
+            WindowIndex(0): [
+                (WindowIndex(11), WindowIndex(11)),
+            ],
+            WindowIndex(1): [
+                (WindowIndex(12), WindowIndex(11)),
+                (WindowIndex(2), WindowIndex(1)),
+                (WindowIndex(102), WindowIndex(101))
+            ]
+        }
+        matches: Matches = self.create_valid(
+            Matches,
+            reduce(lambda a, b: a + b, matches_per_offset.values(), [])
+        )
+        scored_offsets: ScoresByOffset = self.create_valid(
+            ScoresByOffset,
+            count_offsets(matches)
+        )
+        self.assertEqual(len(scored_offsets), len(matches_per_offset), "Returned scored offsets not complete")
+        for offset, score in scored_offsets.items():
+            self.assertIn(offset, matches_per_offset, f"Offset '{offset}' missing")
+            self.assertEqual(
+                scored_offsets[offset],
+                score,
+                f"Returned score for offset '{offset}' wrong"
+            )
 
-    def get_max_offset(self):
-        pass
+    def test_get_max_offset(self):
+        scores = list(range(5)) + list(range(3, 0, -1))
+        scored_offsets: ScoresByOffset = self.create_valid(
+            ScoresByOffset,
+            {WindowIndex(i): score for i, score in enumerate(scores)}
+        )
+        max_offset: (WindowIndex, Score) = self.create_valid(
+            Tuple[WindowIndex, Score],
+            get_max_offset(scored_offsets)
+        )
+        max_score = sorted(scores)[-1]
+        self.assertEqual(max_offset, (WindowIndex(scores.index(max_score)), max_score))
 
     def test_sort_scores_descending(self):
-        pass
+        scores_map: ScoresMap = self.create_valid(
+            ScoresMap,
+            {ProteinID(i): (WindowIndex(i), Score(1 + i//2), JSI(i//3 * .1)) for i in range(30)}
+        )
+        descending: Scores = self.create_valid(
+            Scores,
+            sort_scores_descending(scores_map)
+        )
+        prev_score, prev_jsi = float("+inf"), float("+inf")
+        for _, (_, score, jsi) in descending:
+            self.assertTrue(score <= prev_score, f"Score {score} is greater than its previous {prev_score}")
+            self.assertTrue(jsi <= prev_jsi, f"JSI {jsi} is greater than its previous {prev_jsi}")
+            prev_score, prev_jsi = score, jsi
 
     def test_get_top_matches(self):
         pass
