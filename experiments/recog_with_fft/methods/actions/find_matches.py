@@ -182,7 +182,10 @@ def print_result(matches: Scores, protein_lookup: ProteinLookup):
 def print_input_info(prot_id: ProteinID, description: str, seq: str, scores: Scores, hashes: Hashes):
     print("\nInput:       %s - %s" % (prot_id, description))
     print(seq)
-    _, score, jsi = sorted(scores, key=lambda match: match[0] == prot_id)[-1][1]
+    if scores:
+        _, score, jsi = sorted(scores, key=lambda match: match[0] == prot_id)[-1][1]
+    else:
+        score, jsi = Score(0), JSI(0)
     print("Input-JSI: %s  -  Input-Score: %s" % (jsi, score))
     print("\nFound hashes: %d" % len(hashes))
 

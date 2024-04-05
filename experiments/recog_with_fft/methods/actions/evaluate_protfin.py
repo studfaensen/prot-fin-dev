@@ -55,8 +55,8 @@ def evaluate_protfin(protfin_out_file: str):
                 hash_count,  # Sample_Hashes
                 jsi,  # Sample_JSI
                 score,  # Sample_Score
-                list(matches.values())[0][0],  # Top_JSI
-                list(matches.values())[0][1]  # Top_Score
+                list(matches.values())[0][0] if matches else JSI(0),  # Top_JSI
+                list(matches.values())[0][1] if matches else Score(0)  # Top_Score
             )
 
         # write to stdout

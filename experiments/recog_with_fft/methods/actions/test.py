@@ -30,7 +30,7 @@ class TestCreateDB(ut.TestCase):
             db, lookup = db
 
         self.assertTrue(verify_type(db, Database), "Database has a wrong type")
-        self.assertTrue(verify_type(lookup, ProteinLookup), "Database has a wrong type")
+        self.assertTrue(verify_type(lookup, ProteinLookup), "Protein lookup has a wrong type")
         self.assertEqual(len(lookup), 3, "Protein lookup is not complete")
 
         for hash_, idx_prot_pairs in db.items():
@@ -44,7 +44,7 @@ class TestCreateDB(ut.TestCase):
             self.assertEqual(len(prot_info), 2, "Lookup value is differs in length")
 
             description, hash_count = prot_info
-            self.assertFalse(hash_count < 0, "Hash count in protein lookup below zero")
+            self.assertGreaterEqual(hash_count, 0, "Hash count in protein lookup below zero")
 
 
 class TestFindMatches(ut.TestCase):
@@ -174,8 +174,8 @@ class TestFindMatches(ut.TestCase):
         )
         prev_score, prev_jsi = float("+inf"), float("+inf")
         for _, (_, score, jsi) in descending:
-            self.assertTrue(score <= prev_score, f"Score {score} is greater than its previous {prev_score}")
-            self.assertTrue(jsi <= prev_jsi, f"JSI {jsi} is greater than its previous {prev_jsi}")
+            self.assertLessEqual(score, prev_score, f"Score {score} is greater than its previous {prev_score}")
+            self.assertLessEqual(jsi, prev_jsi, f"JSI {jsi} is greater than its previous {prev_jsi}")
             prev_score, prev_jsi = score, jsi
 
     def test_get_top_matches(self):
@@ -215,6 +215,9 @@ class TestFindMatches(ut.TestCase):
                     f"{prot_id} - description of {prot_id}: Jaccard Index of {scores_map[prot_id][2]} : Score of {scores_map[prot_id][1]}\n",
                     "Printed match output different"
                 )
+        with open(self.stdout_pipe, "w") as f:
+            sys.stdout = f
+            self.assertIsNone(print_result([], lookup))
 
     def test_input_info(self):
         prot_id = ProteinID("prot_id")
@@ -245,6 +248,11 @@ Found hashes: {len(hashes)}
                 expected,
                 "Printed input info output different"
             )
+        with open(self.stdout_pipe, "w") as f:
+            sys.stdout = f
+            self.assertIsNone(print_input_info(prot_id, description, seq, scores, {}))
+            self.assertIsNone(print_input_info(prot_id, description, seq, [], hashes))
+            self.assertIsNone(print_input_info(prot_id, description, seq, [], {}))
 
 
 class TestEvaluateProtfin(ut.TestCase):
