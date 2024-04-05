@@ -97,12 +97,12 @@ class TestFindMatches(ut.TestCase):
     def test_get_matches_per_prot(self):
         hashes: Hashes = self.create_valid(
             Hashes,
-            {123: (WindowIndex(1), ProteinID(""))}
+            {Hash(123): (WindowIndex(1), ProteinID(""))}
         )
         proteins = [(WindowIndex(0), ProteinID(i)) for i in range(10)]
         db = self.create_valid(
             Database,
-            {123: proteins}
+            {Hash(123): proteins}
         )
         matches: MatchesPerProt = self.create_valid(
             MatchesPerProt,
@@ -179,13 +179,72 @@ class TestFindMatches(ut.TestCase):
             prev_score, prev_jsi = score, jsi
 
     def test_get_top_matches(self):
-        pass
+        scores: Scores = self.create_valid(
+            Scores,
+            [(ProteinID(i), (WindowIndex(i), Score(1 + i//2), JSI(i//3 * .1))) for i in range(29, 0, -1)]
+        )
+        top: Scores = self.create_valid(
+            Scores,
+            get_top_matches(scores)
+        )
+        self.assertNotEqual(len(top), len(scores), "Length of input scores has changed")
+        self.assertEqual(top, scores[:2], "Top scores not as expected")
 
     def test_print_result(self):
-        pass
+        proteins = [ProteinID(i) for i in range(10)]
+        scores_map: ScoresMap = self.create_valid(
+            ScoresMap,
+            {p: (WindowIndex(i), Score(1 + i//2), JSI(i//3 * .1)) for i, p in enumerate(proteins)}
+        )
+        scores: Scores = self.create_valid(
+            Scores,
+            list(scores_map.items())
+        )
+        lookup: ProteinLookup = self.create_valid(
+            ProteinLookup,
+            {p: (f"description of {p}", 1) for p in proteins}
+        )
+
+        with open(self.stdout_pipe, "w") as f:
+            sys.stdout = f
+            print_result(scores, lookup)
+        with open(self.stdout_pipe, "r") as f:
+            for line, prot_id in zip(f, proteins):
+                self.assertEqual(
+                    line,
+                    f"{prot_id} - description of {prot_id}: Jaccard Index of {scores_map[prot_id][2]} : Score of {scores_map[prot_id][1]}\n",
+                    "Printed match output different"
+                )
 
     def test_input_info(self):
-        pass
+        prot_id = ProteinID("prot_id")
+        description = "very cool"
+        seq = "MAAGCSTTTYRAGGG"
+        scores: Scores = self.create_valid(
+            Scores,
+            [(prot_id, (WindowIndex(1), Score(10), JSI(.5)))]
+        )
+        hashes: Hashes = self.create_valid(
+            Hashes,
+            {Hash(i): (WindowIndex(i), ProteinID(0)) for i in range(19)}
+        )
+        with open(self.stdout_pipe, "w") as f:
+            sys.stdout = f
+            print_input_info(prot_id, description, seq, scores, hashes)
+        with open(self.stdout_pipe, "r") as f:
+            content = f.read()
+            expected = f"""
+Input:       {prot_id} - {description}
+{seq}
+Input-JSI: {scores[0][1][2]}  -  Input-Score: {scores[0][1][1]}
+
+Found hashes: {len(hashes)}
+"""
+            self.assertEqual(
+                content,
+                expected,
+                "Printed input info output different"
+            )
 
 
 class TestEvaluateProtfin(ut.TestCase):
