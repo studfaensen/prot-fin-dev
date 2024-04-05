@@ -13,6 +13,25 @@ Now, instead of looking on text-based likelihood, the goal is to identify a prot
 2. create a database of reference proteins: `python3 protfin.py create-db <ref-fasta>`
 3. find best scored matches for protein sequence samples: `python3 protfin.py find-matches <samples-fasta>`
 
+
+## Experiments
+<ul>
+    <li>
+        <details>
+            <summary><code>v01-exp-stft_params</code> - Trying different parameters for the STFT to fit the best: <a href="https://github.com/usadellab/prot-fin/blob/v0.1-exp-stft_params/experiments/recog_with_fft">go to branch</a></summary>
+            The creation of the constellation map is based on the STFT.<br>
+            To increase the accuracy of the recognition algorithm, it is very important to optimize the parameters to generate the most effective constellation map for a protein.
+            <br><br>
+            Therefore, window size, overlap and number of selected peaks are passed to <code>prot-fin</code>.<br>
+            As every configuration of parameters needs a custom database, this procedure is done in parallel on a compute cluster.<br>
+            The results of each recognition process are summarized in <a href="https://github.com/usadellab/prot-fin/blob/v0.1-exp-stft_params/experiments/recog_with_fft/results/stft_param_exp.summary.csv">stft_param_exp.summary.csv</a>.
+            <br><br>
+            It looks like that the maximum overlap (so hop size of 1) is the best option for accuracy.<br>
+            Currently, for window size and selected peaks are further analyses necessary.
+        </details>
+    </li>
+</ul>
+
 ## Methods (`methods/*`)
 <ul>
     <li>
