@@ -23,11 +23,11 @@ groups <- lapply(seq_along(sequence_lengths), function(i) {tibble(value = sequen
 data <- dplyr::bind_rows(groups)
 
 plt <- ggplot(data, aes(x = group, y = value)) +
-  stat_halfeye(fill = "darkgray", width = 2) +
-  geom_boxplot(width = 0, outlier.colour = "black", outlier.size = 0.1) +
+  stat_halfeye(fill = "darkgray", width = 2, position = position_nudge(x = 0.11, y=0)) +
   coord_flip() +
   theme(plot.title = element_text(hjust = 0.5), axis.ticks.y = element_blank()) +
   scale_y_continuous(n.breaks = 10) +
+  geom_jitter(position = position_jitter(width = 0.1, seed = 1), size = 0.1, colour="black") +
   labs(x = "Frequencies", y = "Lengths") +
   ggtitle("Raincloud Plot of Sequence Lengths")
 
