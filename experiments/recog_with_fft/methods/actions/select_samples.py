@@ -30,7 +30,7 @@ def select_samples(mapman: str, protein_file: str, samples_per_family: int):
     """
 
     # read the mapman reference
-    map_data: pd.DataFrame = pd.read_csv(mapman, sep="\t").loc[:, ["BINCODE", "IDENTIFIER"]]
+    map_data: pd.DataFrame = pd.read_csv(mapman, sep="\t", quotechar="'").loc[:, ["BINCODE", "IDENTIFIER"]]
 
     # get families' members' indices
     families: Families = get_groups(map_data)
@@ -51,11 +51,7 @@ def get_samples(families: Families, samples_per_family: int, map_data: pd.DataFr
     for fam in families:
         chosen_idx = random.choice(fam, samples_per_family, replace=False)
         for fam_id, prot_id in map_data.iloc[chosen_idx].to_numpy():
-
-            fam_id: str = fam_id[1:-1]  # because it has surrounding apostrophes
-            prot_id: ProteinID = prot_id[1:-1].upper()
-
-            selected_samples[prot_id] = fam_id
+            selected_samples[prot_id.upper()] = fam_id
 
     return selected_samples
 
@@ -68,7 +64,7 @@ def get_groups(map_data: pd.DataFrame) -> Families:
     groups = mask.cumsum()
 
     # erase the rows that introduce a family
-    mask = map_data["IDENTIFIER"] != "''"
+    mask = ~map_data["IDENTIFIER"].isnull()
     groups = groups[mask]
     map_data = map_data[mask]
 

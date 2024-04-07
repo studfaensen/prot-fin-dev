@@ -1,6 +1,7 @@
 from typing import Type, Any
 from functools import reduce
 from tools import *
+import pandas as pd
 import unittest as ut
 import pickle
 import sys
@@ -87,8 +88,8 @@ class TestFindMatches(ut.TestCase):
             Hashes,
             {hash_: (WindowIndex(i), ProteinID("")) for i, hash_ in enumerate(db.keys())}
         )
-        scores: Scores = self.create_valid(
-            Scores,
+        scores: ScoresMap = self.create_valid(
+            ScoresMap,
             score_prots(hashes, db, lookup)
         )
         self.assertEqual(db, self.db, "Database has changed")
@@ -163,96 +164,32 @@ class TestFindMatches(ut.TestCase):
         max_score = sorted(scores)[-1]
         self.assertEqual(max_offset, (WindowIndex(scores.index(max_score)), max_score))
 
-    def test_sort_scores_descending(self):
-        scores_map: ScoresMap = self.create_valid(
-            ScoresMap,
-            {ProteinID(i): (WindowIndex(i), Score(1 + i//2), JSI(i//3 * .1)) for i in range(30)}
-        )
-        descending: Scores = self.create_valid(
-            Scores,
-            sort_scores_descending(scores_map)
-        )
-        prev_score, prev_jsi = float("+inf"), float("+inf")
-        for _, (_, score, jsi) in descending:
-            self.assertLessEqual(score, prev_score, f"Score {score} is greater than its previous {prev_score}")
-            self.assertLessEqual(jsi, prev_jsi, f"JSI {jsi} is greater than its previous {prev_jsi}")
-            prev_score, prev_jsi = score, jsi
-
-    def test_get_top_matches(self):
-        scores: Scores = self.create_valid(
-            Scores,
-            [(ProteinID(i), (WindowIndex(i), Score(1 + i//2), JSI(i//3 * .1))) for i in range(29, 0, -1)]
-        )
-        top: Scores = self.create_valid(
-            Scores,
-            get_top_matches(scores)
-        )
-        self.assertNotEqual(len(top), len(scores), "Length of input scores has changed")
-        self.assertEqual(top, scores[:2], "Top scores not as expected")
-
-    def test_print_result(self):
+    def test_get_result_frame(self):
         proteins = [ProteinID(i) for i in range(10)]
         scores_map: ScoresMap = self.create_valid(
             ScoresMap,
-            {p: (WindowIndex(i), Score(1 + i//2), JSI(i//3 * .1)) for i, p in enumerate(proteins)}
+            {p: (WindowIndex(i), Score(10 - + i//2), JSI(1 - i//3 * .1)) for i, p in enumerate(proteins)}
         )
-        scores: Scores = self.create_valid(
-            Scores,
-            list(scores_map.items())
+        result: pd.DataFrame = self.create_valid(
+            pd.DataFrame,
+            get_result_frame(scores_map, proteins[0], 10, 5)
         )
-        lookup: ProteinLookup = self.create_valid(
-            ProteinLookup,
-            {p: (f"description of {p}", 1) for p in proteins}
-        )
+        self.assertTrue(get_result_frame({}, proteins[0], 10, 5).empty, "Expected empty dataframe for zero scores")
 
-        with open(self.stdout_pipe, "w") as f:
-            sys.stdout = f
-            print_result(scores, lookup)
-        with open(self.stdout_pipe, "r") as f:
-            for line, prot_id in zip(f, proteins):
-                self.assertEqual(
-                    line,
-                    f"{prot_id} - description of {prot_id}: Jaccard Index of {scores_map[prot_id][2]} : Score of {scores_map[prot_id][1]}\n",
-                    "Printed match output different"
-                )
-        with open(self.stdout_pipe, "w") as f:
-            sys.stdout = f
-            self.assertIsNone(print_result([], lookup))
+        rank = 0
+        prev_score, prev_jsi = float("+inf"), float("+inf")
 
-    def test_input_info(self):
-        prot_id = ProteinID("prot_id")
-        description = "very cool"
-        seq = "MAAGCSTTTYRAGGG"
-        scores: Scores = self.create_valid(
-            Scores,
-            [(prot_id, (WindowIndex(1), Score(10), JSI(.5)))]
-        )
-        hashes: Hashes = self.create_valid(
-            Hashes,
-            {Hash(i): (WindowIndex(i), ProteinID(0)) for i in range(19)}
-        )
-        with open(self.stdout_pipe, "w") as f:
-            sys.stdout = f
-            print_input_info(prot_id, description, seq, scores, hashes)
-        with open(self.stdout_pipe, "r") as f:
-            content = f.read()
-            expected = f"""
-Input:       {prot_id} - {description}
-{seq}
-Input-JSI: {scores[0][1][2]}  -  Input-Score: {scores[0][1][1]}
-
-Found hashes: {len(hashes)}
-"""
+        for expected, actual in zip(scores_map.items(), result.sort_values("Rank").values):
+            if actual[2] < prev_jsi or actual[3] < prev_score:
+                prev_jsi, prev_score = actual[2], actual[3]
+                rank += 1
+            (e_match_id, (_, e_score, e_jsi)) = expected
+            e_input_id, e_seq_len, e_hash_count = proteins[0], 10, 5
             self.assertEqual(
-                content,
-                expected,
-                "Printed input info output different"
+                (rank, e_match_id, e_jsi, e_score, proteins[0], 10, 5),
+                tuple(actual),
+                "Protfin output not correct"
             )
-        with open(self.stdout_pipe, "w") as f:
-            sys.stdout = f
-            self.assertIsNone(print_input_info(prot_id, description, seq, scores, {}))
-            self.assertIsNone(print_input_info(prot_id, description, seq, [], hashes))
-            self.assertIsNone(print_input_info(prot_id, description, seq, [], {}))
 
 
 class TestEvaluateProtfin(ut.TestCase):

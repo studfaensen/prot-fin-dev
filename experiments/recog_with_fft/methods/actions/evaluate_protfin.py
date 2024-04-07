@@ -32,59 +32,29 @@ def evaluate_protfin(protfin_out_file: str):
     protfin_out_file : str
         Path to the file the output of protfin was written to
     """
-    with open(protfin_out_file) as f:
+    protfin_out = pd.read_csv(protfin_out_file, sep=",")
+    protfin_out["Sample_Index"] = protfin_out["Match_Protein_ID"].isnull().cumsum()
+    protfin_out = protfin_out[~protfin_out["Match_Protein_ID"].isnull()]
+    by_samples = protfin_out.groupby("Sample_Index")
 
-        # just counting number proteins used as protfin input
-        result_count = count("Seems to be", f)
+    # data will be collected into a dataframe
+    evaluation = pd.DataFrame(columns=["Sample_ID", "First_Match_Count", "Sample_In_First_Matches", "Sequence_Length", "Sample_Hashes", "Sample_JSI", "Sample_Score", "Top_JSI", "Top_Score"])
+    for _, matches in tqdm(by_samples):
+        input_sample = matches["Input_Protein_ID"].iloc[0]
+        sample_result = matches[matches["Match_Protein_ID"] == input_sample]
 
-        # data will be collected into a dataframe
-        evaluation = pd.DataFrame(columns=["Sample_ID", "First_Match_Count", "Sample_In_First_Matches", "Sequence_Length", "Sample_Hashes", "Sample_JSI", "Sample_Score", "Top_JSI", "Top_Score"])
-        for _ in tqdm(range(result_count)):
-            matches: Matches = get_match_info(f)
+        # insert the data into the dataframe
+        evaluation.loc[len(evaluation.index)] = (
+            input_sample,  # Sample_ID
+            len(matches),  # First_Match_Count
+            input_sample in matches[matches["Rank"] == 1]["Match_Protein_ID"].values,  # Sample_In_First_Matches
+            matches["Input_Sequence_Length"].iloc[0],  # Sequence_Length
+            matches["Input_Found_Hashes"].iloc[0],  # Sample_Hashes
+            sample_result["JSI"].iloc[0],  # Sample_JSI
+            sample_result["Score"].iloc[0],  # Sample_Score
+            matches[matches["Rank"] == 1]["JSI"].iloc[0],  # Top_JSI
+            matches[matches["Rank"] == 1]["Score"].iloc[0]  # Top_Score
+        )
 
-            # now crawl the few lines below a protfin result to collect data
-            # about the input protein
-            input_sample, seq, jsi, score, hash_count = get_appendix_info(f)
-
-            # insert the data into the dataframe
-            evaluation.loc[len(evaluation.index)] = (
-                input_sample,  # Sample_ID
-                len(matches),  # First_Match_Count
-                input_sample in matches,  # Sample_In_First_Matches
-                len(seq),  # Sequence_Length
-                hash_count,  # Sample_Hashes
-                jsi,  # Sample_JSI
-                score,  # Sample_Score
-                list(matches.values())[0][0] if matches else JSI(0),  # Top_JSI
-                list(matches.values())[0][1] if matches else Score(0)  # Top_Score
-            )
-
-        # write to stdout
-        print(evaluation.to_csv(index=False), end="")
-
-
-def get_match_info(file: TextIO) -> Matches:
-    matches: Matches = {}
-
-    # iterate through the lines of matches and extract their information
-    while (match := file.readline()) != "\n":
-        prot_id, jacc_index, score = re.findall("(.*) - .*Jaccard Index of (\d+\.\d+) : Score of (\d+)", match)[0]
-        matches[prot_id] = (jacc_index, score)
-
-    return matches
-
-
-def get_appendix_info(file: TextIO) -> Tuple[ProteinID, str, JSI, Score, int]:
-    file.readline()  # Seems to be...
-    file.readline()  #
-    input_sample: ProteinID = re.findall(".*Input: +(.*) - .*", file.readline())[0]  # Input:  ...
-    seq: str = file.readline()[:-1]  # sequence line
-    jsi, score = re.findall("JSI: (\d+\.\d).*Score: (\d+)", file.readline())[0]  # Input-JSI ...
-    file.readline()  #
-    hashes: int = re.findall("Found hashes: (\d+)", file.readline())[0]  # Found hashes: ...
-
-    jsi = JSI(jsi)
-    score = Score(score)
-    hashes = int(hashes)
-
-    return input_sample, seq, jsi, score, hashes
+    # write to stdout
+    print(evaluation.to_csv(index=False, float_format="%g"), end="")

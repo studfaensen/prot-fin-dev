@@ -1,4 +1,5 @@
 from typing import Dict, List, Tuple
+import pandas as pd
 from tools import *
 from .algorithm import hashes_from_seq
 import pickle
@@ -7,6 +8,16 @@ Matches = List[Tuple[WindowIndex, WindowIndex]]
 MatchesPerProt = Dict[ProteinID, Matches]
 ScoresByOffset = Dict[WindowIndex, Score]
 ScoresMap = Dict[ProteinID, Tuple[WindowIndex, Score, JSI]]
+
+COLUMNS = [
+    "Rank",
+    "Match_Protein_ID",
+    "JSI",
+    "Score",
+    "Input_Protein_ID",
+    "Input_Sequence_Length",
+    "Input_Found_Hashes"
+]
 
 
 def find_matches(
@@ -28,30 +39,55 @@ def find_matches(
         Name of the file storing the trained database
     """
 
-    for (prot_id, description, seq) in Fasta(fasta_file):
+    # load databases
+    with open(db_in, 'rb') as f:
+        database, protein_lookup = pickle.load(f)
 
+    print(*COLUMNS, sep=",")
+
+    # print the matches with description and score
+    for (input_id, description, seq) in Fasta(fasta_file):
         # create the combinatorial hashes for the sequence
-        hashes: Hashes = hashes_from_seq(seq, prot_id)
-
-        # load databases
-        with open(db_in, 'rb') as f:
-            database, protein_lookup = pickle.load(f)
+        hashes: Hashes = hashes_from_seq(seq, input_id)
 
         # calculate the scores for proteins in the database
-        scores: Scores = score_prots(hashes, database, protein_lookup)
+        scored_matches: ScoresMap = score_prots(hashes, database, protein_lookup)
 
-        top_matches: Scores = get_top_matches(scores)
+        result = get_result_frame(scored_matches, input_id, len(seq), len(hashes))
 
-        print_result(top_matches, protein_lookup)
+        result = result[result["Rank"] == 1]
+        result.loc[len(result.index)] = None
+        print(result.sort_values("Rank").to_csv(index=False, header=False, float_format="%g"), end="")
 
-        print_input_info(prot_id, description, seq, scores, hashes)
+
+def get_result_frame(
+        scored_matches: ScoresMap,
+        input_id: str,
+        seq_len: int,
+        hash_count: int
+        ) -> pd.DataFrame:
+
+    result = pd.DataFrame(columns=COLUMNS)
+
+    if scored_matches:
+        result["Match_Protein_ID"] = scored_matches.keys()
+        _, scores, jsi = zip(*scored_matches.values())
+        result["JSI"] = jsi
+        result["Score"] = scores
+        result["Input_Protein_ID"] = input_id
+        result["Input_Sequence_Length"] = seq_len
+        result["Input_Found_Hashes"] = hash_count
+
+        result["Rank"] = result[["JSI", "Score"]].apply(tuple, axis=1).rank(method="dense", ascending=False)
+
+    return result
 
 
 def score_prots(
         hashes: Hashes,
         database: Database,
         protein_lookup: ProteinLookup
-        ) -> Scores:
+        ) -> ScoresMap:
     """
     Scores the proteins of the database by their suitability to the given hashes
 
@@ -116,19 +152,7 @@ def score_prots(
         # take the frequency of the most related offset as score
         scores_map[match_prot_id] = (max_offset, max_frequency, jacc_sim_index)
 
-    return sort_scores_descending(scores_map)
-
-
-def sort_scores_descending(scores_map: ScoresMap) -> Scores:
-    # Sort the scores for the user descending by the Jaccard Similarity Index
-    # at first level and the calculated score on second level
-    scores: Scores = list(sorted(
-        scores_map.items(),
-        key=lambda x: (x[1][2], x[1][1]),
-        reverse=True
-    ))
-
-    return scores
+    return scores_map
 
 
 def get_max_offset(prot_scores_by_offset: ScoresByOffset) -> Tuple[WindowIndex, Score]:
@@ -153,41 +177,6 @@ def count_offsets(matches: Matches) -> ScoresByOffset:
         prot_scores_by_offset[delta] += 1
 
     return prot_scores_by_offset
-
-
-def get_top_matches(scores: Scores) -> Scores:
-    # filter to the best
-    if scores:
-        top_scored = filter(lambda score: scores[0][1][1] == score[1][1] and scores[0][1][2] == score[1][2], scores)
-        scores: Scores = list(top_scored)
-
-    return scores
-
-
-def print_result(matches: Scores, protein_lookup: ProteinLookup):
-    # print the matches with description and score
-    for prot_index, (_, score, jacc_sim_index) in matches:
-        match_prot_description, _ = protein_lookup[prot_index]
-        print(f"{prot_index} - {match_prot_description}: Jaccard Index of {jacc_sim_index} : Score of {score}")
-
-    # print first match as most likely match
-    if len(matches):
-        first_match_id: str = matches[0][0]
-        first_match_description: str = protein_lookup[first_match_id][0]
-        print("\nSeems to be: %s - %s" % (first_match_id, first_match_description))
-    else:
-        print("\nNo matches found")
-
-
-def print_input_info(prot_id: ProteinID, description: str, seq: str, scores: Scores, hashes: Hashes):
-    print("\nInput:       %s - %s" % (prot_id, description))
-    print(seq)
-    if scores:
-        _, score, jsi = sorted(scores, key=lambda match: match[0] == prot_id)[-1][1]
-    else:
-        score, jsi = Score(0), JSI(0)
-    print("Input-JSI: %s  -  Input-Score: %s" % (jsi, score))
-    print("\nFound hashes: %d" % len(hashes))
 
 
 def get_matches_per_prot(hashes: Hashes, database: Database) -> MatchesPerProt:

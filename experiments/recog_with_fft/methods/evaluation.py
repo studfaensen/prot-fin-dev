@@ -2,8 +2,7 @@
 This module is to do some statistic analysis on the protfin results
 """
 
-from actions.evaluate_protfin import evaluate_protfin
-from actions.select_samples import select_samples
+from actions import evaluate_protfin, select_samples
 import argparse
 from signal import signal, SIGPIPE, SIG_DFL
 signal(SIGPIPE, SIG_DFL)  # fixes weird python error, look: https://newbebweb.blogspot.com/2012/02/python-head-ioerror-errno-32-broken.html
@@ -40,11 +39,11 @@ def get_cli():
     eval_parser.add_argument("protein-file")
     eval_parser.add_argument("-s", "--samples-per-family", default=1, type=int)
     eval_parser.set_defaults(func=lambda args:
-                             select_samples(getattr(args, "mapman-file"),
-                                            getattr(args, "protein-file"),
-                                            args.samples_per_family
-                                            )
-                             )
+                             select_samples(
+                                getattr(args, "mapman-file"),
+                                getattr(args, "protein-file"),
+                                args.samples_per_family
+                             ))
 
     return parser
 
