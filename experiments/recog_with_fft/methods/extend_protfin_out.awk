@@ -23,21 +23,12 @@ END {
     while ((getline line < protfin_out) > 0) {
         len=split(line, fields, ",")
         if (fields[1] == "Rank") {
-            fields[len+1] = "Input_Family"
-            fields[len+2] = "Match_Family"
+            print line",Input_Family,Match_Family"
         } else {
             match_id = fields[2]
             input_id = fields[5]
-            if (match_id != "''") {
-                fields[len+1] = bins[input_id]
-                fields[len+2] = bins[match_id]
-            }
+            print line","bins[input_id]","bins[match_id]
         }
-        new_line = fields[1]
-        for (i=2; i <= len+2; i++) {
-            new_line = new_line "," fields[i]
-        }
-        print new_line
     }
     close(protfin_out)
 }
