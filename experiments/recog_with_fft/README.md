@@ -26,6 +26,9 @@ python3 evaluation.py eval protfin_out.csv
 # extend the protfin output with two columns for the match related mapman bins
 awk -v protfin_out=protfin_out.csv -f extend_protfin_out.awk mapmanreferencebins.results.txt > protfin_out.extended.csv
 
+# generate a plot for counts of calculated hashes
+TITLE="Distribution of sequences' hash counts" X_LABEL="Hash counts" \
+Rscript raincloud_plot.R normal $(py evaluation.py print-hash-counts database.pickle) plot.png
 ```
 
 ### Unit Testing
@@ -172,10 +175,20 @@ TQDM_DISABLE=1 python3 test.py
                         </ol>
                     </td>
                 </tr>
+                <tr>
+                    <td><code>print_hash_counts(database)</code></td>
+                    <td>
+                        <ol type="1">
+                            <li>Extract the hash counts from the protein lookup in <code>database</code></li>
+                            <li>Print the extracted values comma separated to stdout</li>
+                        </ol>
+                    </td>
+                </tr>
             </table>
         </details>
     </li>
     <li><code>extend_protfin_out.awk</code> - A script to extend the protfin output with two columns for the match related mapman bins</li>
+    <li><code>raincloud_plot.R</code> - A script to plot groups of values into a raincloud plot</li>
 </ul>
 
 ### Unit Tests
@@ -190,6 +203,7 @@ TQDM_DISABLE=1 python3 test.py
 |                          file                            |     content
 |----------------------------------------------------------|------------------
 |[test_selection.summary.csv](./results/test_selection.summary.csv)|a summary of the found matches for 217 protein sequences (7 per family)
+|[hash_count_dist.png](./results/hash_count_dist.png)|a raincloud plot of the hash counts calculated for the sequences
 
 ### Reproduce
 In this repository, `protein.fa` is used to generate the database. You can extract the file from [this archive](https://github.com/usadellab/prot-fin/raw/5be77c4247327e3958c89200c03a938ec4734834/material/Mapman_reference_DB_202310.tar.bz2). The archive also includes `mapmanreferencebins.results.txt` which maps the proteins to their families.
@@ -204,6 +218,15 @@ python3 protfin.py create-db $materials/protein.fa
 python3 evaluation.py select-samples $materials/mapmanreferencebins.results.txt $materials/protein.fa -s 7 > ../results/_test_selection.fa
 python3 protfin.py find-matches ../results/_test_selection.fa > ../results/_test_selection.matches
 python3 evaluation.py eval ../results/_test_selection.matches > ../results/test_selection.summary.csv
+```
+
+[hash_count_dist.png](./results/hash_count_dist.png):
+```sh
+cd methods
+materials=../../../materials
+python3 protfin.py create-db $materials/protein.fa
+TITLE="Distribution of sequences' hash counts" X_LABEL="Hash counts" \
+Rscript raincloud_plot.R normal $(py evaluation.py print-hash-counts database.pickle) ../results/hash_count_dist.png
 ```
 
 ---

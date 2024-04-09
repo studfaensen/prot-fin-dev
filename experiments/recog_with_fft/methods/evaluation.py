@@ -2,7 +2,7 @@
 This module is to do some statistic analysis on the protfin results
 """
 
-from actions import evaluate_protfin, select_samples
+from actions import evaluate_protfin, select_samples, print_hash_counts
 import argparse
 from signal import signal, SIGPIPE, SIG_DFL
 signal(SIGPIPE, SIG_DFL)  # fixes weird python error, look: https://newbebweb.blogspot.com/2012/02/python-head-ioerror-errno-32-broken.html
@@ -44,6 +44,11 @@ def get_cli():
                                 getattr(args, "protein-file"),
                                 args.samples_per_family
                              ))
+
+    # evaluation.py print-hash-counts <database-file>
+    eval_parser = sub_commands.add_parser("print-hash-counts", help="Print the calculated hash counts per sequence as csv")
+    eval_parser.add_argument("database")
+    eval_parser.set_defaults(func=lambda args: print_hash_counts(args.database))
 
     return parser
 
