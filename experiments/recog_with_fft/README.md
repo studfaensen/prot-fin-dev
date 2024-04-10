@@ -28,7 +28,7 @@ awk -v protfin_out=protfin_out.csv -f extend_protfin_out.awk mapmanreferencebins
 
 # generate a plot for counts of calculated hashes
 TITLE="Distribution of sequences' hash counts" X_LABEL="Hash counts" \
-Rscript raincloud_plot.R normal $(py evaluation.py print-hash-counts database.pickle) plot.png
+Rscript raincloud_plot.R normal <(py evaluation.py print-hash-counts database.pickle) plot.png
 ```
 
 ### Unit Testing
@@ -226,7 +226,7 @@ cd methods
 materials=../../../materials
 python3 protfin.py create-db $materials/protein.fa
 TITLE="Distribution of sequences' hash counts" X_LABEL="Hash counts" \
-Rscript raincloud_plot.R normal $(py evaluation.py print-hash-counts database.pickle) ../results/hash_count_dist.png
+Rscript raincloud_plot.R normal <(py evaluation.py print-hash-counts database.pickle) ../results/hash_count_dist.png
 ```
 
 ---
@@ -254,3 +254,7 @@ Shell: `zsh 5.8`
 |    numpy   | 1.23.0  |
 |   pandas   |  2.0.1  |
 |    tqdm    | 4.66.2  |
+|      R     |  3.6.3  |
+|   tibble   |  3.2.1  |
+|   ggplot2  |  3.5.0  |
+|   ggdist   |  3.3.2  |
