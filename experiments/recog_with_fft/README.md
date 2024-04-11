@@ -43,7 +43,7 @@ TQDM_DISABLE=1 python3 test.py
 <ul>
     <li>
         <details>
-            <summary><code>v01-exp-stft_params</code> - Trying different parameters for the STFT to fit the best: <a href="https://github.com/usadellab/prot-fin/blob/v0.1-exp-stft_params/experiments/recog_with_fft">go to branch</a></summary>
+            <summary><code>v0.1-exp-stft_params</code> - Trying different parameters for the STFT to fit the best: <a href="https://github.com/usadellab/prot-fin/blob/v0.1-exp-stft_params/experiments/recog_with_fft">go to branch</a></summary>
             The creation of the constellation map is based on the STFT.<br>
             To increase the accuracy of the recognition algorithm, it is very important to optimize the parameters to generate the most effective constellation map for a protein.
             <br><br>
@@ -53,6 +53,44 @@ TQDM_DISABLE=1 python3 test.py
             <br><br>
             It looks like that the maximum overlap (so hop size of 1) is the best option for accuracy.<br>
             Currently, for window size and selected peaks are further analyses necessary.
+        </details>
+    </li>
+    <li>
+        <details>
+            <summary><code>v0.2-exp-hash_analysises</code> - Analyzing the generated hashes: <a href="https://github.com/usadellab/prot-fin/blob/v0.2-exp-hash_analysises/experiments/recog_with_fft">go to branch</a></summary>
+            The recognition of proteins in protfin is based on hashes.<br>
+            To increase the accuracy of the recognition algorithm, a high quantity and quality of hashes is of interest.<br>
+            To understand how to improve both efficiently, is the purpose of this experiment.
+            <br><br>
+            Therefore, hash counts and their components will be analyzed.
+            <br><br>
+            Currently, there are very many unused hashes that are just ignored, as <a href="https://github.com/usadellab/prot-fin/blob/v0.2-exp-hash_analysises/experiments/recog_with_fft/results/potential_hashes.png">potential_hashes.png</a> implies.
+        </details>
+    </li>
+    <li>
+        <details>
+            <summary><code>v0.2-exp-hashed_amplitudes</code> - Analyzing the influence of STFT amplitudes included in hashes: <a href="https://github.com/usadellab/prot-fin/blob/v0.2-exp-hashed_amplitudes/experiments/recog_with_fft">go to branch</a></summary>
+            The recognition of proteins in protfin is based on hashes.<br>
+            Currently, hashes are created of STFT frequency pairs and the distance between them in the constelllation map.<br>
+            Including the STFT amplitudes could increase the hashes' quality, as they store more information then.
+            <br><br>
+            Therefore, the amplitudes will be included in hash generation as the result of the comparisons between the amplitudes of the frequency pairs that are included in a hash.<br>
+            So the amplitudes take only a few bits, as the full values may lead to overfitting.
+            <br><br>
+            Using 1 or 2 bits seems to work good enough, as <a href="https://github.com/usadellab/prot-fin/blob/v0.2-exp-hashed_amplitudes/experiments/recog_with_fft/results/summary.csv">summary.csv</a> implies.<br>
+            Currently, only the first rank of matches is analyzed to see if the original match was identified. The other related matches need to be checked on familiarity concerning their mapman bins.
+        </details>
+    </li>
+    <li>
+        <details>
+            <summary><code>v0.2-exp-peak_selection</code> - Analyzing the peak selection method in STFT: <a href="https://github.com/usadellab/prot-fin/blob/v0.2-exp-peak_selection/experiments/recog_with_fft">go to branch</a></summary>
+            To create hashes from a STFT, only a subset of frequencies is selected to be included in the hash generation.<br>
+            Currently, the <code>scipy.signal.find_peaks</code> function is used to select the local maxima only. But in case of protein sequences instead of music, this may not be that useful, as the maxima's neighbors could be still relevant for identification of familiar proteins.
+            <br><br>
+            Therefore, an alternative way of selection is going to be developed. The current approach is to just sort the frequencies by their amplitudes descending and select the first ones.
+            <br><br>
+            The difference for 5 selected peaks doesn't seem that big, as <a href="https://github.com/usadellab/prot-fin/blob/v0.2-exp-peak_selection/experiments/recog_with_fft/results/summary.csv">summary.csv</a> shows.<br>
+            The average match count is lower, but not that much. Further analysises necessary.
         </details>
     </li>
 </ul>
