@@ -48,14 +48,14 @@ def find_matches(
     # print the matches with description and score
     for (input_id, description, seq) in Fasta(fasta_file):
         # create the combinatorial hashes for the sequence
-        hashes: Hashes = hashes_from_seq(seq, input_id)
+        hashes: Hashes = hashes_from_seq(seq)
 
         # calculate the scores for proteins in the database
         scored_matches: ScoresMap = score_prots(hashes, database, protein_lookup)
 
         result = get_result_frame(scored_matches, input_id, len(seq), len(hashes))
 
-        result = result[result["Rank"] == 1]
+        result = result[result["Rank"].isin(range(11))]
         result.loc[len(result.index)] = None
         print(result.sort_values("Rank").to_csv(index=False, header=False, float_format="%g"), end="")
 
@@ -184,7 +184,7 @@ def get_matches_per_prot(hashes: Hashes, database: Database) -> MatchesPerProt:
     matches_per_prot: MatchesPerProt = {}
 
     # find the matches per protein
-    for hash_, (sample_index, _) in hashes.items():
+    for hash_, sample_index in hashes.items():
         if hash_ in database:
             matching_occurences: List[HashOccurence] = database[hash_]
 

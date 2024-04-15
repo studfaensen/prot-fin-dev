@@ -86,7 +86,7 @@ class TestFindMatches(ut.TestCase):
 
         hashes: Hashes = self.create_valid(
             Hashes,
-            {hash_: (WindowIndex(i), ProteinID("")) for i, hash_ in enumerate(db.keys())}
+            {hash_: WindowIndex(i) for i, hash_ in enumerate(db.keys())}
         )
         scores: ScoresMap = self.create_valid(
             ScoresMap,
@@ -98,7 +98,7 @@ class TestFindMatches(ut.TestCase):
     def test_get_matches_per_prot(self):
         hashes: Hashes = self.create_valid(
             Hashes,
-            {Hash(123): (WindowIndex(1), ProteinID(""))}
+            {Hash(123): WindowIndex(1)}
         )
         proteins = [(WindowIndex(0), ProteinID(i)) for i in range(10)]
         db = self.create_valid(
@@ -112,7 +112,7 @@ class TestFindMatches(ut.TestCase):
         self.assertEqual(len(matches), len(proteins), "Returned matches not complete")
         for idx, prot_id in proteins:
             self.assertIn(prot_id, matches, f"Protein identifier '{prot_id}' missing")
-            original_matches = [(list(hashes.values())[0][0], idx)]
+            original_matches = [(list(hashes.values())[0], idx)]
             self.assertEqual(
                 matches[prot_id],
                 original_matches,

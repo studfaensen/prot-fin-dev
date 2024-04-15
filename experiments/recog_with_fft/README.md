@@ -222,11 +222,21 @@ TQDM_DISABLE=1 python3 test.py
                         </ol>
                     </td>
                 </tr>
+                <tr>
+                    <td><code>plot_frequencies(prot_file, out_file)</code></td>
+                    <td>
+                        <ol type="1">
+                            <li>Create the constellation maps of all sequences and collect the selected frequencies</li>
+                            <li>Plot the frequences' rates and indicate how many sequences share a frequence</li>
+                        </ol>
+                    </td>
+                </tr>
             </table>
         </details>
     </li>
     <li><code>extend_protfin_out.awk</code> - A script to extend the protfin output with two columns for the match related mapman bins</li>
     <li><code>raincloud_plot.R</code> - A script to plot groups of values into a raincloud plot</li>
+    <li><code>summary.py</code> - A script to summarize the output of <code>evaluation.py eval</code></li>
 </ul>
 
 ### Unit Tests
@@ -241,7 +251,9 @@ TQDM_DISABLE=1 python3 test.py
 |                          file                            |     content
 |----------------------------------------------------------|------------------
 |[test_selection.summary.csv](./results/test_selection.summary.csv)|a summary of the found matches for 217 protein sequences (7 per family)
+|[summary.csv](./results/summary.csv)|a summary of the `*.summary.csv` files
 |[hash_count_dist.png](./results/hash_count_dist.png)|a raincloud plot of the hash counts calculated for the sequences
+|[frequencies.png](./results/frequencies.png)|A scatter plot of the frequences that are included in constellation maps
 
 ### Reproduce
 In this repository, `protein.fa` is used to generate the database. You can extract the file from [this archive](https://github.com/usadellab/prot-fin/raw/5be77c4247327e3958c89200c03a938ec4734834/material/Mapman_reference_DB_202310.tar.bz2). The archive also includes `mapmanreferencebins.results.txt` which maps the proteins to their families.
@@ -258,6 +270,12 @@ python3 protfin.py find-matches ../results/_test_selection.fa > ../results/_test
 python3 evaluation.py eval ../results/_test_selection.matches > ../results/test_selection.summary.csv
 ```
 
+[summary.csv](./results/summary.csv):
+```sh
+cd methods
+python3 summary.py ../results/*.summary.csv > ../results/summary.csv
+```
+
 [hash_count_dist.png](./results/hash_count_dist.png):
 ```sh
 cd methods
@@ -267,17 +285,28 @@ TITLE="Distribution of sequences' hash counts" X_LABEL="Hash counts" \
 Rscript raincloud_plot.R normal <(py evaluation.py print-hash-counts database.pickle) ../results/hash_count_dist.png
 ```
 
+[frequencies.png](./results/frequencies.png):
+```sh
+cd methods
+materials=../../../materials
+python3 evaluation.py plot-frequencies $materials/protein.fa ../results/frequencies.png
+```
+
 ---
 ## Discussion/Brainstorming
 The summary implies that longer sequences have a more accurate result than shorter ones. As the recognition is based on hash similarities, this implication is not that unexpected, as longer sequences produce more hashes. Interesting here is that same hash counts seem to cause the same match counts.<br>
 To increase the general accuracy of the algorithm, the hash creation has to be more quantitative or better, more qualitative.
 
+As shown in `frequencies.png`, all frequencies from STFT are below 1, so the current hashing makes no sense, as they are casted into integer to be all zero in the end. They should be multiplied by e.g. 1000 before casting.<br>
+Interesting are the uncommon frequencies with rates below 25000, as they may be the family related ones.
+
 Some ideas for future development:
  - add appropriate testing
- - find ways to create more hashes or to increase their quality
-   - find the best combination of parameters for the STFT $\rightarrow$ maybe more hashes
-   - don't just use the peaks only (`create_constellations`) $\rightarrow$ maybe more hashes
-   - include the frequencies' amplitudes of the STFT in the hashes (maybe 1 Bit if amplitude of frequency A is lower than from B) $\rightarrow$ maybe better quality
+ - find ways to create more qualitative hashes:
+   - find the best combination of parameters for the STFT
+   - don't just use the peaks only (`create_constellations`)
+   - include the frequencies' amplitudes of the STFT in the hashes (maybe 1 Bit if amplitude of frequency A is lower than from B)
+ - improve performance/efficiency
 
 ---
 ## Environment
@@ -292,6 +321,7 @@ Shell: `zsh 5.8`
 |    numpy   | 1.23.0  |
 |   pandas   |  2.0.1  |
 |    tqdm    | 4.66.2  |
+| matplotlib |  3.5.2  |
 |      R     |  3.6.3  |
 |   tibble   |  3.2.1  |
 |   ggplot2  |  3.5.0  |

@@ -1,11 +1,15 @@
 from tools import *
 import pandas as pd
 import numpy as np
+from os import environ as env
+
+KIDERA_FACTOR = ["Helix/bend preference", "Side-chain size", "Extended structure preference", "Hydrophobicity", "Double-bend preference", "Partial specific volume", "Flat extended preference", "Occurrence in alpha region", "pK-C", "Surrounding hydrophobicity"]\
+    .index("Hydrophobicity")
 
 
 def get_aa_vector(
         seq: str,
-        factor: int,
+        factor=KIDERA_FACTOR,
         normalize=True,
         file="../../../materials/Amino_Acid_Kidera_Factors.csv"
         ) -> np.ndarray:

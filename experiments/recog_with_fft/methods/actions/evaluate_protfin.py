@@ -46,7 +46,7 @@ def evaluate_protfin(protfin_out_file: str):
         # insert the data into the dataframe
         evaluation.loc[len(evaluation.index)] = (
             input_sample,  # Sample_ID
-            len(matches),  # First_Match_Count
+            (matches["Rank"] == 1).sum(),  # First_Match_Count
             input_sample in matches[matches["Rank"] == 1]["Match_Protein_ID"].values,  # Sample_In_First_Matches
             matches["Input_Sequence_Length"].iloc[0],  # Sequence_Length
             matches["Input_Found_Hashes"].iloc[0],  # Sample_Hashes

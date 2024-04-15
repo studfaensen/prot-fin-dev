@@ -10,14 +10,14 @@ import re
 
 # type aliases
 Hash = int
-WindowIndex = np.float64
+WindowIndex = int
 ProteinID = str
 Score = int
 JSI = float
-HashOccurence = Tuple[WindowIndex, ProteinID]
+HashOccurence = WindowIndex
 Hashes = Dict[Hash, HashOccurence]
 Scores = List[Tuple[ProteinID, Tuple[WindowIndex, Score, JSI]]]
-Database = Dict[Hash, List[HashOccurence]]
+Database = Dict[Hash, List[Tuple[HashOccurence, ProteinID]]]
 ProteinLookup = Dict[ProteinID, Tuple[str, int]]
 ConstellationMap = List[Tuple[WindowIndex, float]]
 

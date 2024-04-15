@@ -1,14 +1,22 @@
 from scipy import signal
 import numpy as np
 from tools import *
+from os import environ as env
+
+# parameters for the STFT
+WINDOW_SIZE = int(env.get("WINDOW_SIZE", 30))
+WINDOW_TYPE = env.get("WINDOW_TYPE", ["boxcar", "triang", "blackman", "hamming", "hann", "bartlett", "flattop", "parzen", "bohman", "blackmanharris", "nuttall", "barthann", "cosine", "exponential", "tukey", "taylor", "lanczos"]\
+                                     [0])
+OVERLAP = int(env.get("OVERLAP", 15))
+N_PEAKS = int(env.get("N_PEAKS", 0))  # 0 means all
 
 
 def create_constellation(
         aa_vec: np.ndarray,
-        window_size: int,
-        n_peaks=0,
-        window="boxcar",
-        **kwargs
+        window_size=WINDOW_SIZE,
+        n_peaks=N_PEAKS,
+        window=WINDOW_TYPE,
+        overlap=OVERLAP
         ) -> ConstellationMap:
     """
     The function carries out a windowed fast fourier transformation,
@@ -29,18 +37,14 @@ def create_constellation(
     window : str
         The window type for the STFT, read https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.get_window.html#scipy.signal.get_window
         for supported ones (defaults to "boxcar")
-    **kwargs:
-        overlap : int
-            the overlap between two windows during doing the STFT (defaults to half the window size)
+    overlap : int
+        the overlap between two windows during doing the STFT (defaults to half the window size)
 
     Returns
     -------
      A ConstellationMap, a list of coordinates, meaning the pairs of
      window index and prominent frequency peak of the window
     """
-
-    # extract overlap from keyword arguments
-    overlap: int = kwargs.get("overlap", window_size // 2)
 
     # adjust window size and overlap if invalid
     if len(aa_vec) < window_size:
@@ -78,7 +82,7 @@ def stft_to_constellation(
 
         for peak in peaks:
             frequency = frequencies[peak]
-            constellation_map.append([window_idx, frequency])
+            constellation_map.append([int(window_idx), frequency])
 
     return constellation_map
 

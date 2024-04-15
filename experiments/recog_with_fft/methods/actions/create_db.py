@@ -30,17 +30,17 @@ def create_db(
     for prot_id, description, seq in Fasta(prot_file):
 
         # calculate the combinatorial hashes for the sequence
-        hashes: Hashes = hashes_from_seq(seq, prot_id)
+        hashes: Hashes = hashes_from_seq(seq)
 
         # save the protein related data
         protein_lookup[prot_id] = (description, len(hashes))
 
         # sort the hashes into the database by using them as key pointing to
         # their matching proteins
-        for hash_, index_prot_id_pair in hashes.items():
+        for hash_, index in hashes.items():
             if hash_ not in database:
                 database[hash_] = []
-            database[hash_].append(index_prot_id_pair)
+            database[hash_].append((index, prot_id))
 
     # write the databases into files
     with open(db_out, 'wb') as db:
