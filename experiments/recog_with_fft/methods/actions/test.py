@@ -23,15 +23,20 @@ class TestCreateDB(ut.TestCase):
     def tearDownClass(cls):
         os.remove(cls.db_out)
 
+    def create_valid(self, ty: Type, value: Any) -> Type:
+        type_name = str(locals()["ty"])
+        self.assertTrue(verify_type(value, ty), "Value of wrong type, expected: " + type_name)
+        return value
+
     def test_create_db(self):
         with open(self.db_out, "rb") as f:
-            db = pickle.load(f)
-            self.assertTrue(verify_type(db, Tuple[Database, ProteinLookup]), "The loaded pickle-file stores a wrong type")
+            db = self.create_valid(
+                Tuple[Database, ProteinLookup],
+                pickle.load(f)
+            )
 
             db, lookup = db
 
-        self.assertTrue(verify_type(db, Database), "Database has a wrong type")
-        self.assertTrue(verify_type(lookup, ProteinLookup), "Protein lookup has a wrong type")
         self.assertEqual(len(lookup), 3, "Protein lookup is not complete")
 
         for hash_, idx_prot_pairs in db.items():
@@ -86,7 +91,7 @@ class TestFindMatches(ut.TestCase):
 
         hashes: Hashes = self.create_valid(
             Hashes,
-            {hash_: WindowIndex(i) for i, hash_ in enumerate(db.keys())}
+            {hash_: (WindowIndex(i), ProteinID()) for i, hash_ in enumerate(db.keys())}
         )
         scores: ScoresMap = self.create_valid(
             ScoresMap,
@@ -98,7 +103,7 @@ class TestFindMatches(ut.TestCase):
     def test_get_matches_per_prot(self):
         hashes: Hashes = self.create_valid(
             Hashes,
-            {Hash(123): WindowIndex(1)}
+            {Hash(123): (WindowIndex(1), ProteinID())}
         )
         proteins = [(WindowIndex(0), ProteinID(i)) for i in range(10)]
         db = self.create_valid(
@@ -112,43 +117,14 @@ class TestFindMatches(ut.TestCase):
         self.assertEqual(len(matches), len(proteins), "Returned matches not complete")
         for idx, prot_id in proteins:
             self.assertIn(prot_id, matches, f"Protein identifier '{prot_id}' missing")
-            original_matches = [(list(hashes.values())[0], idx)]
+            original_offsets = self.create_valid(
+                ScoresByOffset,
+                {WindowIndex(1): 1}
+            )
             self.assertEqual(
                 matches[prot_id],
-                original_matches,
-                f"Found matches for protein id '{prot_id}' wrong"
-            )
-
-    def test_count_offsets(self):
-        matches_per_offset = {
-            WindowIndex(-1): [
-                (WindowIndex(10), WindowIndex(11)),
-                (WindowIndex(100), WindowIndex(101))
-            ],
-            WindowIndex(0): [
-                (WindowIndex(11), WindowIndex(11)),
-            ],
-            WindowIndex(1): [
-                (WindowIndex(12), WindowIndex(11)),
-                (WindowIndex(2), WindowIndex(1)),
-                (WindowIndex(102), WindowIndex(101))
-            ]
-        }
-        matches: Matches = self.create_valid(
-            Matches,
-            reduce(lambda a, b: a + b, matches_per_offset.values(), [])
-        )
-        scored_offsets: ScoresByOffset = self.create_valid(
-            ScoresByOffset,
-            count_offsets(matches)
-        )
-        self.assertEqual(len(scored_offsets), len(matches_per_offset), "Returned scored offsets not complete")
-        for offset, score in scored_offsets.items():
-            self.assertIn(offset, matches_per_offset, f"Offset '{offset}' missing")
-            self.assertEqual(
-                scored_offsets[offset],
-                score,
-                f"Returned score for offset '{offset}' wrong"
+                original_offsets,
+                f"Found offsets for protein id '{prot_id}' wrong"
             )
 
     def test_get_max_offset(self):

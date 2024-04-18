@@ -5,8 +5,8 @@ from .algorithm import hashes_from_seq
 import pickle
 
 Matches = List[Tuple[WindowIndex, WindowIndex]]
-MatchesPerProt = Dict[ProteinID, Matches]
 ScoresByOffset = Dict[WindowIndex, Score]
+MatchesPerProt = Dict[ProteinID, ScoresByOffset]
 ScoresMap = Dict[ProteinID, Tuple[WindowIndex, Score, JSI]]
 
 COLUMNS = [
@@ -46,9 +46,9 @@ def find_matches(
     print(*COLUMNS, sep=",")
 
     # print the matches with description and score
-    for (input_id, description, seq) in Fasta(fasta_file):
+    for input_id, _, seq in Fasta(fasta_file):
         # create the combinatorial hashes for the sequence
-        hashes: Hashes = hashes_from_seq(seq)
+        hashes: Hashes = hashes_from_seq(seq, None)
 
         # calculate the scores for proteins in the database
         scored_matches: ScoresMap = score_prots(hashes, database, protein_lookup)
@@ -126,13 +126,13 @@ def score_prots(
     scores_map: ScoresMap = {}
 
     # calculate the scores for each protein based on the matching hashes
-    for match_prot_id, matches in matches_per_prot.items():
+    for match_prot_id, offsets in matches_per_prot.items():
 
         # calculate the jaccard similarity index as one scoring value
         sample_cardinality: int = len(hashes)
         _, match_cardinality = protein_lookup[match_prot_id]
 
-        intersection_cardinality: int = len(matches)
+        intersection_cardinality: int = sum(offsets.values())
         union_cardinality: int = sample_cardinality + match_cardinality - intersection_cardinality
 
         # union cardinality can't be zero, because:
@@ -141,13 +141,9 @@ def score_prots(
         # -> union_cardinality >= 2
         jacc_sim_index: JSI = intersection_cardinality / union_cardinality
 
-        # count all offsets of hashes in the sample to their original position
-        # in the match sequence pointing to the number of hashes having this offset
-        prot_scores_by_offset: ScoresByOffset = count_offsets(matches)
-
         # find the most related offset, as it describes the biggest matching
         # constellation of found hashes for a protein
-        max_offset, max_frequency = get_max_offset(prot_scores_by_offset)
+        max_offset, max_frequency = get_max_offset(offsets)
 
         # take the frequency of the most related offset as score
         scores_map[match_prot_id] = (max_offset, max_frequency, jacc_sim_index)
@@ -164,35 +160,23 @@ def get_max_offset(prot_scores_by_offset: ScoresByOffset) -> Tuple[WindowIndex, 
     return max_
 
 
-def count_offsets(matches: Matches) -> ScoresByOffset:
-    prot_scores_by_offset: ScoresByOffset = {}
-
-    for sample_index, source_index in matches:
-        # calculate the offset
-        delta: WindowIndex = source_index - sample_index
-
-        # initialize with zero if necessary and count
-        if delta not in prot_scores_by_offset:
-            prot_scores_by_offset[delta] = 0
-        prot_scores_by_offset[delta] += 1
-
-    return prot_scores_by_offset
-
-
 def get_matches_per_prot(hashes: Hashes, database: Database) -> MatchesPerProt:
     # stores all found hashes that exist for a known protein
     matches_per_prot: MatchesPerProt = {}
 
     # find the matches per protein
-    for hash_, sample_index in hashes.items():
+    for hash_, (sample_index, _) in hashes.items():
         if hash_ in database:
             matching_occurences: List[HashOccurence] = database[hash_]
 
             # for each known protein for the hash, keep the indices of its
             # occurrence in the sample and the known sequence
             for source_index, match_prot_id in matching_occurences:
-                if match_prot_id not in matches_per_prot:
-                    matches_per_prot[match_prot_id] = []
-                matches_per_prot[match_prot_id].append((sample_index, source_index))
+                if (offsets := matches_per_prot.get(match_prot_id)) is None:
+                    offsets = {}
+                    matches_per_prot[match_prot_id] = offsets
+
+                offset = sample_index - source_index
+                offsets[offset] = offsets.get(offset, 0) + 1
 
     return matches_per_prot

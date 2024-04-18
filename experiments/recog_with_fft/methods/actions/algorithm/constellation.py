@@ -72,7 +72,7 @@ def stft_to_constellation(
     constellation_map: ConstellationMap = []
 
     # find and collect the most prominent frequencies from STFT per window
-    for window_idx, amplitudes in zip(window_indexes, stft.T):
+    for amplitudes in stft.T:
 
         # get rid of complex values to make them comparable
         spectrum: np.ndarray = abs(amplitudes)
@@ -80,9 +80,7 @@ def stft_to_constellation(
         # find peaks
         peaks: List[int] = find_peaks(spectrum, n_peaks)
 
-        for peak in peaks:
-            frequency = frequencies[peak]
-            constellation_map.append([int(window_idx), frequency])
+        constellation_map.append(tuple((float(frequencies[peak]), float(spectrum[peak])) for peak in peaks))
 
     return constellation_map
 

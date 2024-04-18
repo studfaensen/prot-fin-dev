@@ -14,12 +14,24 @@ WindowIndex = int
 ProteinID = str
 Score = int
 JSI = float
-HashOccurence = WindowIndex
+HashOccurence = Tuple[WindowIndex, ProteinID]
 Hashes = Dict[Hash, HashOccurence]
 Scores = List[Tuple[ProteinID, Tuple[WindowIndex, Score, JSI]]]
-Database = Dict[Hash, List[Tuple[HashOccurence, ProteinID]]]
-ProteinLookup = Dict[ProteinID, Tuple[str, int]]
-ConstellationMap = List[Tuple[WindowIndex, float]]
+Database = Dict[Hash, List[Tuple[WindowIndex, ProteinID]]]
+ProteinLookup = Dict[ProteinID, Tuple[int, int]]
+ConstellationMap = List[Tuple[Tuple[float, float], ...]]
+
+
+def divide_evenly(num: int, n_parts: int) -> Generator[slice, None, None]:
+    if n_parts > 0:
+        quotient, rest = divmod(num, n_parts)
+        start = 0
+        for _ in range(rest):
+            yield slice(start, start + quotient + 1)
+            start += quotient + 1
+        for _ in range(n_parts - rest):
+            yield slice(start, start + quotient)
+            start += quotient
 
 
 def verify_type(var, ty) -> bool:
@@ -46,7 +58,8 @@ def verify_type(var, ty) -> bool:
         if not isinstance(var, tuple):
             return False
         if len(var) != len(ty.__args__):
-            return False
+            if ty.__args__[-1] is not ...:
+                return False
         if False in [verify_type(item, type_) for item, type_ in zip(var, ty.__args__)]:
             return False
 
@@ -83,16 +96,21 @@ class Fasta:
         return self.protein_count
 
     def __iter__(self) -> Generator[Tuple[ProteinID, str, str], None, None]:
-        with open(self.file_name) as f:
+        return self[:]
 
+    def __getitem__(self, key) -> Generator[Tuple[ProteinID, str, str], None, None]:
+        assert type(key) is slice
+        start, stop, step = key.indices(len(self))
+
+        with open(self.file_name) as f:
             # create a progress bar and iterate over the FASTA file
-            for _ in tqdm(range(len(self))):
+            current_prot = 0
+            for i in tqdm(range(start, stop, step), desc=("From %% %ds. Seq." % len(str(len(self)))) % (start + 1)):
 
                 # find line of sequence description
-                while True:
+                while current_prot <= i:
                     prot_desc = f.readline()
-                    if prot_desc[0] == ">":
-                        break
+                    current_prot += prot_desc[0] == ">"
 
                 # extract information from describing line
                 prot_id, _, description = prot_desc.split(" ", 2)
@@ -103,6 +121,8 @@ class Fasta:
                 # yield the extracted values, remove '>' from identifier and
                 # '\n' from description
                 yield prot_id[1:], description[:-1], seq
+
+        assert current_prot == stop
 
 
 def count_appearances_in_file(pattern, file: TextIO):

@@ -36,10 +36,12 @@ def get_cli():
     create_db_parser = sub_commands.add_parser("create-db", help="Create Database")
     create_db_parser.add_argument("fasta-file")
     create_db_parser.add_argument("-p", "--path", default=DB_DEFAULT)
+    create_db_parser.add_argument("-c", "--cpu", default=1, type=int)
     create_db_parser.set_defaults(func=lambda args:
                                   create_db(
                                       getattr(args, "fasta-file"),
-                                      db_out=args.path
+                                      db_out=args.path,
+                                      cpu_count=args.cpu
                                   ))
 
     # protfin.py find-matches [-d] <fasta-file>

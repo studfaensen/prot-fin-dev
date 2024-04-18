@@ -54,7 +54,8 @@ def get_cli():
     eval_parser = sub_commands.add_parser("plot-frequencies", help="Plot the selected frequencies")
     eval_parser.add_argument("protein-file")
     eval_parser.add_argument("out-file")
-    eval_parser.set_defaults(func=lambda args: plot_frequencies(getattr(args, "protein-file"), getattr(args, "out-file")))
+    eval_parser.add_argument("-c", "--cpu", default=1, type=int)
+    eval_parser.set_defaults(func=lambda args: plot_frequencies(getattr(args, "protein-file"), getattr(args, "out-file"), args.cpu))
 
     return parser
 
