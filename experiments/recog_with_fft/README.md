@@ -27,11 +27,18 @@ python3 evaluation.py eval protfin_out.summary.csv
 python3 summary.py *.summary.csv
 
 # extend the protfin output with two columns for the match related mapman bins
-awk -v protfin_out=protfin_out.csv -f extend_protfin_out.awk mapmanreferencebins.results.txt > protfin_out.extended.csv
+awk -v protfin_out=protfin_out.csv -f extend_protfin_out.awk mapmanreferencebins.results.txt > protfin_out.extended.csv 
+
+# create a plot of the extended output file
+python3 evaluation.py plot-extended-out protfin_out.extended.csv plot.png
 
 # generate a plot for counts of calculated hashes
 TITLE="Distribution of sequences' hash counts" X_LABEL="Hash counts" \
 Rscript raincloud_plot.R normal <(python3 evaluation.py print-hash-counts database.pickle) plot.png
+
+# generate a plot for counts of proteins per hash with a log10 transformation
+TITLE="Distribution of proteins per hash" X_LABEL="Protein counts" \
+Rscript raincloud_plot_log10.R normal <(python3 evaluation.py print-prots-per-hash database.pickle) plot.png
 ```
 
 ### Unit Testing
@@ -123,9 +130,10 @@ TQDM_DISABLE=1 python3 test.py
                         <ul><li>defaults: <code>n_peaks=0</code>, <code>window="boxcar"</code>, <code>overlap@kwargs=window_size//2</code></li></ul>
                         <ol type="1">
                             <li>Initialize values: equalize <code>window_size</code> to <code>aa_vec</code> if it is greater than the vector size, also set <code>overlap=window_size-1</code> if it is bigger than window size</li>
+                            <li>If input sequence is shorter than window size, return empty map</li>
                             <li>Do a STFT on <code>aa_vec</code> with the given parameters</li>
                             <li>for each STF-transformed window, get the n most prominent peaks as set by <code>n_peaks</code> or select all if <code>n_peaks=0</code></li>
-                            <li>append all tuples of frequency and its amplitude as selected by <code>find_peaks</code> as one whole tuple to the constellation map, so one tuple per window with all its frequencies</li>
+                            <li>append all tuples of peak and its amplitude as selected by <code>find_peaks</code> as one whole tuple to the constellation map, so one tuple per window with all its frequencies</li>
                         </ol>
                     </td>
                 </tr>
@@ -160,7 +168,7 @@ TQDM_DISABLE=1 python3 test.py
                         <ol type="1">
                             <li>create a database for all proteins in the file by joining the results of <code>create_hashes</code></li>
                             <li>create a protein-lookup as well to get to the hash count for each protein</li>
-                            <li>dump both into <code>lookup_out</code></li>
+                            <li>dump both into <code>db_out</code></li>
                         </ol>
                     </td>
                 </tr>
@@ -168,7 +176,7 @@ TQDM_DISABLE=1 python3 test.py
                     <td>actions.find_matches:<br><code>find_matches(fasta_file, db_in)</code></td>
                     <td>
                         <ol type="1">
-                            <li>for each protein in the file, find all match(es), using the database in <code>db_in</code>, and print only the top ten of score to stdout. The score consists of the JSI as first level weight and the custom score on second level</li>
+                            <li>for each protein in the file, find all match(es), using the database in <code>db_in</code>, and print them to stdout. The score consists of the custom score multiplied with the JSI</li>
                         </ol>
                     </td>
                 </tr>
@@ -180,7 +188,7 @@ TQDM_DISABLE=1 python3 test.py
             </ul>
             <code>tools.Fasta(fasta_file)</code>
             <ul>
-                <li>a class to iterate easily through the fasta file's contents, adding also a progress bar to indicate processed proteins</li>
+                <li>a class to iterate easily through the fasta file's contents with support of slicing, adding also a progress bar to indicate processed proteins</li>
                 <li>currently not validating the file</li>
             </ul>
             <code>tools.count_appearances_in_file(pattern, file)</code>
@@ -194,6 +202,11 @@ TQDM_DISABLE=1 python3 test.py
             <code>tools.divide_evenly(num, n_parts)</code>
             <ul>
                 <li>currently used to easily divide <code>num</code> tasks equally among assigned cores</li>
+            </ul>
+            <code>tools.pd_read_chunkwise(csv_file, chunksize)</code>
+            <ul>
+                <li>used for chunkwise iteration over the protfin output csv to reduce memory usage</li>
+                <li>a returned item stores all matches of one input protein</li>
             </ul>
         </details>
     </li>
@@ -232,11 +245,29 @@ TQDM_DISABLE=1 python3 test.py
                     </td>
                 </tr>
                 <tr>
+                    <td><code>print_prots_per_hash(database)</code></td>
+                    <td>
+                        <ol type="1">
+                            <li>Extract the counts of proteins per hash from the <code>database</code></li>
+                            <li>Print the extracted values comma separated to stdout</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
                     <td><code>plot_frequencies(prot_file, out_file, cpu_count)</code></td>
                     <td>
                         <ol type="1">
                             <li>Create the constellation maps of all sequences and collect the selected frequencies</li>
                             <li>Plot the frequences' rates and indicate how many sequences share a frequence</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>plot_extended_out(ext_out, plot_out)</code></td>
+                    <td>
+                        <ol type="1">
+                            <li>Iterate through the proteins' matches and plot a box of the scores of each</li>
+                            <li>Also add dots for each score of family and non-family matches</li>
                         </ol>
                     </td>
                 </tr>
@@ -256,6 +287,8 @@ TQDM_DISABLE=1 python3 test.py
 |[summary.csv](./results/summary.csv)|a summary of the `*.summary.csv` files
 |[hash_count_dist.png](./results/hash_count_dist.png)|a raincloud plot of the hash counts calculated for the sequences
 |[frequencies.png](./results/frequencies.png)|A scatter plot of the frequences that are included in constellation maps
+|[matches.png](./results/matches.png)|A scattered box plot of the found matches per protein, with focus on family relatives
+|[prots_per_hash.png](./results/prots_per_hash.png)|A raincloud plot of the protein counts that share the same hash
 
 ### Reproduce
 In this repository, `protein.fa` is used to generate the database. You can extract the file from [this archive](https://github.com/usadellab/prot-fin/raw/5be77c4247327e3958c89200c03a938ec4734834/material/Mapman_reference_DB_202310.tar.bz2). The archive also includes `mapmanreferencebins.results.txt` which maps the proteins to their families.
@@ -284,7 +317,7 @@ cd methods
 materials=../../../materials
 python3 protfin.py create-db -c 6 $materials/protein.fa
 TITLE="Distribution of sequences' hash counts" X_LABEL="Hash counts" \
-Rscript raincloud_plot.R normal <(py evaluation.py print-hash-counts database.pickle) ../results/hash_count_dist.png
+Rscript raincloud_plot.R normal <(python3 evaluation.py print-hash-counts database.pickle) ../results/hash_count_dist.png
 ```
 
 [frequencies.png](./results/frequencies.png):
@@ -294,13 +327,32 @@ materials=../../../materials
 python3 evaluation.py plot-frequencies -c 6 $materials/protein.fa ../results/frequencies.png
 ```
 
+[matches.png](./results/matches.png):
+```sh
+cd methods
+materials=../../../materials
+python3 protfin.py create-db -c 6 $materials/protein.fa
+python3 evaluation.py select-samples $materials/mapmanreferencebins.results.txt $materials/protein.fa -s 7 > ../results/_test_selection.fa
+python3 protfin.py find-matches ../results/_test_selection.fa > ../results/_test_selection.matches
+awk -v protfin_out=../results/_test_selection.matches -f extend_protfin_out.awk ../../../materials/mapmanreferencebins.results.txt > ../results/_test_selection.matches.extended
+python3 evaluation.py plot-extended-out ../results/_test_selection.matches.extended ../results/matches.png
+```
+
+[prots_per_hash.png](./results/prots_per_hash.png):
+```sh
+cd methods
+materials=../../../materials
+python3 protfin.py create-db -c 6 $materials/protein.fa
+TITLE="Distribution of proteins per hash" X_LABEL="Protein counts" \
+Rscript raincloud_plot_log10.R normal <(python3 evaluation.py print-prots-per-hash database.pickle) ../results/prots_per_hash.png
+```
+
 ---
 ## Discussion/Brainstorming
-The summary implies that longer sequences have a more accurate result than shorter ones. As the recognition is based on hash similarities, this implication is not that unexpected, as longer sequences produce more hashes. Interesting here is that same hash counts seem to cause the same match counts.<br>
-To increase the general accuracy of the algorithm, the hash creation has to be more quantitative or better, more qualitative.
+As of <code>summary.csv</code>, the original match is mostly found. Looking into <code>test_selection.summary.csv</code> and <code>protein.fa</code>, the matches with multiple first hits have just other proteins with duplicate sequences in <code>protein.fa</code>.
+So it is actually always found.
 
-As shown in `frequencies.png`, all frequencies from STFT are below 1, so the current hashing makes no sense, as they are casted into integer to be all zero in the end. They should be multiplied by e.g. 1000 before casting.<br>
-Interesting are the uncommon frequencies with rates below 25000, as they may be the family related ones.
+The plot of the matches in <code>matches.png</code> indicates that there is no real difference in scoring between family related and non-related proteins for an input sequence. There are some sequences with higher scores, but these are just some with high sequence similarity when inspecting the <code>protein.fa</code>.
 
 Some ideas for future development:
  - add appropriate testing
@@ -329,3 +381,4 @@ Shell: `zsh 5.8`
 |   tibble   |  3.2.1  |
 |   ggplot2  |  3.5.0  |
 |   ggdist   |  3.3.2  |
+|   dplyr    |  1.1.4  |

@@ -3,6 +3,7 @@ Some essential and useful functions for the algorithm behind prot-fin
 """
 
 from typing import List, Dict, Tuple, Generator, TextIO, _GenericAlias
+import pandas as pd
 from sys import stderr
 from tqdm import tqdm
 import numpy as np
@@ -20,6 +21,27 @@ Scores = List[Tuple[ProteinID, Tuple[WindowIndex, Score, JSI]]]
 Database = Dict[Hash, List[Tuple[WindowIndex, ProteinID]]]
 ProteinLookup = Dict[ProteinID, Tuple[int, int]]
 ConstellationMap = List[Tuple[Tuple[float, float], ...]]
+
+
+def pd_read_chunkwise(csv_file: str, chunksize=10_000) -> Generator[pd.DataFrame, None, None]:
+    data = pd.DataFrame()
+
+    with open(csv_file, "r") as f:
+        sample_count = count_appearances_in_file("^,,", f)
+
+    proc_bar = tqdm(total=sample_count)
+
+    for chunk in pd.read_csv(csv_file, sep=",", chunksize=chunksize):
+        data = pd.concat([data, chunk], ignore_index=True)
+        sample_ends = np.concatenate([[0], np.where(data["Rank"].isnull())], axis=None)
+
+        if len(sample_ends) > 1:
+            for i, end in enumerate(sample_ends[1:]):
+                proc_bar.update(1)
+                # print(i, end, data)
+                sample = data.loc[sample_ends[i]: end - 1, :]
+                data = data.loc[end + 1:, :]
+                yield sample
 
 
 def divide_evenly(num: int, n_parts: int) -> Generator[slice, None, None]:

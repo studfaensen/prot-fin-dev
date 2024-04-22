@@ -55,7 +55,6 @@ def find_matches(
 
         result = get_result_frame(scored_matches, input_id, len(seq), len(hashes))
 
-        result = result[result["Rank"].isin(range(11))]
         result.loc[len(result.index)] = None
         print(result.sort_values("Rank").to_csv(index=False, header=False, float_format="%g"), end="")
 
@@ -78,7 +77,7 @@ def get_result_frame(
         result["Input_Sequence_Length"] = seq_len
         result["Input_Found_Hashes"] = hash_count
 
-        result["Rank"] = result[["JSI", "Score"]].apply(tuple, axis=1).rank(method="dense", ascending=False)
+        result["Rank"] = result[["JSI", "Score"]].apply(lambda x: x[0] * x[1], axis=1).rank(method="dense", ascending=False)
 
     return result
 

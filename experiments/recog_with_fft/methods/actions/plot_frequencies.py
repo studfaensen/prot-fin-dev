@@ -4,21 +4,28 @@ from matplotlib import pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap as Cmap, Normalize
 from matplotlib.cm import ScalarMappable
 from multiprocessing import Pool
+from .algorithm.constellation import WINDOW_SIZE
+from scipy.fft import fftfreq
+
+FREQS = list(filter(lambda x: x >= 0, fftfreq(WINDOW_SIZE)))
 
 
 def plot_frequencies(prot_file: str, out_file: str, cpu_count=1):
     fasta = Fasta(prot_file)
     protein_count = len(fasta)
 
-    with Pool(cpu_count) as p:
-        subproc_slices = divide_evenly(protein_count, cpu_count)
-        main_slice = next(subproc_slices)
-        subprocesses = p.map_async(_process, ((fasta, slc) for slc in subproc_slices))
-        sel_freqs = _process((fasta, main_slice))
-        for res_sel_freqs in subprocesses.get():
-            for res_freq, (res_freq_count, res_prot_count) in res_sel_freqs.items():
-                freq_count, prot_count = sel_freqs.get(res_freq, (0, 0))
-                sel_freqs[res_freq] = (freq_count + res_freq_count, prot_count + res_prot_count)
+    if cpu_count > 1:
+        with Pool(cpu_count - 1) as p:
+            subproc_slices = divide_evenly(protein_count, cpu_count)
+            main_slice = next(subproc_slices)
+            subprocesses = p.map_async(_process, ((fasta, slc) for slc in subproc_slices))
+            sel_freqs = _process((fasta, main_slice))
+            for res_sel_freqs in subprocesses.get():
+                for res_freq, (res_freq_count, res_prot_count) in res_sel_freqs.items():
+                    freq_count, prot_count = sel_freqs[res_freq]
+                    sel_freqs[res_freq] = (freq_count + res_freq_count, prot_count + res_prot_count)
+    else:
+        sel_freqs = _process((fasta, slice(None)))
 
     if sel_freqs:
         cmap = Cmap.from_list(
@@ -27,16 +34,16 @@ def plot_frequencies(prot_file: str, out_file: str, cpu_count=1):
         )
         norm = Normalize(vmin=0, vmax=protein_count)
 
-        freqs, counts = zip(*sorted(sel_freqs.items()))
+        freqs, counts = zip(*sorted(filter(lambda x: x[1][0] > 0, sel_freqs.items())))
         freq_counts, prot_counts = zip(*counts)
 
         fig = plt.figure(figsize=(10, 5))
         plt.scatter(freqs, freq_counts, marker='o', c=list(map(lambda c: cmap(norm(c)), prot_counts)))
-        for outlier_freq, (outlier_freq_count, _) in filter(lambda i: i[1][0] > max(freq_counts) / 2, sel_freqs.items()):
+        for f, f_count in zip(freqs, freq_counts):
             plt.text(
-                outlier_freq,
-                outlier_freq_count - max(freq_counts) / 100 * 1.5,
-                round(outlier_freq, 2),
+                f,
+                f_count - (max(freq_counts)-min(freq_counts)) / 100 * 1.5,
+                round(f, 2),
                 ha="center",
                 va="top"
             )
@@ -44,19 +51,20 @@ def plot_frequencies(prot_file: str, out_file: str, cpu_count=1):
         plt.xlabel("Frequencies")
         plt.ylabel("Absolute count in all sequences")
         plt.title("Occurences of selected STFT frequences")
-        plt.savefig(out_file)
+        plt.savefig(out_file, bbox_inches='tight')
 
 
 def _process(args) -> Dict[float, Tuple[int, int]]:
     fasta, prot_slice = args
-    selected_freqs = {}
+    selected_freqs = dict.fromkeys(FREQS, (0, 0))
 
     for _, _, seq in fasta[prot_slice]:
         constellation_map = create_constellation(get_aa_vector(seq))
         all_freqs = set() 
         for window in constellation_map:
-            for freq, _ in window:
-                freq_count, prot_count = selected_freqs.get(freq, (0, 0))
+            for freq_idx, _ in window:
+                freq = FREQS[freq_idx]
+                freq_count, prot_count = selected_freqs[freq]
                 selected_freqs[freq] = (freq_count + 1, prot_count)
                 all_freqs.add(freq)
 

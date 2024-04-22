@@ -52,6 +52,9 @@ def create_constellation(
     if overlap >= window_size:
         overlap = window_size - 1
 
+    if len(aa_vec) < window_size:
+        return []
+
     # executing the STFT
     stft_result = signal.stft(
         aa_vec,
@@ -80,7 +83,7 @@ def stft_to_constellation(
         # find peaks
         peaks: List[int] = find_peaks(spectrum, n_peaks)
 
-        constellation_map.append(tuple((float(frequencies[peak]), float(spectrum[peak])) for peak in peaks))
+        constellation_map.append(tuple((peak, float(spectrum[peak])) for peak in peaks))
 
     return constellation_map
 

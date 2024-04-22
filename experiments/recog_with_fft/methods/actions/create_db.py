@@ -27,27 +27,31 @@ def create_db(
 
     fasta = Fasta(prot_file)
 
-    with Pool(cpu_count) as p:
-        subproc_slices = divide_evenly(len(fasta), cpu_count)
-        main_slice = next(subproc_slices)
-        subprocesses = p.map_async(_process, ((fasta, slc) for slc in subproc_slices))
-        database, protein_lookup = _process((fasta, main_slice))
+    if cpu_count > 1:
+        with Pool(cpu_count - 1) as p:
+            subproc_slices = divide_evenly(len(fasta), cpu_count)
+            main_slice = next(subproc_slices)
+            subprocesses = p.map_async(_process, ((fasta, slc) for slc in subproc_slices))
+            database, protein_lookup = _process((fasta, main_slice))
 
-        for sub_db, sub_lookup in subprocesses.get():
-            protein_lookup = {**protein_lookup, **sub_lookup}
+            for sub_db, sub_lookup in subprocesses.get():
+                protein_lookup = {**protein_lookup, **sub_lookup}
 
-            for hash_, occs in sub_db.items():
-                if hash_ not in database:
-                    database[hash_] = occs
-                else:
-                    database[hash_].extend(occs)
+                for hash_, occs in sub_db.items():
+                    if hash_ not in database:
+                        database[hash_] = occs
+                    else:
+                        database[hash_].extend(occs)
+
+    else:
+        database, protein_lookup = _process((fasta, slice(None)))
 
     # write the databases into files
     with open(db_out, 'wb') as db:
         pickle.dump((database, protein_lookup), db, pickle.HIGHEST_PROTOCOL)
 
 
-def _process(args) ->  Tuple[Database, ProteinLookup]:
+def _process(args) -> Tuple[Database, ProteinLookup]:
     fasta, slc = args
 
     database: Database = {}
