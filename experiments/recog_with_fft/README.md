@@ -17,6 +17,9 @@ Now, instead of looking on text-based likelihood, the goal is to identify a prot
 ```sh
 cd methods
 
+# create a boxplot for protein counts for a hash, grouped by the hash's window distance
+python3 evaluation.py plot-prots-per-windist database.pickle plot.png
+
 # select sample proteins from different mapman bins
 python3 evaluation.py select-samples mapmanreferencebins.results.txt protein.fa > samples.fa
 
@@ -271,6 +274,15 @@ TQDM_DISABLE=1 python3 test.py
                         </ol>
                     </td>
                 </tr>
+                <tr>
+                    <td><code>plot_prots_per_windist(database, out_file)</code></td>
+                    <td>
+                        <ol type="1">
+                            <li>Collect the protein counts per hash, grouped by the hash's window distance</li>
+                            <li>Plot boxes per window distance</li>
+                        </ol>
+                    </td>
+                </tr>
             </table>
         </details>
     </li>
@@ -289,6 +301,7 @@ TQDM_DISABLE=1 python3 test.py
 |[frequencies.png](./results/frequencies.png)|A scatter plot of the frequences that are included in constellation maps
 |[matches.png](./results/matches.png)|A scattered box plot of the found matches per protein, with focus on family relatives
 |[prots_per_hash.png](./results/prots_per_hash.png)|A raincloud plot of the protein counts that share the same hash
+|[prots_per_windist.png](./results/prots_per_windist.png)|A boxplot of the protein counts per hash, grouped by the hash's window distance
 
 ### Reproduce
 In this repository, `protein.fa` is used to generate the database. You can extract the file from [this archive](https://github.com/usadellab/prot-fin/raw/5be77c4247327e3958c89200c03a938ec4734834/material/Mapman_reference_DB_202310.tar.bz2). The archive also includes `mapmanreferencebins.results.txt` which maps the proteins to their families.
@@ -345,6 +358,14 @@ materials=../../../materials
 python3 protfin.py create-db -c 6 $materials/protein.fa
 TITLE="Distribution of proteins per hash" X_LABEL="Protein counts" \
 Rscript raincloud_plot_log10.R normal <(python3 evaluation.py print-prots-per-hash database.pickle) ../results/prots_per_hash.png
+```
+
+[prots_per_windist.png](./results/prots_per_windist.png):
+```sh
+cd methods
+materials=../../../materials
+python3 protfin.py create-db -c 6 $materials/protein.fa
+python3 evaluation.py plot-prots-per-windist database.pickle ../results/prots_per_windist.png
 ```
 
 ---

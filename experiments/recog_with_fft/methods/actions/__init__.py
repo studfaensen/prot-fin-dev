@@ -6,3 +6,4 @@ from .print_hash_counts import print_hash_counts
 from .print_prots_per_hash import print_prots_per_hash
 from .plot_frequencies import plot_frequencies
 from .plot_extended_out import plot_extended_out
+from .plot_prots_per_windist import plot_prots_per_windist

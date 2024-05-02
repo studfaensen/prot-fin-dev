@@ -68,6 +68,12 @@ def get_cli():
     eval_parser.add_argument("-c", "--cpu", default=1, type=int)
     eval_parser.set_defaults(func=lambda args: plot_frequencies(getattr(args, "protein-file"), getattr(args, "out-file"), args.cpu))
 
+    # evaluation.py plot-prots-per-windist <database-file> <out-file>
+    eval_parser = sub_commands.add_parser("plot-prots-per-windist", help="Plot the protein counts per window distance included in the hashes")
+    eval_parser.add_argument("database-file")
+    eval_parser.add_argument("out-file")
+    eval_parser.set_defaults(func=lambda args: plot_prots_per_windist(getattr(args, "database-file"), getattr(args, "out-file")))
+
     return parser
 
 

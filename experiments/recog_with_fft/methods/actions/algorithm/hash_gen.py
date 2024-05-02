@@ -1,5 +1,8 @@
 from tools import *
 
+FREQUENCY_BITS = 5
+DIFFERENCE_BITS = 12
+
 
 def create_hashes(
         constellation_map: ConstellationMap,
@@ -26,8 +29,6 @@ def create_hashes(
     """
 
     hashes: Hashes = {}
-    FREQUENCY_BITS = 5
-    DIFFERENCE_BITS = 12
 
     # Iterate through the constellation map
     for idx, freqs in enumerate(constellation_map):
