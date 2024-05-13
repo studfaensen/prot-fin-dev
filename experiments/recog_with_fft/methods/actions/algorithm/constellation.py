@@ -97,4 +97,4 @@ def find_peaks(spectrum: np.ndarray, n_peaks: int) -> List[int]:
     if n_peaks:
         peaks = peaks[:n_peaks]
 
-    return [p[1] for p in peaks]
+    return [int(p[1]) for p in peaks]

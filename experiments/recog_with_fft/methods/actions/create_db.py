@@ -29,10 +29,8 @@ def create_db(
 
     if cpu_count > 1:
         with Pool(cpu_count - 1) as p:
-            subproc_slices = divide_evenly(len(fasta), cpu_count)
-            main_slice = next(subproc_slices)
-            subprocesses = p.map_async(_process, ((fasta, slc) for slc in subproc_slices))
-            database, protein_lookup = _process((fasta, main_slice))
+            subprocesses = p.map_async(_process, ((fasta, slice(i, None, cpu_count)) for i in range(1, cpu_count)))
+            database, protein_lookup = _process((fasta, slice(0, None, cpu_count)))
 
             for sub_db, sub_lookup in subprocesses.get():
                 protein_lookup = {**protein_lookup, **sub_lookup}

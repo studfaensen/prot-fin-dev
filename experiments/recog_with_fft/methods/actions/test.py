@@ -1,8 +1,6 @@
-from typing import Type, Any
-from functools import reduce
+from test import TestCase
 from tools import *
 import pandas as pd
-import unittest as ut
 import pickle
 import sys
 import os
@@ -11,7 +9,7 @@ from .create_db import *
 from .find_matches import *
 
 
-class TestCreateDB(ut.TestCase):
+class TestCreateDB(TestCase):
     protein_file = "test/create_db.fa"
     db_out = "test/create_db.pickle"
 
@@ -22,11 +20,6 @@ class TestCreateDB(ut.TestCase):
     @classmethod
     def tearDownClass(cls):
         os.remove(cls.db_out)
-
-    def create_valid(self, ty: Type, value: Any) -> Type:
-        type_name = str(locals()["ty"])
-        self.assertTrue(verify_type(value, ty), "Value of wrong type, expected: " + type_name)
-        return value
 
     def test_create_db(self):
         with open(self.db_out, "rb") as f:
@@ -53,15 +46,10 @@ class TestCreateDB(ut.TestCase):
             self.assertGreaterEqual(hash_count, 0, "Hash count in protein lookup below zero")
 
 
-class TestFindMatches(ut.TestCase):
+class TestFindMatches(TestCase):
     protein_file = "test/create_db.fa"
     db_in = "test/find_matches.pickle"
     stdout_pipe = "test/find_matches.matches.tmp"
-
-    def create_valid(self, ty: Type, value: Any) -> Type:
-        type_name = str(locals()["ty"])
-        self.assertTrue(verify_type(value, ty), "Value of wrong type, expected: " + type_name)
-        return value
 
     @classmethod
     def setUpClass(cls):
@@ -168,9 +156,9 @@ class TestFindMatches(ut.TestCase):
             )
 
 
-class TestEvaluateProtfin(ut.TestCase):
+class TestEvaluateProtfin(TestCase):
     ...
 
 
-class TestSelectSamples(ut.TestCase):
+class TestSelectSamples(TestCase):
     ...

@@ -16,10 +16,8 @@ def plot_frequencies(prot_file: str, out_file: str, cpu_count=1):
 
     if cpu_count > 1:
         with Pool(cpu_count - 1) as p:
-            subproc_slices = divide_evenly(protein_count, cpu_count)
-            main_slice = next(subproc_slices)
-            subprocesses = p.map_async(_process, ((fasta, slc) for slc in subproc_slices))
-            sel_freqs = _process((fasta, main_slice))
+            subprocesses = p.map_async(_process, ((fasta, slice(i, None, cpu_count)) for i in range(1, cpu_count)))
+            sel_freqs = _process((fasta, slice(0, None, cpu_count)))
             for res_sel_freqs in subprocesses.get():
                 for res_freq, (res_freq_count, res_prot_count) in res_sel_freqs.items():
                     freq_count, prot_count = sel_freqs[res_freq]
@@ -60,7 +58,7 @@ def _process(args) -> Dict[float, Tuple[int, int]]:
 
     for _, _, seq in fasta[prot_slice]:
         constellation_map = create_constellation(get_aa_vector(seq))
-        all_freqs = set() 
+        all_freqs = set()
         for window in constellation_map:
             for freq_idx, _ in window:
                 freq = FREQS[freq_idx]

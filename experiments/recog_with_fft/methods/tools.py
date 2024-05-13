@@ -18,9 +18,9 @@ JSI = float
 HashOccurence = Tuple[WindowIndex, ProteinID]
 Hashes = Dict[Hash, HashOccurence]
 Scores = List[Tuple[ProteinID, Tuple[WindowIndex, Score, JSI]]]
-Database = Dict[Hash, List[Tuple[WindowIndex, ProteinID]]]
+Database = Dict[Hash, List[HashOccurence]]
 ProteinLookup = Dict[ProteinID, Tuple[int, int]]
-ConstellationMap = List[Tuple[Tuple[float, float], ...]]
+ConstellationMap = List[Tuple[Tuple[int, float], ...]]
 
 
 def pd_read_chunkwise(csv_file: str, chunksize=10_000) -> Generator[pd.DataFrame, None, None]:
@@ -42,18 +42,6 @@ def pd_read_chunkwise(csv_file: str, chunksize=10_000) -> Generator[pd.DataFrame
                 sample = data.loc[sample_ends[i]: end - 1, :]
                 data = data.loc[end + 1:, :]
                 yield sample
-
-
-def divide_evenly(num: int, n_parts: int) -> Generator[slice, None, None]:
-    if n_parts > 0:
-        quotient, rest = divmod(num, n_parts)
-        start = 0
-        for _ in range(rest):
-            yield slice(start, start + quotient + 1)
-            start += quotient + 1
-        for _ in range(n_parts - rest):
-            yield slice(start, start + quotient)
-            start += quotient
 
 
 def verify_type(var, ty) -> bool:
@@ -79,11 +67,15 @@ def verify_type(var, ty) -> bool:
     elif ty.__origin__ is tuple:
         if not isinstance(var, tuple):
             return False
-        if len(var) != len(ty.__args__):
-            if ty.__args__[-1] is not ...:
+        if ty.__args__[-1] is ...:
+            if False in [verify_type(item, ty.__args__[0]) for item in var]:
                 return False
-        if False in [verify_type(item, type_) for item, type_ in zip(var, ty.__args__)]:
-            return False
+
+        else:
+            if len(var) != len(ty.__args__):
+                return False
+            if False in [verify_type(item, type_) for item, type_ in zip(var, ty.__args__)]:
+                return False
 
     return True
 
@@ -101,7 +93,7 @@ class Fasta:
     protein_count : int
         The number of sequences stored in the FASTA file
     """
-    def __init__(self, file_name: str):
+    def __init__(self, file_name: str, check=True):
         """
         Parameters
         ----------
@@ -110,11 +102,17 @@ class Fasta:
         """
         with open(file_name) as f:
             self.file_name = file_name
-            self.protein_count = count_appearances_in_file("^>", f)
+            if check:
+                self.protein_count = count_appearances_in_file("^>", f)
 
-            # validate ... TODO
+                # validate ... TODO
+
+            else:
+                self.protein_count = None
 
     def __len__(self):
+        if self.protein_count is None:
+            raise TypeError("Can't predict protein count of unchecked Fasta")
         return self.protein_count
 
     def __iter__(self) -> Generator[Tuple[ProteinID, str, str], None, None]:
@@ -122,29 +120,55 @@ class Fasta:
 
     def __getitem__(self, key) -> Generator[Tuple[ProteinID, str, str], None, None]:
         assert type(key) is slice
-        start, stop, step = key.indices(len(self))
+        if self.protein_count is None:
+            start, _, step = key.indices(0)
+            stop = key.stop
+
+            def open_range(start, step=1):
+                while True:
+                    yield start
+                    start += step
+
+            pbar = tqdm(open_range(start, step))
+        else:
+            start, stop, step = key.indices(self.protein_count)
+            pbar = tqdm(range(start, stop, step))
+        assert step > 0, "negative steps currently not supported"
 
         with open(self.file_name) as f:
             # create a progress bar and iterate over the FASTA file
             current_prot = 0
-            for i in tqdm(range(start, stop, step), desc=("From %% %ds. Seq." % len(str(len(self)))) % (start + 1)):
+            for i in pbar:
 
                 # find line of sequence description
-                while current_prot <= i:
-                    prot_desc = f.readline()
+                while current_prot <= i and (prot_desc := f.readline()):
                     current_prot += prot_desc[0] == ">"
+                if not prot_desc:
+                    break  # because EOF
+
+                # read sequence
+                seq = ""
+                while (seq_segment := f.readline()) and seq_segment[0] != ">":
+                    pointer = f.tell()
+                    seq += seq_segment
+                seq = seq.replace("\n", "")
+
+                # go to last line -> readline returns header of next protein
+                f.seek(pointer)
 
                 # extract information from describing line
-                prot_id, _, description = prot_desc.split(" ", 2)
-                seq = f.readline()
-                if seq[-1] == "\n":
-                    seq = seq[:-1]
+                header = prot_desc.split(" ", 1)
+                if len(header) == 2:
+                    prot_id, description = header
+                else:
+                    prot_id, description = header[0][:-1], "\n"
 
                 # yield the extracted values, remove '>' from identifier and
                 # '\n' from description
                 yield prot_id[1:], description[:-1], seq
 
-        assert current_prot == stop
+        if stop is not None:
+            assert current_prot == max(start, stop - (stop - start - 1) % step)
 
 
 def count_appearances_in_file(pattern, file: TextIO):

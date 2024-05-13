@@ -34,11 +34,24 @@ def evaluate_protfin(protfin_out_file: str):
     """
 
     # data will be collected into a dataframe
-    evaluation = pd.DataFrame(columns=["Sample_ID", "First_Match_Count", "Sample_In_First_Matches", "Sequence_Length", "Sample_Hashes", "Sample_JSI", "Sample_Score", "Top_JSI", "Top_Score"])
+    evaluation = pd.DataFrame(columns=["Sample_ID", "First_Match_Count", "Sample_In_First_Matches", "Sequence_Length", "Sample_Hashes", "Sample_JSI", "Sample_Score", "Top_JSI", "Top_Score", "F1_Score"])
     for matches in pd_read_chunkwise(protfin_out_file):
         if matches.size:
             input_sample = matches["Input_Protein_ID"].iloc[0]
             sample_result = matches[matches["Match_Protein_ID"] == input_sample]
+
+            input_fams = tuple(map(lambda x: x.split(".", 1)[0], str(matches["Input_Family"].iloc[0]).split("|")))
+
+            def same_fam(other):
+                other_fams = tuple(map(lambda x: x.split(".", 1)[0], other.split("|")))
+                return any(input_fam in other_fams for input_fam in input_fams)
+
+            positives = int(len(matches.index) * .05) + 1
+            true_positives = matches.loc[:positives, "Match_Family"].apply(same_fam).sum()
+            precision = true_positives / positives
+            false_negatives = matches.loc[positives+1:, "Match_Family"].apply(same_fam).sum()
+            recall = true_positives / (true_positives + false_negatives) if true_positives + false_negatives else 0
+            f1_score = (2 * precision * recall) / (precision + recall) if precision + recall else 0
 
             # insert the data into the dataframe
             evaluation.loc[len(evaluation.index)] = (
@@ -47,10 +60,11 @@ def evaluate_protfin(protfin_out_file: str):
                 input_sample in matches[matches["Rank"] == 1]["Match_Protein_ID"].values,  # Sample_In_First_Matches
                 matches["Input_Sequence_Length"].iloc[0],  # Sequence_Length
                 matches["Input_Found_Hashes"].iloc[0],  # Sample_Hashes
-                sample_result["JSI"].iloc[0],  # Sample_JSI
-                sample_result["Score"].iloc[0],  # Sample_Score
+                sample_result["JSI"].iloc[0] if len(sample_result) else None,  # Sample_JSI
+                sample_result["Score"].iloc[0] if len(sample_result) else None,  # Sample_Score
                 matches[matches["Rank"] == 1]["JSI"].max(),  # Top_JSI
-                matches[matches["Rank"] == 1]["Score"].max()  # Top_Score
+                matches[matches["Rank"] == 1]["Score"].max(),  # Top_Score
+                f1_score
             )
 
     # write to stdout
