@@ -3,6 +3,8 @@ import pandas as pd
 from tools import *
 from .algorithm import hashes_from_seq
 import pickle
+import sys
+import os
 
 Matches = List[Tuple[WindowIndex, WindowIndex]]
 ScoresByOffset = Dict[WindowIndex, Score]
@@ -22,7 +24,8 @@ COLUMNS = [
 
 def find_matches(
         fasta_file: str,
-        db_in: str
+        db_in: str,
+        filter_quantile=1.0
         ):
     """
     Find matches for the proteins defined in the FASTA file
@@ -37,11 +40,15 @@ def find_matches(
         of interest
     db_in : str
         Name of the file storing the trained database
+    filter_quantile : float
+        Quantile of hashes to be kept in database
     """
 
-    # load databases
-    with open(db_in, 'rb') as f:
-        database, protein_lookup = pickle.load(f)
+    assert filter_quantile > 0 and filter_quantile <= 1
+
+    (database, protein_lookup), hash_blacklist = get_filtered_db(db_in, filter_quantile)
+    if filter_quantile == 1:
+        assert len(hash_blacklist) == 0
 
     print(*COLUMNS, sep=",")
 
@@ -49,6 +56,7 @@ def find_matches(
     for input_id, _, seq in Fasta(fasta_file):
         # create the combinatorial hashes for the sequence
         hashes: Hashes = hashes_from_seq(seq, None)
+        hashes = {k: v for k, v in hashes.items() if k not in hash_blacklist}
 
         # calculate the scores for proteins in the database
         scored_matches: ScoresMap = score_prots(hashes, database, protein_lookup)
@@ -57,6 +65,41 @@ def find_matches(
 
         result.loc[len(result.index)] = None
         print(result.sort_values("Rank").to_csv(index=False, header=False, float_format="%g"), end="")
+
+
+def get_filtered_db(db_in: str, filter_quantile: float) -> Tuple[Tuple[Database, ProteinLookup], List[Hash]]:
+    # load databases
+    with open(db_in, 'rb') as f:
+        database, protein_lookup = pickle.load(f)
+
+    prev_size = os.path.getsize(db_in)
+
+    db, hash_blacklist = filter_db(database, protein_lookup, filter_quantile)
+
+    size_now = sys.getsizeof(pickle.dumps(db, pickle.HIGHEST_PROTOCOL))
+    eprint(int(size_now / prev_size * 100), r"%", " (%.2fMB) of database size used by quantile filter" % (size_now / (1024**2)), sep="")
+
+    return db, hash_blacklist
+
+
+def filter_db(database: Database, protein_lookup: ProteinLookup, filter_quantile: float) -> Tuple[Tuple[Database, ProteinLookup], List[Hash]]:
+    # filter db
+    hash_frequencies = np.array(sorted(len(v) for v in database.values()))
+    f = np.cumsum(hash_frequencies)
+    quantile_value = hash_frequencies[np.searchsorted(f, filter_quantile * f[-1])]
+
+    hash_blacklist = [hash_ for hash_, v in database.items() if len(v) > quantile_value]
+    database = {k: v for k, v in database.items() if len(v) <= quantile_value}
+
+    # update lookup
+    hash_counts = {k: 0 for k in protein_lookup}
+    for prots in database.values():
+        for _, p in prots:
+            hash_counts[p] += 1
+    for p, val in protein_lookup.items():
+        protein_lookup[p] = (val[0], hash_counts[p])
+
+    return (database, protein_lookup), hash_blacklist
 
 
 def get_result_frame(

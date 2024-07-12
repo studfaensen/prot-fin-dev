@@ -31,7 +31,8 @@ def get_cli():
     # evaluation.py eval <protfin-out-file>
     eval_parser = sub_commands.add_parser("eval", help="Evaluate protfin find-matches output")
     eval_parser.add_argument("protfin-out-file")
-    eval_parser.set_defaults(func=lambda args: evaluate_protfin(getattr(args, "protfin-out-file")))
+    eval_parser.add_argument("mapman-file")
+    eval_parser.set_defaults(func=lambda args: evaluate_protfin(getattr(args, "protfin-out-file"), getattr(args, "mapman-file")))
 
     # evaluation.py select-samples [-s] <mapman-file> <protein-file>
     eval_parser = sub_commands.add_parser("select-samples", help="Select samples from reference")
@@ -73,6 +74,26 @@ def get_cli():
     eval_parser.add_argument("database-file")
     eval_parser.add_argument("out-file")
     eval_parser.set_defaults(func=lambda args: plot_prots_per_windist(getattr(args, "database-file"), getattr(args, "out-file")))
+
+    # evaluation.py plot-hashes-per-sequence-length <database-file> <out-file>
+    eval_parser = sub_commands.add_parser("plot-hashes-per-sequence-length", help="Plot the hash counts by sequence length")
+    eval_parser.add_argument("database-file")
+    eval_parser.add_argument("out-file")
+    eval_parser.set_defaults(func=lambda args: plot_hashes_per_sequence_length(getattr(args, "database-file"), getattr(args, "out-file")))
+
+    # evaluation.py plot-family-covering <database-file> <out-file>
+    eval_parser = sub_commands.add_parser("plot-family-covering", help="Plot the procentual covering of families by their member hashes")
+    eval_parser.add_argument("database-file")
+    eval_parser.add_argument("mapman-file")
+    eval_parser.add_argument("out-file")
+    eval_parser.set_defaults(func=lambda args: plot_family_covering(getattr(args, "database-file"), getattr(args, "mapman-file"), getattr(args, "out-file")))
+
+    # evaluation.py plot-hash-frequencies <protein-file> <out-file>
+    eval_parser = sub_commands.add_parser("plot-hash-frequencies", help="Plot the average frequencies of hashes in a sequence")
+    eval_parser.add_argument("protein-file")
+    eval_parser.add_argument("out-file")
+    eval_parser.add_argument("-c", "--cpu", default=1, type=int)
+    eval_parser.set_defaults(func=lambda args: plot_hash_frequencies(getattr(args, "protein-file"), getattr(args, "out-file"), args.cpu))
 
     return parser
 
