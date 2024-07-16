@@ -7,7 +7,7 @@ from multiprocessing import Pool
 from .algorithm.constellation import WINDOW_SIZE
 from scipy.fft import fftfreq
 
-FREQS = list(filter(lambda x: x >= 0, fftfreq(WINDOW_SIZE)))
+FREQS = sorted(abs(i) for i in fftfreq(WINDOW_SIZE) if i >= 0 or i == -.5)
 
 
 def plot_frequencies(prot_file: str, out_file: str, cpu_count=1):
@@ -17,8 +17,9 @@ def plot_frequencies(prot_file: str, out_file: str, cpu_count=1):
     if cpu_count > 1:
         with Pool(cpu_count - 1) as p:
             subprocesses = p.map_async(_process, ((fasta, slice(i, None, cpu_count)) for i in range(1, cpu_count)))
-            sel_freqs = _process((fasta, slice(0, None, cpu_count)))
-            for res_sel_freqs in subprocesses.get():
+            sel_freqs, freqs_per_win = _process((fasta, slice(0, None, cpu_count)))
+            for res_sel_freqs, res_freqs_per_win in subprocesses.get():
+                freqs_per_win.extend(res_freqs_per_win)
                 for res_freq, (res_freq_count, res_prot_count) in res_sel_freqs.items():
                     freq_count, prot_count = sel_freqs[res_freq]
                     sel_freqs[res_freq] = (freq_count + res_freq_count, prot_count + res_prot_count)
@@ -48,18 +49,20 @@ def plot_frequencies(prot_file: str, out_file: str, cpu_count=1):
         plt.colorbar(ScalarMappable(cmap=cmap, norm=norm)).set_label("Sequences", rotation=-90, va="bottom")
         plt.xlabel("Frequencies")
         plt.ylabel("Absolute count in all sequences")
-        plt.title("Occurences of selected STFT frequences")
+        plt.title("Occurences of selected STFT frequencies with average %.2g frequencies per window" % np.mean(freqs_per_win))
         plt.savefig(out_file, bbox_inches='tight')
 
 
 def _process(args) -> Dict[float, Tuple[int, int]]:
     fasta, prot_slice = args
     selected_freqs = dict.fromkeys(FREQS, (0, 0))
+    freqs_per_win = []
 
     for _, _, seq in fasta[prot_slice]:
         constellation_map = create_constellation(get_aa_vector(seq))
         all_freqs = set()
         for window in constellation_map:
+            freqs_per_win.append(len(window))
             for freq_idx, _, _ in window:
                 freq = FREQS[freq_idx]
                 freq_count, prot_count = selected_freqs[freq]
@@ -70,4 +73,4 @@ def _process(args) -> Dict[float, Tuple[int, int]]:
             freq_count, prot_count = selected_freqs[freq]
             selected_freqs[freq] = (freq_count, prot_count + 1)
 
-    return selected_freqs
+    return selected_freqs, freqs_per_win

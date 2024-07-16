@@ -10,7 +10,7 @@ def create_hashes(
         constellation_map: ConstellationMap,
         prot_id: ProteinID,
         kidera_factor: int
-        ) -> Hashes:
+        ) -> Tuple[Hashes, HashCounts]:
     """
     Creates combinatorial Hashes from a constellation map for efficient
     database searches
