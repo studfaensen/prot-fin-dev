@@ -46,10 +46,13 @@ def plot_frequencies(prot_file: str, out_file: str, cpu_count=1):
                 ha="center",
                 va="top"
             )
-        plt.colorbar(ScalarMappable(cmap=cmap, norm=norm)).set_label("Sequences", rotation=-90, va="bottom")
+
+        freqs_per_win = round(np.mean(freqs_per_win), 2)
+        print(freqs_per_win)
+        plt.colorbar(ScalarMappable(cmap=cmap, norm=norm), ax=plt.gca()).set_label("Sequences", rotation=-90, va="bottom")
         plt.xlabel("Frequencies")
         plt.ylabel("Absolute count in all sequences")
-        plt.title("Occurences of selected STFT frequencies with average %.2g frequencies per window" % np.mean(freqs_per_win))
+        plt.title("Occurences of selected STFT frequencies with average %g frequencies per window" % freqs_per_win)
         plt.savefig(out_file, bbox_inches='tight')
 
 
