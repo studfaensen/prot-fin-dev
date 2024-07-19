@@ -5,20 +5,21 @@ from matplotlib import pyplot as plt
 from multiprocessing import Pool
 
 
-def plot_hash_frequencies(fasta: str, outfile: str, cpu_count=1):
+def plot_hash_frequencies(fasta: str, outfile: str, cpu_count=1, **kwargs):
     fasta = Fasta(fasta)
+    db_config = DBConfig(**kwargs)
 
     if cpu_count > 1:
         with Pool(cpu_count - 1) as p:
-            subprocesses = p.map_async(_process, ((fasta, slice(i, None, cpu_count)) for i in range(1, cpu_count)))
-            position_counts = _process((fasta, slice(0, None, cpu_count)))
+            subprocesses = p.map_async(_process, ((fasta, slice(i, None, cpu_count), db_config) for i in range(1, cpu_count)))
+            position_counts = _process((fasta, slice(0, None, cpu_count), db_config))
 
             for sub_counts in subprocesses.get():
                 for k, v in sub_counts.items():
                     position_counts[k] = position_counts.get(k, 0) + v
 
     else:
-        position_counts = _process((fasta, slice(None)))
+        position_counts = _process((fasta, slice(None), db_config))
 
     print("Hash_Frequency,Count")
     for item in position_counts.items():
@@ -32,11 +33,11 @@ def plot_hash_frequencies(fasta: str, outfile: str, cpu_count=1):
 
 
 def _process(args):
-    fasta, slc = args
+    fasta, slc, config = args
     position_counts = {}
     for prot_id, _, seq in fasta[slc]:
         for kf in range(10):
-            hashes, pos_counts = create_hashes(create_constellation(get_aa_vector(seq, kf)), prot_id, kf)
+            hashes, pos_counts = create_hashes(create_constellation(get_aa_vector(seq, kf), config), prot_id, kf)
             for pos in pos_counts.values():
                 position_counts[pos] = position_counts.get(pos, 0) + 1
 

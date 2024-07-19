@@ -8,7 +8,7 @@ import pickle
 
 def plot_family_covering(db: str, mapman: str, plot_out: str):
     with open(db, "rb") as f:
-        database, _ = pickle.load(f)
+        database = pickle.load(f).db
 
     proteins = pd.read_csv(mapman, sep="\t", quotechar="'", index_col=1, usecols=["IDENTIFIER", "BINCODE"])
     proteins = proteins[proteins.index.notna()]

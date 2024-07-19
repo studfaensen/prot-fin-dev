@@ -5,6 +5,7 @@ features of their amino acid sequences
 """
 
 import argparse
+from tools import DBConfig
 from actions import create_db, find_matches, match_family
 from signal import signal, SIGPIPE, SIG_DFL
 signal(SIGPIPE, SIG_DFL)  # fixes weird python error, look: https://newbebweb.blogspot.com/2012/02/python-head-ioerror-errno-32-broken.html
@@ -37,11 +38,13 @@ def get_cli():
     create_db_parser.add_argument("fasta-file")
     create_db_parser.add_argument("-p", "--path", default=DB_DEFAULT)
     create_db_parser.add_argument("-c", "--cpu", default=1, type=int)
+    create_db_parser, dbconfig = cli_dbconfig(create_db_parser)
     create_db_parser.set_defaults(func=lambda args:
                                   create_db(
                                       getattr(args, "fasta-file"),
                                       db_out=args.path,
-                                      cpu_count=args.cpu
+                                      cpu_count=args.cpu,
+                                      **dbconfig(args)
                                   ))
 
     # protfin.py find-matches [-d] <fasta-file>
@@ -69,6 +72,24 @@ def get_cli():
                                    ))
 
     return parser
+
+
+def cli_dbconfig(parser: argparse.ArgumentParser):
+    default_config = DBConfig()
+    parser.add_argument("-w", "--window-size", default=default_config.window_size, type=int)
+    parser.add_argument("-o", "--overlap", default=default_config.overlap, type=int)
+    parser.add_argument("-n", "--npeaks", default=default_config.n_peaks, type=int)
+    parser.add_argument("-s", "--significance", default=default_config.significance, type=float)
+    parser.add_argument("-m", "--selection-method", default=default_config.selection_method, choices=("none", "absolute", "deviation"), type=str)
+    parser.add_argument("-k", "--skip-first-k-freqs", default=default_config.skip_first_k_freqs, type=int)
+    return parser, lambda args: {
+        "window_size": args.window_size,
+        "overlap": args.overlap,
+        "n_peaks": args.npeaks,
+        "selection_method": args.selection_method,
+        "significance": args.significance,
+        "skip_first_k_freqs": args.skip_first_k_freqs
+    }
 
 
 if __name__ == '__main__':

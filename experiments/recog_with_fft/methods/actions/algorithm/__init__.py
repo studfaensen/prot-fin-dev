@@ -5,7 +5,7 @@ from .hash_gen import create_hashes
 from os import environ as env
 
 
-def hashes_from_seq(seq: str, prot_id: str) -> Hashes:
+def hashes_from_seq(seq: str, prot_id: str, db_config: DBConfig) -> Hashes:
     """
     Generate the combinatorial hashes from an amino acid sequence
 
@@ -26,7 +26,7 @@ def hashes_from_seq(seq: str, prot_id: str) -> Hashes:
     for kf in ((int(KF),) if KF is not None else range(10)):
         # start the pipeline
         aa_vec = get_aa_vector(seq, kf)
-        constellation = create_constellation(aa_vec)
+        constellation = create_constellation(aa_vec, db_config)
         hashes = {**hashes, **create_hashes(constellation, prot_id, kf)[0]}
 
     return hashes

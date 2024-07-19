@@ -5,7 +5,7 @@ from .algorithm.hash_gen import FREQUENCY_BITS, DIFFERENCE_BITS
 
 def plot_prots_per_windist(database: str, out_file: str):
     with open(database, "rb") as f:
-        database, _ = pickle.load(f)
+        database = pickle.load(f).db
 
     prots_per_windist = {}
     for hash_, prots in database.items():

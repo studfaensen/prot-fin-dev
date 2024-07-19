@@ -24,22 +24,20 @@ class TestCreateDB(TestCase):
     def test_create_db(self):
         with open(self.db_out, "rb") as f:
             db = self.create_valid(
-                Tuple[Database, ProteinLookup],
+                DB,
                 pickle.load(f)
             )
 
-            db, lookup = db
+        self.assertEqual(len(db.lookup), 3, "Protein lookup is not complete")
 
-        self.assertEqual(len(lookup), 3, "Protein lookup is not complete")
-
-        for hash_, idx_prot_pairs in db.items():
+        for hash_, idx_prot_pairs in db.db.items():
 
             for pair in idx_prot_pairs:
                 self.assertEqual(len(pair), 2, "Protein index pair in DB has different length")
                 _, prot = pair
-                self.assertIn(prot, lookup, f"'{prot}' not in protein lookup")
+                self.assertIn(prot, db.lookup, f"'{prot}' not in protein lookup")
 
-        for prot_id, prot_info in lookup.items():
+        for prot_id, prot_info in db.lookup.items():
             self.assertEqual(len(prot_info), 2, "Lookup value is differs in length")
 
             description, hash_count = prot_info
@@ -55,7 +53,7 @@ class TestFindMatches(TestCase):
     def setUpClass(cls):
         cls.assertIsNone(cls, create_db(cls.protein_file, cls.db_in))
         with open(cls.db_in, "rb") as f:
-            cls.db, cls.lookup = pickle.load(f)
+            cls.db, cls.lookup = pickle.load(f)[:2]
 
     @classmethod
     def tearDownClass(cls):
@@ -75,7 +73,7 @@ class TestFindMatches(TestCase):
 
     def test_score_prots(self):
         with open(self.db_in, "rb") as f:
-            db, lookup = pickle.load(f)
+            db, lookup = pickle.load(f)[:2]
 
         hashes: Hashes = self.create_valid(
             Hashes,

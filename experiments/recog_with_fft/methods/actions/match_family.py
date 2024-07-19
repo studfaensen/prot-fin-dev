@@ -10,11 +10,11 @@ def match_family(
         filter_quantile=1.0
         ):
 
-    (database, protein_lookup), hash_blacklist = get_filtered_db(db_in, filter_quantile)
+    db, hash_blacklist = get_filtered_db(db_in, filter_quantile)
     fam_data = pd.read_csv(family_file, sep=",", index_col="Protein_ID").squeeze()
 
     fam_hashes = {f: {} for f in fam_data.unique()}
-    for hash_, prots in tqdm(database.items()):
+    for hash_, prots in tqdm(db.db.items()):
         fam = fam_data.loc[[prot for _, prot in prots]]
         for f in fam:
             fam_hashes[f][hash_] = fam_hashes[f].get(hash_, 0) + 1
@@ -27,7 +27,7 @@ def match_family(
             if len(hashes):
                 match_prots = {}
                 for hash_ in hashes:
-                    for _, match_prot in database.get(hash_):
+                    for _, match_prot in db.db.get(hash_):
                         match_prots[match_prot] = match_prots.get(match_prot, 0) + 1
 
                 match_fams = fam_data.loc[sorted(match_prots, key=lambda x: match_prots[x] / len(hashes))]

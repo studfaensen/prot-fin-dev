@@ -2,7 +2,7 @@
 Some essential and useful functions for the algorithm behind prot-fin
 """
 
-from typing import List, Dict, Tuple, Generator, TextIO, _GenericAlias
+from typing import List, Dict, Tuple, Generator, TextIO, _GenericAlias, NamedTuple
 import pandas as pd
 from sys import stderr
 from tqdm import tqdm
@@ -22,6 +22,21 @@ Scores = List[Tuple[ProteinID, Tuple[WindowIndex, Score, JSI]]]
 Database = Dict[Hash, List[HashOccurence]]
 ProteinLookup = Dict[ProteinID, Tuple[int, int]]
 ConstellationMap = List[Tuple[Tuple[int, float, int], ...]]
+
+
+class DBConfig(NamedTuple):
+    window_size: int = 30
+    overlap: int = 15
+    n_peaks: int = 0  # 0 means all
+    significance: float = 5.  # for quantile selection in percent
+    selection_method: str = "none"
+    skip_first_k_freqs: int = 0
+
+
+class DB(NamedTuple):
+    db: Database
+    lookup: ProteinLookup
+    config: DBConfig
 
 
 def pd_read_chunkwise(csv_file: str, chunksize=10_000) -> Generator[pd.DataFrame, None, None]:
@@ -49,6 +64,8 @@ def verify_type(var, ty) -> bool:
     if isinstance(ty, type):
         assert ty not in (dict, list, tuple), \
             "verify_type: Use types from typing instead of builtins for dict, list, tuple - got: " + ty.__name__
+        if getattr(ty, "_fields", False):  # for NamedTuple classes
+            return type(var) is ty and all(verify_type(getattr(var, field), t) for field, t in ty._field_types.items())
         return type(var) is ty
 
     if ty.__origin__ is list:

@@ -3,7 +3,6 @@ from os import environ as env
 
 FREQUENCY_BITS = 5
 DIFFERENCE_BITS = 3
-FIRST_APPEARANCE = bool(env.get("FIRST_APPEARANCE", False))
 
 
 def create_hashes(
@@ -44,11 +43,7 @@ def create_hashes(
 
             def add_hash(diff, other_freq, other_quantile):
                 hash_: Hash = create_hash((kidera_factor, 4), (quantile, 1), (other_quantile, 1), (diff, DIFFERENCE_BITS), (other_freq, FREQUENCY_BITS), (freq, FREQUENCY_BITS))
-                if FIRST_APPEARANCE:
-                    if hash_ not in hashes:
-                        hashes[hash_] = occ
-                else:
-                    hashes[hash_] = occ
+                hashes[hash_] = occ
                 position_counts[hash_] = position_counts.get(hash_, 0) + 1
 
             for diff, other_freqs in enumerate(constellation_map[idx + 1:idx + 2**DIFFERENCE_BITS]):

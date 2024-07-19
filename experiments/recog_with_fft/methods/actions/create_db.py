@@ -1,13 +1,16 @@
 from tools import *
 from .algorithm import hashes_from_seq
 from multiprocessing import Pool
+from sys import getsizeof as objsize
+from os.path import getsize as filesize
 import pickle
 
 
 def create_db(
         prot_file: str,
         db_out: str,
-        cpu_count=1
+        cpu_count=1,
+        **kwargs
         ):
     """
     Creates a database of combinatorial hashes for all protein sequences in the
@@ -24,13 +27,14 @@ def create_db(
     db_out : str
         Name of the file to write the databases to
     """
+    db_config = DBConfig(**kwargs)
 
     fasta = Fasta(prot_file)
 
     if cpu_count > 1:
         with Pool(cpu_count - 1) as p:
-            subprocesses = p.map_async(_process, ((fasta, slice(i, None, cpu_count)) for i in range(1, cpu_count)))
-            database, protein_lookup = _process((fasta, slice(0, None, cpu_count)))
+            subprocesses = p.map_async(_process, ((fasta, slice(i, None, cpu_count, db_config)) for i in range(1, cpu_count)))
+            database, protein_lookup = _process((fasta, slice(0, None, cpu_count, db_config)))
 
             for sub_db, sub_lookup in subprocesses.get():
                 protein_lookup = {**protein_lookup, **sub_lookup}
@@ -42,24 +46,26 @@ def create_db(
                         database[hash_].extend(occs)
 
     else:
-        database, protein_lookup = _process((fasta, slice(None)))
+        database, protein_lookup = _process((fasta, slice(None), db_config))
 
     # write the databases into files
     with open(db_out, 'wb') as db:
-        pickle.dump((database, protein_lookup), db, pickle.HIGHEST_PROTOCOL)
+        pickle.dump(DB(database, protein_lookup, db_config), db, pickle.HIGHEST_PROTOCOL)
 
 
 def _process(args) -> Tuple[Database, ProteinLookup]:
-    fasta, slc = args
+    fasta, slc, db_config = args
 
     database: Database = {}
     protein_lookup: ProteinLookup = {}
+
+    fasta_size = filesize(fasta.file_name)
 
     # train the database with hashes pointing to their matching proteins
     for prot_id, _, seq in fasta[slc]:
 
         # calculate the combinatorial hashes for the sequence
-        hashes: Hashes = hashes_from_seq(seq, prot_id)
+        hashes: Hashes = hashes_from_seq(seq, prot_id, db_config)
 
         # save the protein related data
         protein_lookup[prot_id] = (len(seq), len(hashes))

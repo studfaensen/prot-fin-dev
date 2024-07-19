@@ -5,15 +5,8 @@ from os import environ as env
 import pandas as pd
 from operator import gt, lt
 
-# parameters for the STFT
-WINDOW_SIZE = int(env.get("WINDOW_SIZE", 30))
 WINDOW_TYPE = env.get("WINDOW_TYPE", ["boxcar", "triang", "blackman", "hamming", "hann", "bartlett", "flattop", "parzen", "bohman", "blackmanharris", "nuttall", "barthann", "cosine", "exponential", "tukey", "taylor", "lanczos"]\
                                      [0])
-OVERLAP = int(env.get("OVERLAP", 15))
-N_PEAKS = int(env.get("N_PEAKS", 0))  # 0 means all
-
-SIGNIFICANCE = round(float(env.get("SIGNIFICANCE", 5)), 5)  # for quantile selection in percent
-
 
 AMPL_QUANTILES = {
     10: {
@@ -141,10 +134,8 @@ AMPL_QUANTILES = {
 
 def create_constellation(
         aa_vec: np.ndarray,
-        window_size=WINDOW_SIZE,
-        n_peaks=N_PEAKS,
-        window=WINDOW_TYPE,
-        overlap=OVERLAP
+        config: DBConfig,
+        window=WINDOW_TYPE
         ) -> ConstellationMap:
     """
     The function carries out a windowed fast fourier transformation,
@@ -174,30 +165,26 @@ def create_constellation(
      window index and prominent frequency peak of the window
     """
 
-    # adjust window size and overlap if invalid
-    if overlap >= window_size:
-        overlap = window_size - 1
-
-    if len(aa_vec) < window_size:
-        aa_vec = np.pad(aa_vec, (0, window_size - len(aa_vec)))
-        assert len(aa_vec) == window_size
+    if len(aa_vec) < config.window_size:
+        aa_vec = np.pad(aa_vec, (0, config.window_size - len(aa_vec)))
+        assert len(aa_vec) == config.window_size
 
     # executing the STFT
     stft_result = signal.stft(
         aa_vec,
-        nperseg=window_size,
-        noverlap=overlap,
+        nperseg=config.window_size,
+        noverlap=config.overlap,
         window=window
     )
 
-    return stft_to_constellation(*stft_result, n_peaks)
+    return stft_to_constellation(*stft_result, config)
 
 
 def stft_to_constellation(
         frequencies: np.ndarray,
         window_indexes: np.ndarray,
         stft: np.ndarray,
-        n_peaks: int
+        config: DBConfig
         ) -> ConstellationMap:
     constellation_map: ConstellationMap = []
 
@@ -207,36 +194,38 @@ def stft_to_constellation(
         # get rid of complex values to make them comparable
         spectrum: np.ndarray = abs(amplitudes)
 
-        peaks: List[Tuple[int, int]] = find_peaks(spectrum, n_peaks)
+        peaks: List[Tuple[int, int]] = find_peaks(spectrum, config)
 
         constellation_map.append(tuple((int(freq_idx), float(spectrum[freq_idx]), quantile) for freq_idx, quantile in peaks))
 
     return constellation_map
 
 
-def find_peaks(spectrum: np.ndarray, n_peaks: int) -> List[Tuple[int, int]]:
-    lower, upper = sorted((SIGNIFICANCE, 100 - SIGNIFICANCE))
+def find_peaks(spectrum: np.ndarray, config: DBConfig) -> List[Tuple[int, int]]:
+    lower, upper = sorted((config.significance, 100 - config.significance))
     peaks = []
 
-    # statistical normalization of spectrum
-    def statistical_norm(amplitudes: np.ndarray):
-        return (amplitudes - AMPL_QUANTILES[WINDOW_SIZE]["mean"]) / AMPL_QUANTILES[WINDOW_SIZE]["std_dev"]
-    norm_spectrum = statistical_norm(spectrum)
+    for quantile, (tail, op, spectrum_mult) in enumerate(((upper, gt, 1), (lower, lt, -1))):
+        quantile_deviations = abs(spectrum - AMPL_QUANTILES[config.window_size][tail]) / AMPL_QUANTILES[config.window_size]["std_dev"]
 
-    for quantile, (tail, op) in enumerate(((upper, gt), (lower, lt))):
-        tail_idx = np.argwhere(op(spectrum, AMPL_QUANTILES[WINDOW_SIZE][tail])).flatten()
+        if config.selection_method == "none":
+            peak_idx = list(range(len(spectrum)))
+        elif config.selection_method == "deviation":
+            peak_idx, _ = signal.find_peaks(quantile_deviations)
+        elif config.selection_method == "absolute":
+            peak_idx, _ = signal.find_peaks(spectrum * spectrum_mult)
 
-        if not len(tail_idx):
+        tail_idx = np.argwhere(op(spectrum, AMPL_QUANTILES[config.window_size][tail])).flatten()
+        selection_idx = np.intersect1d(tail_idx, peak_idx)
+
+        if not len(selection_idx):
             continue
 
-        norm_learned = statistical_norm(np.array(AMPL_QUANTILES[WINDOW_SIZE][tail]))
-        quantile_deviations = abs(norm_spectrum - norm_learned)
-
-        selected_deviations = quantile_deviations[tail_idx]
-        peaks += [*zip(selected_deviations.tolist(), tail_idx.tolist(), [quantile] * len(selected_deviations))]
+        selected_deviations = quantile_deviations[selection_idx]
+        peaks += [*zip(selected_deviations.tolist(), selection_idx.tolist(), [quantile] * len(selected_deviations))]
 
     peaks = sorted(peaks, reverse=True)
-    if n_peaks:
-        peaks = peaks[:n_peaks]
+    if config.n_peaks:
+        peaks = peaks[:config.n_peaks]
 
-    return [(idx, q) for _, idx, q in peaks]
+    return [(idx, q) for _, idx, q in peaks if not idx < config.skip_first_k_freqs]

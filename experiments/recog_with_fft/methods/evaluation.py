@@ -3,6 +3,7 @@ This module is to do some statistic analysis on the protfin results
 """
 
 from actions import *
+from protfin import cli_dbconfig
 import argparse
 from signal import signal, SIGPIPE, SIG_DFL
 signal(SIGPIPE, SIG_DFL)  # fixes weird python error, look: https://newbebweb.blogspot.com/2012/02/python-head-ioerror-errno-32-broken.html
@@ -67,7 +68,8 @@ def get_cli():
     eval_parser.add_argument("protein-file")
     eval_parser.add_argument("out-file")
     eval_parser.add_argument("-c", "--cpu", default=1, type=int)
-    eval_parser.set_defaults(func=lambda args: plot_frequencies(getattr(args, "protein-file"), getattr(args, "out-file"), args.cpu))
+    eval_parser, dbconfig = cli_dbconfig(eval_parser)
+    eval_parser.set_defaults(func=lambda args: plot_frequencies(getattr(args, "protein-file"), getattr(args, "out-file"), args.cpu, **dbconfig(args)))
 
     # evaluation.py plot-prots-per-windist <database-file> <out-file>
     eval_parser = sub_commands.add_parser("plot-prots-per-windist", help="Plot the protein counts per window distance included in the hashes")
@@ -93,7 +95,8 @@ def get_cli():
     eval_parser.add_argument("protein-file")
     eval_parser.add_argument("out-file")
     eval_parser.add_argument("-c", "--cpu", default=1, type=int)
-    eval_parser.set_defaults(func=lambda args: plot_hash_frequencies(getattr(args, "protein-file"), getattr(args, "out-file"), args.cpu))
+    eval_parser, dbconfig = cli_dbconfig(eval_parser)
+    eval_parser.set_defaults(func=lambda args: plot_hash_frequencies(getattr(args, "protein-file"), getattr(args, "out-file"), args.cpu, **dbconfig(args)))
 
     return parser
 
