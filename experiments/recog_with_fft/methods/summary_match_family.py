@@ -27,7 +27,7 @@ for file in tqdm(args[1:]):
         logfile = file.split("/")
         logfile.insert(-1, "_logs")
         logfile = glob("%s*.err" % "/".join(logfile).rsplit(".", 2)[0])[0]
-        params = re.findall('WINSIZE_(\d+)_NPEAKS_(\d+)_OVERLAP_(\d+)_SKIPK_(\d+)_SELMETH_(\w+)_ALPHA_(\d+\.?\d+)', file)[0]
+        params = re.findall('WINSIZE_(\d+)_NPEAKS_(\d+)_OVERLAP_(\d+)_SKIPK_(\d+)_SELMETH_(\w+)_ALPHA_(\d+\.?\d?\d?\d?\d?)', file)[0]
         f_scores = summary["F_Score"][~summary["F_Score"].isna()]
 
         with open(logfile, "r") as f:
