@@ -55,6 +55,7 @@ def create_db(
 
 def _process(args) -> Tuple[Database, ProteinLookup]:
     fasta, slc, db_config = args
+    cores = slc.indices(1)[-1]
 
     database: Database = {}
     protein_lookup: ProteinLookup = {}
@@ -62,7 +63,7 @@ def _process(args) -> Tuple[Database, ProteinLookup]:
     fasta_size = filesize(fasta.file_name)
 
     # train the database with hashes pointing to their matching proteins
-    for prot_id, _, seq in fasta[slc]:
+    for i, (prot_id, _, seq) in enumerate(fasta[slc], 1):
 
         # calculate the combinatorial hashes for the sequence
         hashes: Hashes = hashes_from_seq(seq, prot_id, db_config)
@@ -76,5 +77,9 @@ def _process(args) -> Tuple[Database, ProteinLookup]:
             if hash_ not in database:
                 database[hash_] = []
             database[hash_].append(occ)
+
+        if i % 100 == 0:
+            if objsize(pickle.dumps(DB(database, protein_lookup, db_config), pickle.HIGHEST_PROTOCOL)) > 6 * fasta_size / cores:
+                raise MemoryError("database too big")
 
     return database, protein_lookup
