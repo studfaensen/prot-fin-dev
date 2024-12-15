@@ -34,42 +34,47 @@ KIDERA_MIN = abs(KIDERA_TABLE.to_numpy().min())
 
 def get_aa_vector(
         seq: str,
-        factor=KIDERA_FACTOR,
         normalize=True,
         ignore_warnings=False
         ) -> np.ndarray:
     """
-    Transform an amino acid sequence into a vector of floats from the
-    Kidera factor table for the selected factor
-
-    ...
+    Transform an amino acid sequence into a concatenated vector of floats from
+    the Kidera factor table for all factors.
 
     Parameters
     ----------
     seq : str
-        The amino acid sequence to be transformed
-    factor : int
-        The index of the Kidera factor
+        The amino acid sequence to be transformed.
+    normalize : bool, optional
+        Whether to normalize the values to non-negatives by adding the absolute
+        value of the global minimum of the Kidera factor table. Default is True.
+    ignore_warnings : bool, optional
+        Whether to suppress warnings for unknown amino acids. Default is False.
 
     Returns
     -------
-    A numpy array of 32-bit floats
+    np.ndarray
+        A numpy array of 32-bit floats containing the concatenated values for
+        all Kidera factors.
     """
 
-    # select the specified Kidera factor from the table
-    sel_factor: pd.Series = KIDERA_TABLE.iloc[factor]
+    concatenated_sequence = []
 
-    # normalizing to non-negatives by adding the absolute of the global minimum
-    if normalize:
-        sel_factor = KIDERA_TABLE.iloc[factor] + KIDERA_MIN + 1
+    for factor in range(KIDERA_TABLE.shape[0]):
+        sel_factor: pd.Series = KIDERA_TABLE.iloc[factor]
 
-    # define symbols representing multiple amino acids
-    extend_selected_factor(sel_factor)
+        # normalizing to non-negatives by adding the absolute of the global minimum
+        if normalize:
+            sel_factor = sel_factor + KIDERA_MIN + 1
 
-    # transform the sequence
-    transformed_seq = transform_seq(seq, sel_factor, ignore_warnings)
+        # define symbols representing multiple amino acids
+        extend_selected_factor(sel_factor)
 
-    return np.array(transformed_seq)
+        # transform the sequence for this factor
+        transformed_seq = transform_seq(seq, sel_factor, ignore_warnings)
+        concatenated_sequence.extend(transformed_seq)
+
+    return np.array(concatenated_sequence, dtype=np.float32)
 
 
 def extend_selected_factor(sel_factor: pd.Series):
