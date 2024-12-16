@@ -21,12 +21,9 @@ def hashes_from_seq(seq: str, prot_id: str, db_config: DBConfig) -> Hashes:
     """
 
     hashes = {}
-
-    KF = env.get("KIDERA_FACTOR")
-    for kf in ((int(KF),) if KF is not None else range(10)):
-        # start the pipeline
-        aa_vec = get_aa_vector(seq, kf)
-        constellation = create_constellation(aa_vec, db_config)
-        hashes = {**hashes, **create_hashes(constellation, prot_id, kf)[0]}
-
+    kf = 0 
+    # start the pipeline
+    aa_vec = get_aa_vector(seq, kf)
+    constellation = create_constellation(aa_vec, db_config)
+    hashes = {**hashes, **create_hashes(constellation, prot_id, kf)[0]}
     return hashes

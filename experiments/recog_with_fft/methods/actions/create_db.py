@@ -78,8 +78,8 @@ def _process(args) -> Tuple[Database, ProteinLookup]:
                 database[hash_] = []
             database[hash_].append(occ)
 
-        if i % 100 == 0:
-            if objsize(pickle.dumps(DB(database, protein_lookup, db_config), pickle.HIGHEST_PROTOCOL)) > 6 * fasta_size / cores:
-                raise MemoryError("database too big")
+        #if i % 100 == 0:
+        #if objsize(pickle.dumps(DB(database, protein_lookup, db_config), pickle.HIGHEST_PROTOCOL)) > 6 * fasta_size / cores:
+        #raise MemoryError("database too big")
 
     return database, protein_lookup
