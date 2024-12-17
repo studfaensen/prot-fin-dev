@@ -34,6 +34,10 @@ for file in tqdm(args[1:]):
         logfile.insert(-1, "_logs")
         logfile = glob("%s*.err" % "/".join(logfile).rsplit(".", 2)[0])[0]
         params = re.findall('WINSIZE_(\d+)_NPEAKS_(\d+)_OVERLAP_(\d+)_SKIPK_(\d+)_SELMETH_(\w+)_ALPHA_(\d+\.?\d?\d?\d?\d?)', file)[0]
+        if not params:
+            eprint(f"No parameters found in file name: {file}")
+            continue
+        params = params[0]
         with open(logfile, "r") as f:
             log = f.readlines()
             time_regex = re.compile("([:\d]+)<[:\d]+,[ \d\.it/s\]]+$")
